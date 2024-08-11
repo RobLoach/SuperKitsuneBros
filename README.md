@@ -15,8 +15,8 @@ An attempt at recreating [1-1](https://en.wikipedia.org/wiki/World_1-1) of [Supe
     ```
 
 2. Launch Kitsune Tails
-3. Select "Mods"
-4. Choose "SuperKitsuneBros"
+3. Select Mods
+4. Choose SuperKitsuneBros
 
 ## Development
 
@@ -30,4 +30,4 @@ An attempt at recreating [1-1](https://en.wikipedia.org/wiki/World_1-1) of [Supe
 
 ## License
 
-Kitsune Tails Super Mario Bros © 2024 by Rob Loach is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
