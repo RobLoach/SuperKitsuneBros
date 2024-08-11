@@ -4,7 +4,7 @@
  "layers":[
         {
          "compression":"gzip",
-         "data":"H4sIAAAAAAAAA+2aSU7DMBiFncCmSMzTHjgJcAkK12DqHRglxjsw3oPxCMCWUVC2vIhEqqw2Sd0\/dhy9T\/oWlRr7+TVuXbVKEUKqwGeg1FfgOoU5vucncjQNrnF9\/4yGSo3B8dB8jFfkf4Pv8ENgLd10Usb8tnGZv0z91we6v0Yif9F8o5Mf2IS\/bfoZRPYhOAxHBNYh2UlW9giX+fM81+f+I2zlb8T7z\/b9UzQTWMcknILTJX6faIfP2RN8X4Ot\/KcGn39Z+N49IbYoYv8RQvJh8v2PECJDg\/uPEGfw\/EmIO2ydP7cCpbbhDtyFe3Dfw9+tCJHE1vnzDHvtHF7AS3gFr1P231NNqWf4Uvt\/rO\/dItDnbGUVc67BdbgBNzMyzKDXWTgX9+t7fhtI5tex0X8anfLnPX\/2mv8G19zCO3gPH+BjyjghcvXB\/jifvnd1TP7HkzVnKweY8xAewWN4ktHBPMZYgIsVyZ+89p0oW349m43+0\/A9f9VYRocrcAnWDd+PkzEiehmnCkj0SQghhBBCCJHhD6ShU9aAOwAA",
+         "data":"H4sIAAAAAAAAA+2ZSzMcURTH70xsqAoy45FYhnXiLSzFOkGEeHwGEm++g0yo8voQQfI9YpAgyRLbMIRBVvlN0VWqi2mm273TXedX9Vt0Vdc9\/z73nNmMUoIgBIHDkFJHIdMpMsfv+QWzmJ6fR2GlIhgNZ37GH\/Lv4wEmPPiWu\/QkG\/PrxmR+v\/ffbf61iFLruIHf8Qdu4hZu40\/8hb8jmWc8picnmMTTa\/rzkOz5WICFLu7Bwos7tXDKnsJk\/tu86+f+p9CRf5X5jl\/OuM75SVDzEI\/wLx7jCSbxFM\/wHP+52L8ivqMYS7DUozvRhZ+zW\/j9G3Tk32e+D1zM+E04ZS+Msu8YwSgWYTGWYCk+xidYFvU+myBkC\/nMd4GBGa+kZhVWYw3WYh3WYwO+wEZskv0TAswz5vu5gRlvpWYbtuMb7MC32Ild+A67sUf2Twgwr5jv1wZm\/D01P+AgDuEwjuAojuE4TuCk7J8QYPqZ7wGZcUEwwkd2L6Zp\/6ZC1MMYfsJpnPHh\/1aC4BVL7N6ypv37zK4t4TKu4Bf8mmb\/dnKV2sW93Itn++7eB\/aaVxmh5iiO4ThOOGR4mqdUOVbkXTz7Pb8OvMxvR0f\/03Fd\/lV2L37L\/XOb\/1uqHsZxDddxI805Ye79AeZc3r99d+0k7x7JseZVZqk5h\/O4gIsOPWjmjJfYEpD81t3fRLblt2fT0f90+D1\/0Oilh33YjT0Z\/h5bZ6Rwc04Q8KKfgiAIgiAIgiB4w3\/NNnuugDsAAA==",
          "encoding":"base64",
          "height":17,
          "id":9,
@@ -442,6 +442,19 @@
         {
          "firstgid":3789,
          "source":"..\/..\/..\/..\/..\/.steam\/debian-installation\/steamapps\/common\/KitsuneTails\/Content\/introworld-fall.json"
+        }, 
+        {
+         "columns":32,
+         "firstgid":4813,
+         "image":"superkitsunebros.png",
+         "imageheight":512,
+         "imagewidth":512,
+         "margin":0,
+         "name":"Mario",
+         "spacing":0,
+         "tilecount":1024,
+         "tileheight":16,
+         "tilewidth":16
         }],
  "tilewidth":16,
  "type":"map",
