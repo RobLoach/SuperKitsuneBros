@@ -1,6 +1,6 @@
-# Kitsune Tails: Super Mario Bros
+# Kitsune Tails: Super Kitsune Bros
 
-An attempt at recreating 1-1 of Super Mario Brothers in [Kitsune Tails](https://kitsunegames.com/kitsunetails/).
+An attempt at recreating [1-1](https://en.wikipedia.org/wiki/World_1-1) of [Super Mario Bros](https://en.wikipedia.org/wiki/Super_Mario_Bros) in [Kitsune Tails](https://kitsunegames.com/kitsunetails/).
 
 ![Screenshot](screenshot.jpg)
 
@@ -16,7 +16,7 @@ An attempt at recreating 1-1 of Super Mario Brothers in [Kitsune Tails](https://
 
 2. Launch Kitsune Tails
 3. Select "Mods"
-4. Choose "Super Mario Bros"
+4. Choose "SuperKitsuneBros"
 
 ## Development
 
