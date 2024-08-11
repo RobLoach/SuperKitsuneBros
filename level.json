@@ -398,12 +398,12 @@
         {
          "name":"background",
          "type":"string",
-         "value":"bg-mountains-01"
+         "value":"bg-smb-outside"
         }, 
         {
          "name":"music",
          "type":"string",
-         "value":"music-ground"
+         "value":"music-smb-ground"
         }, 
         {
          "name":"postScene",
