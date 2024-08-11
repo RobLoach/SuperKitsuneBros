@@ -4,7 +4,7 @@
  "layers":[
         {
          "compression":"gzip",
-         "data":"H4sIAAAAAAAAA+2ZSU7DMBiFncCmSMwUJJbAKVgCl6BwDShwB0aJqXdgXHIHxiVLypZRUCRWvIpEiiyauI1jx+F90qduWvv5JX+kqEIQQorAmyfEu2c7Ree4np\/Yxfb9M+gLMeSnW+MJ+Z\/hC3zVcJZ2OsljftPYzB\/2P5ziGuQhf575QCefsAG\/\/uinF\/n7YD8c0HAWnZ0kZW+SVX6Ve1Llu7b6TzNTUUzlr5V+P3XmV7l\/smYE5yjDUTiW82eFjMvZQ1w\/g6n8FyX9a7rePSGmuM9g\/gghanxz\/gixxniP7QSE\/F+mOX+EWKNiaP7WPSE24Cbcgttwx8H\/rQjRyZqh+TvCrB3DE3gKz+B5zPw94L20Dh+D91N5drNA3jPKEvZchlW4AlcTMkyg10k4FfTren4T6MwvY6L\/OFrlryn2mzb\/JX5zBa\/hDbyFdzHr+MjVBbuDfPLsyjTaj5S4Z5Rd7LkH9+EBPEzoYAZrzMK5guQPr30r8pZfzmai\/zhcz180FtDhIpyHlQ6fx+EaTdKsUwR09EkIIYQQQgjRww+W9dupgDsAAA==",
+         "data":"H4sIAAAAAAAAA+2aSU7DMBiFncCmSMzTHjgJcAkK12DqHRglxjsw3oPxCMCWUVC2vIhEqqw2Sd0\/dhy9T\/oWlRr7+TVuXbVKEUKqwGeg1FfgOoU5vucncjQNrnF9\/4yGSo3B8dB8jFfkf4Pv8ENgLd10Usb8tnGZv0z91we6v0Yif9F8o5Mf2IS\/bfoZRPYhOAxHBNYh2UlW9giX+fM81+f+I2zlb8T7z\/b9UzQTWMcknILTJX6faIfP2RN8X4Ot\/KcGn39Z+N49IbYoYv8RQvJh8v2PECJDg\/uPEGfw\/EmIO2ydP7cCpbbhDtyFe3Dfw9+tCJHE1vnzDHvtHF7AS3gFr1P231NNqWf4Uvt\/rO\/dItDnbGUVc67BdbgBNzMyzKDXWTgX9+t7fhtI5tex0X8anfLnPX\/2mv8G19zCO3gPH+BjyjghcvXB\/jifvnd1TP7HkzVnKweY8xAewWN4ktHBPMZYgIsVyZ+89p0oW349m43+0\/A9f9VYRocrcAnWDd+PkzEiehmnCkj0SQghhBBCCJHhD6ShU9aAOwAA",
          "encoding":"base64",
          "height":17,
          "id":9,
@@ -24,7 +24,7 @@
         }, 
         {
          "compression":"gzip",
-         "data":"H4sIAAAAAAAAA+2X4Q2CMBBGOxjjOBJrqSyi\/ugCQkIThF6vcAVMeS\/5IgntKee9AM4BAAAAAAAAAAD8L50SaW1r+M7G8Btj59oxsfO14ccAwLF4h38AZ+Ad\/gGcwdy9mv3rhM\/S3Ps8d1ibw3BNjbNdm\/T+N9S8Keul43mdXKR3w4AXjjXms75l7qfvy1v6HXOvZv9KoTnz6vPJrLVmLfwScyhnfmOzfvTsS+5d2b\/ce5HmDP7tT8qh1AxLs67ttT6nTPen3Luyf7ku4N+55DgUm+PUrGt7rf9T2K+5l3v\/PoIHWaREb+hx2X7WmjdZJFCihrVODaEPZE0CJWpY69QQ+kDWJFCihrVODaEPcr6LIq8jgDsAAA==",
+         "data":"H4sIAAAAAAAAA+2XWw6DIBBFWZjdTZfUbfWxkbYfbKCaSGoRGJRXiuckNzERJjjeGx2lAAAAAAAAAADgHzm1PkAlHoJ8a1P6MySc0XXvMst1vzf0LACoi1bkD6AFWpE\/gBbY2espf\/YcM80Qg\/rOOKVmiuuoe4G1MSyfcS+++W+qeRbW+67tOrH4ZkOD9lxL2F7f4\/vlvLyn367s9ZS\/UkiZeY56R9bashZ+cWUoxr8ur9f2vi97R85f7LdIygz5K08oQyEP+7wu7U39T1nuD2XvyPmLzQL5a0tMhlw+Dnld2pv6nsx+KXux3+8a3NBKOXpDj\/P2s1e90EqGHDVS6\/Qg+oC2yJCjRmqdHkQf0BYZctRIrdOD6INfH4UNdNiAOwAA",
          "encoding":"base64",
          "height":17,
          "id":7,
@@ -150,54 +150,6 @@
                  "width":48,
                  "x":1696.5,
                  "y":208.25
-                }, 
-                {
-                 "gid":61,
-                 "height":16,
-                 "id":59,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":256.333333333333,
-                 "y":160.666666666667
-                }, 
-                {
-                 "gid":61,
-                 "height":16,
-                 "id":60,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":367.833333333333,
-                 "y":160.166666666667
-                }, 
-                {
-                 "gid":61,
-                 "height":16,
-                 "id":61,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":351.833333333333,
-                 "y":96.6666666666667
-                }, 
-                {
-                 "gid":60,
-                 "height":40,
-                 "id":62,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":335.333333333333,
-                 "y":160.166666666667
                 }, 
                 {
                  "gid":36,
@@ -344,34 +296,27 @@
                  "y":208
                 }, 
                 {
-                 "gid":60,
-                 "height":40,
-                 "id":79,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"invisible",
-                         "type":"bool",
-                         "value":true
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":1023.83333333333,
-                 "y":143.666666666667
-                }, 
-                {
                  "gid":131,
                  "height":16,
                  "id":80,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"disableInventory",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"zoneTo",
+                         "type":"string",
+                         "value":"level--smb--1-1--underground"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":447.75,
-                 "y":192.25
+                 "x":912.401515151515,
+                 "y":160.083333333333
                 }, 
                 {
                  "gid":90,
@@ -384,21 +329,56 @@
                  "width":48,
                  "x":25,
                  "y":207.666666666667
+                }, 
+                {
+                 "gid":153,
+                 "height":16,
+                 "id":85,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":2608.01086956522,
+                 "y":192.005434782609
+                }, 
+                {
+                 "gid":60,
+                 "height":40,
+                 "id":86,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":1024.75,
+                 "y":144
                 }],
          "opacity":1,
+         "properties":[
+                {
+                 "name":"invisible",
+                 "type":"bool",
+                 "value":true
+                }],
          "type":"objectgroup",
          "visible":true,
          "x":0,
          "y":0
         }],
  "nextlayerid":17,
- "nextobjectid":82,
+ "nextobjectid":105,
  "orientation":"orthogonal",
  "properties":[
         {
          "name":"background",
          "type":"string",
          "value":"bg-smb-outside"
+        }, 
+        {
+         "name":"customIndicator",
+         "type":"string",
+         "value":"1-1"
         }, 
         {
          "name":"music",
