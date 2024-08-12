@@ -24,7 +24,7 @@
         }, 
         {
          "compression":"gzip",
-         "data":"H4sIAAAAAAAAA+2XWw6DIBBF2UK\/3Ey7l350u31spO0HG1CTkloFBhzUBs9JbmLicIPj3CjGAAAAAAAAAAAA\/C8PQaFaDYdm\/h5993zXtWI\/AoB1sYb8AWyBNeQPYAvG2as5f\/0Z4mi+Z4mlzhTXTvcFalPon+nU6J7tHDjD9Z4Xhe\/QJ6c2Vm8D1xLjWZ8z98O9zem3L3s1568UUmaend6JXjm18IsvQynz65v1tWc\/lL095y\/1WyRlhvwtTyxDsRkOzbq0VvufMlwfy96e85eaBfK3LSkZ8s1xbNaltdr35NZL2Uv9fq\/BDU1Uojf0uGw\/a9ULTeQo4aH1qUH0AeXIUcJD61OD6APKkaOEh9anBtGHsFrzoVFIgDsAAA==",
+         "data":"H4sIAAAAAAAAA+2XQQ6CMBBFu9WdK9Cz6F1ceF7jSdz0AkpiI0LbaZkCpryX\/ISEdgLjvGCNAQAAAAAAAAAA+F8eQkJrNRya6c\/ou+e7rhX7CQAsizX4B7AG1uAfwBoM3avZv+4McTbfs8RcZ4pda8y+Lb82he6dLo3u3a6BM1xX86ao26+Tsza23gauJYazPmXu+882pd8+92r2rxSSM8f3vVOiUzlr4RefQynz65v1pWc\/5N6W\/Uv9FknO4N\/8xByKzXBo1qW92v8p\/f0x97bsX6oL+LcuKQ755jg269Je7e\/k9kvupX6\/l+BORinRG3pctp+15klGcZSooa1TQ+gDyYmjRA1tnRpCH0hOHCVqaOvUEPoQzgtKqW6EgDsAAA==",
          "encoding":"base64",
          "height":17,
          "id":7,
@@ -345,8 +345,8 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":2608.01086956522,
-                 "y":192.005434782609
+                 "x":2608,
+                 "y":192
                 }, 
                 {
                  "gid":60,
@@ -639,6 +639,10 @@
         {
          "firstgid":5837,
          "source":"..\/mario\/objects.json"
+        }, 
+        {
+         "firstgid":6041,
+         "source":"..\/..\/..\/..\/..\/.steam\/debian-installation\/steamapps\/common\/KitsuneTails\/Content\/function_blocks.json"
         }],
  "tilewidth":16,
  "type":"map",

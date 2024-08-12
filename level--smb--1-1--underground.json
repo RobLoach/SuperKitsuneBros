@@ -24,7 +24,7 @@
         }, 
         {
          "compression":"gzip",
-         "data":"H4sIAAAAAAAAA7vMwsBwmQx8CYqRwSUW3BgdvAWKvUeSJ8cNlOBR94+6f9T9mO4iFoy6f9T9o+4fdf+o+xFgqJf\/xLj\/LJB9Dog\/DlH387IyMPBBMT8r5e4\/N8TxuyGOAaKF4gPADAAA",
+         "data":"H4sIAAAAAAAAA3vHwsDwHogvQzEyuMSCG6MDSVEGBilRhDlvgfgdnfCo+0fdP+p+TPeTAkbdP+r+UfcPXfdrAt2uNYTdDwODyf2klP+j7h+57hdgZWA4x0Jd\/JGO7h\/KGAAD1Pe0wAwAAA==",
          "encoding":"base64",
          "height":17,
          "id":7,
@@ -44,7 +44,7 @@
         }, 
         {
          "compression":"gzip",
-         "data":"H4sIAAAAAAAAA2NgGAWjYBSMglEwGIATFjwK6AOwhf1oHNAPjIb\/KBgFo4AUAAAVbCC7wAwAAA==",
+         "data":"H4sIAAAAAAAAA+3RMREAAAwCMbTVv6ga6Fqm5A4DTwLAhzlGx9XeBz36A58WBm3PWcAMAAA=",
          "encoding":"base64",
          "height":17,
          "id":11,
@@ -62,9 +62,21 @@
          "name":"Objects",
          "objects":[
                 {
-                 "gid":131,
+                 "gid":90,
+                 "height":48,
+                 "id":84,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":48,
+                 "x":66,
+                 "y":0.0303030303030312
+                }, 
+                {
+                 "gid":5221,
                  "height":16,
-                 "id":82,
+                 "id":85,
                  "name":"",
                  "properties":[
                         {
@@ -80,26 +92,14 @@
                         {
                          "name":"zoneY",
                          "type":"int",
-                         "value":11
+                         "value":10
                         }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":449.333333333333,
-                 "y":224.666666666667
-                }, 
-                {
-                 "gid":90,
-                 "height":48,
-                 "id":84,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":48,
-                 "x":258,
-                 "y":0.0303030303030312
+                 "x":288,
+                 "y":176
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -108,7 +108,7 @@
          "y":0
         }],
  "nextlayerid":17,
- "nextobjectid":85,
+ "nextobjectid":87,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -153,6 +153,18 @@
         {
          "firstgid":3789,
          "source":"..\/..\/..\/..\/..\/.steam\/debian-installation\/steamapps\/common\/KitsuneTails\/Content\/introworld-fall.json"
+        }, 
+        {
+         "firstgid":4813,
+         "source":"..\/..\/..\/..\/..\/.steam\/debian-installation\/steamapps\/common\/KitsuneTails\/Content\/function_blocks.json"
+        }, 
+        {
+         "firstgid":5069,
+         "source":"..\/mario\/objects.json"
+        }, 
+        {
+         "firstgid":5273,
+         "source":"..\/..\/..\/..\/..\/.steam\/debian-installation\/steamapps\/common\/KitsuneTails\/Content\/function_blocks_dark.json"
         }],
  "tilewidth":16,
  "type":"map",
