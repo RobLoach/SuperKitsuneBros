@@ -57,6 +57,26 @@
          "y":0
         }, 
         {
+         "compression":"gzip",
+         "data":"H4sIAAAAAAAAA5MWZ2CQRsLIQFocN0YHKUCxVDzq6YVH3T\/q\/lH3kw5G3T\/q\/lH3D133twD1tg5h98PAYHI\/Of4cdf\/Icr\/MKB5QDAATB8v6wAwAAA==",
+         "encoding":"base64",
+         "height":17,
+         "id":17,
+         "name":"Foreground",
+         "opacity":1,
+         "properties":[
+                {
+                 "name":"foreground",
+                 "type":"bool",
+                 "value":true
+                }],
+         "type":"tilelayer",
+         "visible":true,
+         "width":48,
+         "x":0,
+         "y":0
+        }, 
+        {
          "draworder":"topdown",
          "id":10,
          "name":"Objects",
@@ -107,7 +127,7 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":17,
+ "nextlayerid":18,
  "nextobjectid":87,
  "orientation":"orthogonal",
  "properties":[
@@ -165,6 +185,19 @@
         {
          "firstgid":5273,
          "source":"..\/..\/..\/..\/..\/.steam\/debian-installation\/steamapps\/common\/KitsuneTails\/Content\/function_blocks_dark.json"
+        }, 
+        {
+         "columns":32,
+         "firstgid":5529,
+         "image":"superkitsunebros.png",
+         "imageheight":512,
+         "imagewidth":512,
+         "margin":0,
+         "name":"Mario",
+         "spacing":0,
+         "tilecount":1024,
+         "tileheight":16,
+         "tilewidth":16
         }],
  "tilewidth":16,
  "type":"map",

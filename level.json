@@ -545,8 +545,28 @@
          "visible":true,
          "x":0,
          "y":0
+        }, 
+        {
+         "compression":"gzip",
+         "data":"H4sIAAAAAAAAA+3WQQ6CMBRF0e5BBroTXbj708SQVCztJ9Qy4JyEEXTEu4GUAAAAAAD6eF4+FzDW3J7+YKy8Pf3BOMv29LffdUrpNvV\/ll\/5Xrdsd7n1I3Zfak9\/ba1m7u97j2BTW57lW6mhyH5LWx+9\/bX2ztxf9FvUakZ\/\/1drqLbhta23zu79T8nP19o7c3\/RFvR3rEhDpR3Xtt46u\/c9zedb7UW\/3wAAANDLC4\/U7zOAOwAA",
+         "encoding":"base64",
+         "height":17,
+         "id":18,
+         "name":"Foreground",
+         "opacity":1,
+         "properties":[
+                {
+                 "name":"foreground",
+                 "type":"bool",
+                 "value":true
+                }],
+         "type":"tilelayer",
+         "visible":true,
+         "width":224,
+         "x":0,
+         "y":0
         }],
- "nextlayerid":18,
+ "nextlayerid":19,
  "nextobjectid":116,
  "orientation":"orthogonal",
  "properties":[

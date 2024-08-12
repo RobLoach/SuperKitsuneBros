@@ -2,7 +2,7 @@
 
 An attempt at recreating [1-1](https://en.wikipedia.org/wiki/World_1-1) of [Super Mario Bros](https://en.wikipedia.org/wiki/Super_Mario_Bros) in [Kitsune Tails](https://kitsunegames.com/kitsunetails/).
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.jpg)
 
 ## Installation
 
