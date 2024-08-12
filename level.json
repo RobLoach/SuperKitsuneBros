@@ -4,7 +4,7 @@
  "layers":[
         {
          "compression":"gzip",
-         "data":"H4sIAAAAAAAAA+3ZS1ITURiG4cOQCUInorAIciOgLkJBUAm6BkRBQRehhoFcVJYAwgDlugSSkCCXoQsQEgIJjHy7SqpSqY7QSdvH7vq\/qmdAp9Pny6n\/JAOUkkgkfki+SalCk+4W9cfr\/SV6o3t+9gNKHeAwUP8zPvHez\/iC+Qaecxk7e\/I\/9rcT6e\/t\/mlDqQx2kEUOu\/iBPezjAIeG9fvLrHuOixrrf+T6NGYwizmL+9a5toFNbDmwf3b2RPpLfzPbzHfKcL\/\/MWvmUcAJijjFGUoo4xwXNc7fVVlhvW\/4jlWsufD9dNWe2In0tx8v9v\/FfB\/9mXE3+7fydxsMBBDETbTjFm6jA50u\/65LJG6mhfm+oWHGw6wZQRQxdCOOHvTiDu7inpw\/iY\/TxXyHNMx4H2v24yEGMIhHeIwnGEICw3L+JD7Ofeb7gYYZH2XNF3iJMYzjFV5jApN4g7dy\/iQ+zgjz\/VxmXCLRknecvfcunb8062SwgyxymPLQ\/6Ct+nsp0l9vrPovYNGlz3HMOnkUcIIilm2cvw\/cnzTPrKZ9t+pvJ5X9kxq+d5zs\/6\/ys7n2a37c\/22krvk5Gu3fGlSqDQYCCAZr3xvjtW7E0YNefGXdJfPMWvQ95doZSg3ORoh1woggWtVP+nunf3XMXpX9l6rm16n+f4uT\/avjRn+\/5Skz8AwJDNf5fXz5DDONPMcPcWI\/JRKJRCKRSCQSiTP5DXIM67yAOwAA",
+         "data":"H4sIAAAAAAAAA+3ZSVITURzH8cfSDUJ3O3EIyQCJeggHVDDgGZwF9RBqWOAAegQVFygIHIFAiBpYegDIyJCV364yValUR+xO289u\/7+qz4JOp98vr\/4vWaCURCKJQso9SlV6dLfwnrD3l+iN7vkpmkptYdv0\/oxZ3juHN3jbxXOacbMn\/2J\/N5H+4e6\/bii1gTw2UcBXfMN3FLGFbcP5\/Qese4hGh\/VnuP4CL\/EKrx3u+8K1Zaxg1Yf9c7Mn0l\/621ljvnNG8P1LrFlGBVXUUMce9nGAQzQ6nL+jssB6n\/AZi1gK4PvpqD1xE+nvPmHsv8N87\/6a8SD79\/F3PwyYsHACJ3EKp3EGAwH\/rkskQaaX+T6uYcZjrBlHAkkMYRgppHEO53FBzp8kwjnLfA9qmPHLrHkFI7iKa7iOUYzhBjIYl\/MniXAuMt+XNMz4Hda8i3u4jwd4iElM4REe44mcP0mEc4v5vi0zLpFoyVPO3rOAzt8662wgj00UMB2i\/0E79Q9TpL\/eOPV\/h\/cBfY4S65RRQRU1fHRx\/p5zf9Y+s5r23am\/m7T2z2r43vGz\/9\/Kj2OdX4vi\/q8h94efo9v+fZZS\/TBgwrI635vktSEMI4U0PrDuvH1mHfrWubaH\/S5nY5B1Yogj0dZP+oenf3vsXq3959vm16\/+v4uX\/q29gtj\/\/ykTzMBNZDDu8fu4+Qw73TwnCvFjPyUSiUQikUgkEok\/+QmQfp+BgDsAAA==",
          "encoding":"base64",
          "height":17,
          "id":9,
@@ -24,7 +24,7 @@
         }, 
         {
          "compression":"gzip",
-         "data":"H4sIAAAAAAAAA+2XWw6DIBBFWZjdTZfUbfWxkbYfbKCaSGoRGJRXiuckNzERJjjeGx2lAAAAAAAAAADgHzm1PkAlHoJ8a1P6MySc0XXvMst1vzf0LACoi1bkD6AFWpE\/gBbY2espf\/YcM80Qg\/rOOKVmiuuoe4G1MSyfcS+++W+qeRbW+67tOrH4ZkOD9lxL2F7f4\/vlvLyn367s9ZS\/UkiZeY56R9bashZ+cWUoxr8ur9f2vi97R85f7LdIygz5K08oQyEP+7wu7U39T1nuD2XvyPmLzQL5a0tMhlw+Dnld2pv6nsx+KXux3+8a3NBKOXpDj\/P2s1e90EqGHDVS6\/Qg+oC2yJCjRmqdHkQf0BYZctRIrdOD6INfH4UNdNiAOwAA",
+         "data":"H4sIAAAAAAAAA+2XWw6DIBBF2UK\/3Ey7l350u31spO0HG1CTkloFBhzUBs9JbmLicIPj3CjGAAAAAAAAAAAA\/C8PQaFaDYdm\/h5993zXtWI\/AoB1sYb8AWyBNeQPYAvG2as5f\/0Z4mi+Z4mlzhTXTvcFalPon+nU6J7tHDjD9Z4Xhe\/QJ6c2Vm8D1xLjWZ8z98O9zem3L3s1568UUmaend6JXjm18IsvQynz65v1tWc\/lL095y\/1WyRlhvwtTyxDsRkOzbq0VvufMlwfy96e85eaBfK3LSkZ8s1xbNaltdr35NZL2Uv9fq\/BDU1Uojf0uGw\/a9ULTeQo4aH1qUH0AeXIUcJD61OD6APKkaOEh9anBtGHsFrzoVFIgDsAAA==",
          "encoding":"base64",
          "height":17,
          "id":7,
@@ -66,12 +66,18 @@
                  "height":112,
                  "id":22,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"visible",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":112,
-                 "x":3217.33333333333,
-                 "y":209
+                 "x":3152,
+                 "y":208
                 }, 
                 {
                  "gid":36,
@@ -327,8 +333,8 @@
                  "type":"",
                  "visible":true,
                  "width":48,
-                 "x":25,
-                 "y":207.666666666667
+                 "x":112,
+                 "y":208
                 }, 
                 {
                  "gid":153,
@@ -353,21 +359,195 @@
                  "width":16,
                  "x":1024.75,
                  "y":144
+                }, 
+                {
+                 "gid":139,
+                 "height":32,
+                 "id":105,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"spawn-type",
+                         "type":"string",
+                         "value":"coin"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":256,
+                 "y":160
+                }, 
+                {
+                 "gid":139,
+                 "height":32,
+                 "id":106,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"spawn-type",
+                         "type":"string",
+                         "value":"coin"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":368,
+                 "y":160
+                }, 
+                {
+                 "gid":139,
+                 "height":32,
+                 "id":107,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"spawn-type",
+                         "type":"string",
+                         "value":"coin"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":352,
+                 "y":96
+                }, 
+                {
+                 "gid":139,
+                 "height":32,
+                 "id":109,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"spawn-type",
+                         "type":"string",
+                         "value":"coin"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":1504,
+                 "y":96
+                }, 
+                {
+                 "gid":139,
+                 "height":32,
+                 "id":110,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"spawn-type",
+                         "type":"string",
+                         "value":"coin"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":1696,
+                 "y":160
+                }, 
+                {
+                 "gid":139,
+                 "height":32,
+                 "id":111,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"spawn-type",
+                         "type":"string",
+                         "value":"coin"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":1744,
+                 "y":160
+                }, 
+                {
+                 "gid":139,
+                 "height":32,
+                 "id":112,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"spawn-type",
+                         "type":"string",
+                         "value":"coin"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":1792,
+                 "y":160
+                }, 
+                {
+                 "gid":139,
+                 "height":32,
+                 "id":113,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"spawn-type",
+                         "type":"string",
+                         "value":"coin"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":2064,
+                 "y":96
+                }, 
+                {
+                 "gid":139,
+                 "height":32,
+                 "id":114,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"spawn-type",
+                         "type":"string",
+                         "value":"coin"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":2080,
+                 "y":96
+                }, 
+                {
+                 "gid":139,
+                 "height":32,
+                 "id":115,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"spawn-type",
+                         "type":"string",
+                         "value":"coin"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":2720,
+                 "y":160
                 }],
          "opacity":1,
-         "properties":[
-                {
-                 "name":"invisible",
-                 "type":"bool",
-                 "value":true
-                }],
          "type":"objectgroup",
          "visible":true,
          "x":0,
          "y":0
         }],
  "nextlayerid":18,
- "nextobjectid":105,
+ "nextobjectid":116,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -455,6 +635,10 @@
          "tilecount":1024,
          "tileheight":16,
          "tilewidth":16
+        }, 
+        {
+         "firstgid":5837,
+         "source":"..\/mario\/objects.json"
         }],
  "tilewidth":16,
  "type":"map",
