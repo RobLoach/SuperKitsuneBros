@@ -20,8 +20,24 @@ An attempt at recreating [1-1](https://en.wikipedia.org/wiki/World_1-1) of [Supe
 
 ## Development
 
+1. Have [Node.js](https://nodejs.org/en) installed
 1. Run `npm it` to set up the correct tileset paths
-2. Open `level.json` in [Tiled](https://www.mapeditor.org/)
+1. Open `SuperKitsuneBros.tiled-project` with [Tiled](https://www.mapeditor.org/)
+
+### File Descriptions
+
+| Filename | Description |
+| -------- | ----------- |
+| bg-bluesky.json | The background sky |
+| level-1-1-begin.json | The opening screen for 1-1 |
+| level-1-1-game.json | The gameplay level for 1-1 |
+| level-1-1-underground.json | The underground stage for 1-1 |
+| level.json | The opening welcome screen for the game |
+| music-ground.ogg | Music for the game |
+| music-underground.ogg | Music for the underground |
+| tileset.png | Additional decoration tileset from the original game |
+| objects.json | The Kitsune Tails original objects file |
+| SuperKitsuneBros.tiled-project | Tiled project file |
 
 ## Resources
 

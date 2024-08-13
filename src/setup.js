@@ -1,3 +1,4 @@
+// Iterate through the JSON files, and update the tileset source to the correct location
 import { getGamePath } from 'steam-game-path';
 import {globby} from 'globby';
 import { fileURLToPath } from 'url';
