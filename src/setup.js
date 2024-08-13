@@ -15,7 +15,7 @@ if (!steam.game) {
 
 const paths = await globby([`${__dirname}/../*.json`]);
 for (const path of paths) {
-    if (path.includes('package.json') || path.includes('package-lock.json')) {
+    if (path.includes('package.json') || path.includes('package-lock.json') || path.includes('objects.json')) {
         continue;
     }
     const data = JSON.parse(readFileSync(path, 'utf8'));

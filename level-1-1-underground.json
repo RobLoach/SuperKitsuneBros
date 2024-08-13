@@ -1,215 +1,202 @@
-{
-  "compressionlevel": -1,
-  "height": 17,
-  "infinite": false,
-  "layers": [
-    {
-      "compression": "gzip",
-      "data": "H4sIAAAAAAAAA+3BAQ0AAADCoPdPbQ43oAAAAD4M9daMScAMAAA=",
-      "encoding": "base64",
-      "height": 17,
-      "id": 9,
-      "name": "Background No Parallax",
-      "opacity": 1,
-      "properties": [
+{ "compressionlevel":-1,
+ "height":17,
+ "infinite":false,
+ "layers":[
         {
-          "name": "drawOrder",
-          "type": "string",
-          "value": "before"
-        }
-      ],
-      "type": "tilelayer",
-      "visible": true,
-      "width": 48,
-      "x": 0,
-      "y": 0
-    },
-    {
-      "compression": "gzip",
-      "data": "H4sIAAAAAAAAA3vHwsDwHogvQzEyuMSCG6MDSVEGBilRhDlvgfgdnfCo+0fdP+p+TPeTAkbdP+r+UfcPXfdrAt2uNYTdDwODyf2klP+j7h+57hdgZWA4x0Jd/JGO7h/KGAAD1Pe0wAwAAA==",
-      "encoding": "base64",
-      "height": 17,
-      "id": 7,
-      "name": "Blocks",
-      "opacity": 0.5,
-      "properties": [
+         "compression":"gzip",
+         "data":"H4sIAAAAAAAAA+3BAQ0AAADCoPdPbQ43oAAAAD4M9daMScAMAAA=",
+         "encoding":"base64",
+         "height":17,
+         "id":9,
+         "name":"Background No Parallax",
+         "opacity":1,
+         "properties":[
+                {
+                 "name":"drawOrder",
+                 "type":"string",
+                 "value":"before"
+                }],
+         "type":"tilelayer",
+         "visible":true,
+         "width":48,
+         "x":0,
+         "y":0
+        }, 
         {
-          "name": "blocks",
-          "type": "bool",
-          "value": true
-        }
-      ],
-      "type": "tilelayer",
-      "visible": true,
-      "width": 48,
-      "x": 0,
-      "y": 0
-    },
-    {
-      "compression": "gzip",
-      "data": "H4sIAAAAAAAAA+3RMREAAAwCMbTVv6ga6Fqm5A4DTwLAhzlGx9XeBz36A58WBm3PWcAMAAA=",
-      "encoding": "base64",
-      "height": 17,
-      "id": 11,
-      "name": "Coins",
-      "opacity": 1,
-      "type": "tilelayer",
-      "visible": true,
-      "width": 48,
-      "x": 0,
-      "y": 0
-    },
-    {
-      "compression": "gzip",
-      "data": "H4sIAAAAAAAAA5MWZ2CQRsLIQFocN0YHKUCxVDzq6YVH3T/q/lH3kw5G3T/q/lH3D133twD1tg5h98PAYHI/Of4cdf/Icr/MKB5QDAATB8v6wAwAAA==",
-      "encoding": "base64",
-      "height": 17,
-      "id": 17,
-      "name": "Foreground",
-      "opacity": 1,
-      "properties": [
+         "compression":"gzip",
+         "data":"H4sIAAAAAAAAA3vHwsDwHogvQzEyuMSCG6MDXxEGBj8RhDlvgfgdnfCo+0fdP+p+TPeTAkbdP+r+UfcPXffHAt0eN4TdDwODyf2klP+j7h+57hdgZWA4x0Jd\/JGO7h\/KGACF8siowAwAAA==",
+         "encoding":"base64",
+         "height":17,
+         "id":7,
+         "name":"Blocks",
+         "opacity":0.5,
+         "properties":[
+                {
+                 "name":"blocks",
+                 "type":"bool",
+                 "value":true
+                }],
+         "type":"tilelayer",
+         "visible":true,
+         "width":48,
+         "x":0,
+         "y":0
+        }, 
         {
-          "name": "foreground",
-          "type": "bool",
-          "value": true
-        }
-      ],
-      "type": "tilelayer",
-      "visible": true,
-      "width": 48,
-      "x": 0,
-      "y": 0
-    },
-    {
-      "draworder": "topdown",
-      "id": 10,
-      "name": "Objects",
-      "objects": [
+         "compression":"gzip",
+         "data":"H4sIAAAAAAAAA+3RMREAAAwCMbTVv6ga6Fqm5A4DTwLAhzlGx9XeBz36A58WBm3PWcAMAAA=",
+         "encoding":"base64",
+         "height":17,
+         "id":11,
+         "name":"Coins",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":48,
+         "x":0,
+         "y":0
+        }, 
         {
-          "gid": 90,
-          "height": 48,
-          "id": 84,
-          "name": "",
-          "rotation": 0,
-          "type": "",
-          "visible": true,
-          "width": 48,
-          "x": 66,
-          "y": 0.0303030303030312
-        },
+         "compression":"gzip",
+         "data":"H4sIAAAAAAAAA\/MXY2DwR8LIwF8MN0YHM4BiM\/Gopxcedf+o+0fdTzoYdf+o+0fdP3TdvwOod+cQdj8MDCb3k+PPUfePLPcHjOIBxQDcm0WKwAwAAA==",
+         "encoding":"base64",
+         "height":17,
+         "id":17,
+         "name":"Foreground",
+         "opacity":1,
+         "properties":[
+                {
+                 "name":"foreground",
+                 "type":"bool",
+                 "value":true
+                }],
+         "type":"tilelayer",
+         "visible":true,
+         "width":48,
+         "x":0,
+         "y":0
+        }, 
         {
-          "gid": 5221,
-          "height": 16,
-          "id": 85,
-          "name": "",
-          "properties": [
-            {
-              "name": "zoneTo",
-              "type": "string",
-              "value": "level"
-            },
-            {
-              "name": "zoneX",
-              "type": "int",
-              "value": 164
-            },
-            {
-              "name": "zoneY",
-              "type": "int",
-              "value": 10
-            }
-          ],
-          "rotation": 0,
-          "type": "",
-          "visible": true,
-          "width": 32,
-          "x": 288,
-          "y": 176
-        }
-      ],
-      "opacity": 1,
-      "type": "objectgroup",
-      "visible": true,
-      "x": 0,
-      "y": 0
-    }
-  ],
-  "nextlayerid": 18,
-  "nextobjectid": 87,
-  "orientation": "orthogonal",
-  "properties": [
-    {
-      "name": "customIndicator",
-      "type": "string",
-      "value": "1-1"
-    },
-    {
-      "name": "disableInventory",
-      "type": "bool",
-      "value": true
-    },
-    {
-      "name": "music",
-      "type": "string",
-      "value": "music-underground"
-    }
-  ],
-  "renderorder": "right-down",
-  "tiledversion": "1.11.0",
-  "tileheight": 16,
-  "tilesets": [
-    {
-      "firstgid": 1,
-      "source": "/home/rob/.steam/debian-installation/steamapps/common/KitsuneTails/docs/objects.json"
-    },
-    {
-      "firstgid": 205,
-      "source": "/home/rob/.steam/debian-installation/steamapps/common/KitsuneTails/Content/introworld-b.json"
-    },
-    {
-      "firstgid": 1229,
-      "source": "/home/rob/.steam/debian-installation/steamapps/common/KitsuneTails/Content/cave.json"
-    },
-    {
-      "firstgid": 1741,
-      "source": "/home/rob/.steam/debian-installation/steamapps/common/KitsuneTails/Content/earthworld.json"
-    },
-    {
-      "firstgid": 3277,
-      "source": "/home/rob/.steam/debian-installation/steamapps/common/KitsuneTails/Content/animated-tile.json"
-    },
-    {
-      "firstgid": 3789,
-      "source": "/home/rob/.steam/debian-installation/steamapps/common/KitsuneTails/Content/introworld-fall.json"
-    },
-    {
-      "firstgid": 4813,
-      "source": "/home/rob/.steam/debian-installation/steamapps/common/KitsuneTails/Content/function_blocks.json"
-    },
-    {
-      "firstgid": 5069,
-      "source": "/home/rob/.steam/debian-installation/steamapps/common/KitsuneTails/docs/objects.json"
-    },
-    {
-      "firstgid": 5273,
-      "source": "/home/rob/.steam/debian-installation/steamapps/common/KitsuneTails/Content/function_blocks_dark.json"
-    },
-    {
-      "columns": 32,
-      "firstgid": 5529,
-      "image": "tileset.png",
-      "imageheight": 512,
-      "imagewidth": 512,
-      "margin": 0,
-      "name": "Mario",
-      "spacing": 0,
-      "tilecount": 1024,
-      "tileheight": 16,
-      "tilewidth": 16
-    }
-  ],
-  "tilewidth": 16,
-  "type": "map",
-  "version": "1.10",
-  "width": 48
+         "draworder":"topdown",
+         "id":10,
+         "name":"Objects",
+         "objects":[
+                {
+                 "gid":90,
+                 "height":48,
+                 "id":84,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":48,
+                 "x":66,
+                 "y":0.0303030303030312
+                }, 
+                {
+                 "gid":153,
+                 "height":16,
+                 "id":85,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"zoneTo",
+                         "type":"string",
+                         "value":"level"
+                        }, 
+                        {
+                         "name":"zoneX",
+                         "type":"int",
+                         "value":164
+                        }, 
+                        {
+                         "name":"zoneY",
+                         "type":"int",
+                         "value":10
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":288,
+                 "y":176
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }],
+ "nextlayerid":18,
+ "nextobjectid":87,
+ "orientation":"orthogonal",
+ "properties":[
+        {
+         "name":"customIndicator",
+         "type":"string",
+         "value":"1-1"
+        }, 
+        {
+         "name":"disableInventory",
+         "type":"bool",
+         "value":true
+        }, 
+        {
+         "name":"music",
+         "type":"string",
+         "value":"music-underground"
+        }],
+ "renderorder":"right-down",
+ "tiledversion":"1.11.0",
+ "tileheight":16,
+ "tilesets":[
+        {
+         "firstgid":1,
+         "source":"objects.json"
+        }, 
+        {
+         "firstgid":205,
+         "source":"..\/..\/..\/..\/..\/.steam\/debian-installation\/steamapps\/common\/KitsuneTails\/Content\/introworld-b.json"
+        }, 
+        {
+         "firstgid":1229,
+         "source":"..\/..\/..\/..\/..\/.steam\/debian-installation\/steamapps\/common\/KitsuneTails\/Content\/cave.json"
+        }, 
+        {
+         "firstgid":1741,
+         "source":"..\/..\/..\/..\/..\/.steam\/debian-installation\/steamapps\/common\/KitsuneTails\/Content\/earthworld.json"
+        }, 
+        {
+         "firstgid":3277,
+         "source":"..\/..\/..\/..\/..\/.steam\/debian-installation\/steamapps\/common\/KitsuneTails\/Content\/animated-tile.json"
+        }, 
+        {
+         "firstgid":3789,
+         "source":"..\/..\/..\/..\/..\/.steam\/debian-installation\/steamapps\/common\/KitsuneTails\/Content\/introworld-fall.json"
+        }, 
+        {
+         "firstgid":4813,
+         "source":"..\/..\/..\/..\/..\/.steam\/debian-installation\/steamapps\/common\/KitsuneTails\/Content\/function_blocks.json"
+        }, 
+        {
+         "firstgid":5069,
+         "source":"..\/..\/..\/..\/..\/.steam\/debian-installation\/steamapps\/common\/KitsuneTails\/Content\/function_blocks_dark.json"
+        }, 
+        {
+         "columns":32,
+         "firstgid":5325,
+         "image":"tileset.png",
+         "imageheight":512,
+         "imagewidth":512,
+         "margin":0,
+         "name":"Mario",
+         "spacing":0,
+         "tilecount":1024,
+         "tileheight":16,
+         "tilewidth":16
+        }],
+ "tilewidth":16,
+ "type":"map",
+ "version":"1.10",
+ "width":48
 }
