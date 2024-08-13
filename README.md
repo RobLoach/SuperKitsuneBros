@@ -43,6 +43,7 @@ An attempt at recreating [1-1](https://en.wikipedia.org/wiki/World_1-1) of [Supe
 
 - https://nesmaps.com/maps/SuperMarioBrothers/SuperMarioBrothers.html
 - https://downloads.khinsider.com/game-soundtracks/album/super-mario-bros
+- https://fontstruct.com/fontstructions/show/1332355/arcade-classic-2-19
 
 ## License
 
