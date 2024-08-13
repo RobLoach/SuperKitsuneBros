@@ -322,7 +322,7 @@
             {
               "name": "zoneTo",
               "type": "string",
-              "value": "level--smb--1-1--underground"
+              "value": "level-1-1-underground"
             }
           ],
           "rotation": 0,
@@ -594,7 +594,7 @@
     {
       "name": "background",
       "type": "string",
-      "value": "bg-smb-outside"
+      "value": "bg-bluesky"
     },
     {
       "name": "customIndicator",
@@ -604,7 +604,7 @@
     {
       "name": "music",
       "type": "string",
-      "value": "music-smb-ground"
+      "value": "music-ground"
     },
     {
       "name": "postScene",
@@ -668,7 +668,7 @@
     {
       "columns": 32,
       "firstgid": 4813,
-      "image": "superkitsunebros.png",
+      "image": "tileset.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,

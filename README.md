@@ -20,9 +20,8 @@ An attempt at recreating [1-1](https://en.wikipedia.org/wiki/World_1-1) of [Supe
 
 ## Development
 
-1. Copy `~/steam/debian-installation/steamapps/comon/KitsuneTails/docs/objects.json` along with the `objects` directory to the same folder
+1. Run `npm it` to set up the correct tileset paths
 2. Open `level.json` in [Tiled](https://www.mapeditor.org/)
-3. Add a new Image Layer called "Template", referencing [template.png](template.png)
 
 ## Resources
 

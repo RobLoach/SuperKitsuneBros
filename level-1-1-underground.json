@@ -151,7 +151,7 @@
     {
       "name": "music",
       "type": "string",
-      "value": "music-smb-underground"
+      "value": "music-underground"
     }
   ],
   "renderorder": "right-down",
@@ -197,7 +197,7 @@
     {
       "columns": 32,
       "firstgid": 5529,
-      "image": "superkitsunebros.png",
+      "image": "tileset.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,
