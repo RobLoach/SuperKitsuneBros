@@ -1,12 +1,13 @@
 # Kitsune Tails: Super Kitsune Bros
 
-An attempt at recreating [1-1](https://en.wikipedia.org/wiki/World_1-1) of [Super Mario Bros](https://en.wikipedia.org/wiki/Super_Mario_Bros) in [Kitsune Tails](https://kitsunegames.com/kitsunetails/).
+An attempt at a faithful recreation of [1-1](https://en.wikipedia.org/wiki/World_1-1) of [Super Mario Bros](https://en.wikipedia.org/wiki/Super_Mario_Bros) in [Kitsune Tails](https://kitsunegames.com/kitsunetails/).
 
 ![Screenshot](screenshot.jpg)
 
 ## Installation
 
-1. Download the folder to your `KitsuneTails/levels` folder, usually available at one of the following...
+1. [Download](https://github.com/RobLoach/SuperKitsuneBros/releases) the latest release
+2. Extract it to your `KitsuneTails/levels` folder, usually available at one of the following...
     ```
     AppData\Roaming\KitsuneTails\levels
     $XDG_DATA_HOME/KitsuneTails/levels
@@ -14,9 +15,11 @@ An attempt at recreating [1-1](https://en.wikipedia.org/wiki/World_1-1) of [Supe
     ~/.local/share/KitsuneTails/levels
     ```
 
-2. Launch Kitsune Tails
-3. Select Mods
-4. Choose SuperKitsuneBros
+    The result should appear like `KitsuneTails/levels/SuperKitsuneBros/level.json`
+  
+3. Launch Kitsune Tails
+4. Select Mods
+5. Choose SuperKitsuneBros
 
 ## Development
 
