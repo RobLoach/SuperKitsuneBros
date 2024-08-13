@@ -30,6 +30,9 @@ for (const path of paths) {
             if (existsSync(newSource)) {
                 tileset.source = newSource
             }
+            if (fileBasename === 'objects.json') {
+                tileset.source = 'objects.json'
+            }
         }
     }
     console.log(data);
