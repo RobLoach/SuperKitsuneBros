@@ -9,7 +9,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const steam = getGamePath(1325260);
 
-if (!steam.game) {
+if (!steam?.game) {
     console.error('Kitsune Tails in Steam not found');
     process.exit(1);
 }
