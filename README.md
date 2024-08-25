@@ -13,6 +13,7 @@ An attempt at a faithful recreation of [1-1](https://en.wikipedia.org/wiki/World
     $XDG_DATA_HOME/KitsuneTails/levels
     ~/Library/Application Support/KitsuneTails/levels
     ~/.local/share/KitsuneTails/levels
+    ~/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/KitsuneTails/levels
     ```
 
     The result should appear like `KitsuneTails/levels/SuperKitsuneBros/level.json`
