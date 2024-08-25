@@ -1627,7 +1627,7 @@
             {
               "name": "zoneTo",
               "type": "string",
-              "value": "level-1-1-game"
+              "value": "level-1-2-game"
             }
           ],
           "rotation": 0,
@@ -1844,7 +1844,7 @@
         0,
         5422,
         5451,
-        5422,
+        5423,
         0,
         0,
         0,
