@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "globby": "^14.0.2",
-    "steam-game-path": "^2.2"
+    "steam-game-path": "github:RobLoach/steam-game-path#flatpak"
   },
   "repository": {
     "type": "git",
