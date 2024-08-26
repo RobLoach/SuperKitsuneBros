@@ -1904,7 +1904,7 @@
     {
       "columns": 32,
       "firstgid": 1,
-      "image": "tileset.png",
+      "image": "../assets/tileset.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,

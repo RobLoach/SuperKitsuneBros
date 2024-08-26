@@ -11724,7 +11724,7 @@
             {
               "name": "zoneTo",
               "type": "string",
-              "value": "level-1-1-underground"
+              "value": "level/1-1-underground"
             }
           ],
           "rotation": 0,
@@ -11979,7 +11979,7 @@
             {
               "name": "zoneTo",
               "type": "string",
-              "value": "level-1-2-begin"
+              "value": "level/1-2-begin"
             }
           ],
           "rotation": 0,
@@ -15832,7 +15832,7 @@
     {
       "name": "background",
       "type": "string",
-      "value": "bg-bluesky"
+      "value": "levels/background-bluesky"
     },
     {
       "name": "customIndicator",
@@ -15842,7 +15842,7 @@
     {
       "name": "music",
       "type": "string",
-      "value": "music-ground"
+      "value": "music/theme"
     },
     {
       "name": "postScene",
@@ -15881,7 +15881,7 @@
   "tilesets": [
     {
       "firstgid": 1,
-      "source": "objects.json"
+      "source": "../assets/objects.json"
     },
     {
       "firstgid": 205,
@@ -15906,7 +15906,7 @@
     {
       "columns": 32,
       "firstgid": 4813,
-      "image": "tileset.png",
+      "image": "../assets/tileset.png",
       "imageheight": 512,
       "imagewidth": 512,
       "margin": 0,

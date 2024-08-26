@@ -14,11 +14,12 @@ if (!steam?.game) {
     process.exit(1);
 }
 
-const paths = await globby([`${__dirname}/../*.json`]);
+const paths = await globby([`${__dirname}/../*.json`, `${__dirname}/../levels/*.json`]);
 for (const path of paths) {
     if (path.includes('package.json') || path.includes('package-lock.json') || path.includes('objects.json')) {
         continue;
     }
+    const pathBasename = basename(path);
     const data = JSON.parse(readFileSync(path, 'utf8'));
     for (let tileset of data.tilesets) {
         if (tileset.source) {
@@ -32,7 +33,10 @@ for (const path of paths) {
                 tileset.source = newSource
             }
             if (fileBasename === 'objects.json') {
-                tileset.source = 'objects.json'
+                tileset.source = '../assets/objects.json'
+                if (pathBasename === 'level.json') {
+                    tileset.source = 'assets/objects.json'
+                }
             }
         }
     }

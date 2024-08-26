@@ -2,7 +2,7 @@
 
 An attempt at a faithful recreation of [1-1](https://en.wikipedia.org/wiki/World_1-1) of [Super Mario Bros](https://en.wikipedia.org/wiki/Super_Mario_Bros) in [Kitsune Tails](https://kitsunegames.com/kitsunetails/).
 
-![Screenshot](screenshot.jpg)
+![Screenshot](src/screenshot.jpg)
 
 ## Installation
 
@@ -37,7 +37,7 @@ An attempt at a faithful recreation of [1-1](https://en.wikipedia.org/wiki/World
 | level-1-1-game.json | The gameplay level for 1-1 |
 | level-1-1-underground.json | The underground stage for 1-1 |
 | level.json | The opening welcome screen for the game |
-| music-ground.ogg | Music for the game |
+| music/theme.ogg | Music for the game |
 | music-underground.ogg | Music for the underground |
 | tileset.png | Additional decoration tileset from the original game |
 | objects.json | The Kitsune Tails original objects file |
