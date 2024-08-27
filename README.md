@@ -25,8 +25,15 @@ An attempt at a faithful recreation of [1-1](https://en.wikipedia.org/wiki/World
 ## Development
 
 1. Have [Node.js](https://nodejs.org/en) installed
-1. Run `npm it` to set up the correct tileset paths
+1. Clone project to your levels dir (from above)
+1. For Steam installed Kitsune: Run `npm it`
+1. For non-Steam install (itch, etc): run `npm i` then `npm t /WHEREEVER/KITSUNE/IS/INSTALLED`
 1. Open `SuperKitsuneBros.tiled-project` with [Tiled](https://www.mapeditor.org/)
+
+See deps/ for example levels from Kitsume as well as the modding PDF.
+
+> [!NOTE]  
+> Users who have installed Linux flatpak version of both Tiled & Steam will have issues, so it's recommended you install a non-flatpak version of 1 of those (I use non-flatpak Steam.)
 
 ### File Descriptions
 
