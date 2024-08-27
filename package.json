@@ -9,6 +9,7 @@
     "test": "node tools/setup.js"
   },
   "dependencies": {
+    "glob": "^11.0.0",
     "steam-game-path": "github:RobLoach/steam-game-path#flatpak"
   },
   "repository": {
