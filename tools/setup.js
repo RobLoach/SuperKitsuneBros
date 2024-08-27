@@ -1,6 +1,6 @@
 // this will setup tiled to work correctly
 
-import { cp, readFile, writeFile } from 'fs/promises'
+import { cp, readFile, writeFile, access } from 'node:fs/promises'
 import { getGamePath } from 'steam-game-path'
 import { glob } from 'glob'
 
@@ -11,6 +11,7 @@ if (!kitsuneInstallDir) {
   kitsuneInstallDir = getGamePath(1325260)?.game?.path
 }
 
+await access(kitsuneInstallDir)
 if (!kitsuneInstallDir) {
   throw new Error('Could not find Kitsune Tails install-dir')
 }
