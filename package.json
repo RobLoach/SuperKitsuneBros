@@ -6,10 +6,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node src/setup.js"
+    "test": "node tools/setup.js"
   },
   "dependencies": {
-    "globby": "^14.0.2",
     "steam-game-path": "github:RobLoach/steam-game-path#flatpak"
   },
   "repository": {

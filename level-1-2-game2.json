@@ -3051,27 +3051,27 @@
   "tilesets": [
     {
       "firstgid": 1,
-      "source": "objects.json"
+      "source": "deps/Content/objects.json"
     },
     {
       "firstgid": 205,
-      "source": "/home/rob/.steam/debian-installation/steamapps/common/KitsuneTails/Content/introworld-b.json"
+      "source": "deps/Content/introworld-b.json"
     },
     {
       "firstgid": 1229,
-      "source": "/home/rob/.steam/debian-installation/steamapps/common/KitsuneTails/Content/cave.json"
+      "source": "deps/Content/cave.json"
     },
     {
       "firstgid": 1741,
-      "source": "/home/rob/.steam/debian-installation/steamapps/common/KitsuneTails/Content/earthworld.json"
+      "source": "deps/Content/earthworld.json"
     },
     {
       "firstgid": 3277,
-      "source": "/home/rob/.steam/debian-installation/steamapps/common/KitsuneTails/Content/animated-tile.json"
+      "source": "deps/Content/animated-tile.json"
     },
     {
       "firstgid": 3789,
-      "source": "/home/rob/.steam/debian-installation/steamapps/common/KitsuneTails/Content/introworld-fall.json"
+      "source": "deps/Content/introworld-fall.json"
     },
     {
       "columns": 32,
@@ -3088,7 +3088,7 @@
     },
     {
       "firstgid": 5837,
-      "source": "/home/rob/.steam/debian-installation/steamapps/common/KitsuneTails/Content/function_blocks.json"
+      "source": "deps/Content/function_blocks.json"
     }
   ],
   "tilewidth": 16,
