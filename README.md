@@ -26,7 +26,8 @@ An attempt at a faithful recreation of [1-1](https://en.wikipedia.org/wiki/World
 
 1. Have [Node.js](https://nodejs.org/en) installed
 1. Clone project to your levels dir (from above)
-1. Run `npm it` to copy all the dependencies (see deps/ for examples from Kitsume as well as the modding PDF.)
+1. For Steam install: Run `npm it` to copy all the dependencies (see deps/ for examples from Kitsume as well as the modding PDF.)
+1. For non-Steam install (itch, etc): run `npm i` then `npm t /WHEREEVER/KITSUNE/IS/INSTALLED`
 1. Open `SuperKitsuneBros.tiled-project` with [Tiled](https://www.mapeditor.org/)
 
 > [!NOTE]  

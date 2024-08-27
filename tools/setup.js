@@ -4,16 +4,16 @@ import { cp, readFile, writeFile } from 'fs/promises'
 import { getGamePath } from 'steam-game-path'
 import { glob } from 'glob'
 
-// get the location of installed game-files
-function getKitsuneGameDir () {
-  const { game } = getGamePath(1325260)
-  if (!game?.path) {
-    throw new Error('Could not find Kitsune Tails install-dir')
-  }
-  return game.path
+let [,, kitsuneInstallDir] = process.argv
+
+// not user-specifed, find it form Steam
+if (!kitsuneInstallDir) {
+  kitsuneInstallDir = getGamePath(1325260)?.game?.path
 }
 
-const kitsuneInstallDir = getKitsuneGameDir()
+if (!kitsuneInstallDir) {
+  throw new Error('Could not find Kitsune Tails install-dir')
+}
 
 // copy deps
 await cp(`${kitsuneInstallDir}/Content/`, 'deps/Content', { recursive: true })
