@@ -1,6 +1,6 @@
 {
   "name": "superkitsunebros",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "An attempt at recreating [1-1](https://en.wikipedia.org/wiki/World_1-1) of [Super Mario Bros](https://en.wikipedia.org/wiki/Super_Mario_Bros) in [Kitsune Tails](https://kitsunegames.com/kitsunetails/).",
   "main": "index.js",
   "private": true,
@@ -17,7 +17,7 @@
     "url": "git+https://github.com/RobLoach/SuperKitsuneBros.git"
   },
   "author": "Rob Loach (https://robloach.net)",
-  "license": "ISC",
+  "license": "CC-BY-NC-SA-4.0",
   "bugs": {
     "url": "https://github.com/RobLoach/SuperKitsuneBros/issues"
   },
