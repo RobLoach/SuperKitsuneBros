@@ -4,6 +4,17 @@ An attempt at a faithful recreation of [1-1](https://en.wikipedia.org/wiki/World
 
 ![Screenshot](tools/screenshot.jpg)
 
+## Features
+
+- [ ] World 1
+  - [x] 1-1
+  - [x] 1-2
+  - [x] 1-3
+  - [ ] 1-4
+- [ ] World 2
+- [ ] World 3
+- [ ] World 4
+
 ## Installation
 
 1. [Download](https://github.com/RobLoach/SuperKitsuneBros/releases) the latest release
