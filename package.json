@@ -6,7 +6,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node tools/setup.js"
+    "test": "node tools/setup.js",
+    "clean": "rm -rf node_modules .git deps package-lock.json"
   },
   "dependencies": {
     "glob": "^11.0.0",

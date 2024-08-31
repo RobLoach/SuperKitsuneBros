@@ -41,6 +41,7 @@ An attempt at a faithful recreation of [1-1](https://en.wikipedia.org/wiki/World
     ```
 1. Open `SuperKitsuneBros.tiled-project` with [Tiled](https://www.mapeditor.org/)
 1. See the newly created `deps` directory for example levels from Kitsume as well as the modding documentation
+1. Before publishing a new version, first run `npm run clean` to clean up the files
 
 ## File Descriptions
 
