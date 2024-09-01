@@ -6,11 +6,7 @@ An attempt at a faithful recreation of [1-1](https://en.wikipedia.org/wiki/World
 
 ## Features
 
-- [ ] World 1
-  - [x] 1-1
-  - [x] 1-2
-  - [x] 1-3
-  - [ ] 1-4
+- [x] World 1
 - [ ] World 2
 - [ ] World 3
 - [ ] World 4
