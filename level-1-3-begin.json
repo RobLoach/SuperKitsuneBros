@@ -108,6 +108,12 @@
                  "height":48,
                  "id":120,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"actor",
+                         "type":"string",
+                         "value":"Mario"
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -195,7 +201,7 @@
         {
          "name":"customIndicator",
          "type":"string",
-         "value":" "
+         "value":"1-3"
         }, 
         {
          "name":"disableInventory",
@@ -211,11 +217,6 @@
          "name":"hideLevelIndicator",
          "type":"bool",
          "value":true
-        }, 
-        {
-         "name":"level1",
-         "type":"string",
-         "value":"level-1-1-begin"
         }, 
         {
          "name":"postScene",
