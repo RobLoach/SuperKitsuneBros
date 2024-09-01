@@ -132,6 +132,34 @@
                  "width":32,
                  "x":48,
                  "y":176
+                }, 
+                {
+                 "gid":30,
+                 "height":32,
+                 "id":142,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"alwaysActive",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"visible",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"zoneTo",
+                         "type":"string",
+                         "value":"level-1-3-begin"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":448,
+                 "y":208
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -174,7 +202,7 @@
          "y":0
         }],
  "nextlayerid":21,
- "nextobjectid":142,
+ "nextobjectid":143,
  "orientation":"orthogonal",
  "properties":[
         {
