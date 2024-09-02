@@ -260,18 +260,6 @@
                  "y":176
                 }, 
                 {
-                 "gid":42,
-                 "height":32,
-                 "id":150,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":48,
-                 "x":1168,
-                 "y":80
-                }, 
-                {
                  "gid":92,
                  "height":16,
                  "id":152,
@@ -378,18 +366,6 @@
                  "width":16,
                  "x":1456.585,
                  "y":160.826666666667
-                }, 
-                {
-                 "gid":42,
-                 "height":32,
-                 "id":158,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":48,
-                 "x":1808,
-                 "y":96
                 }, 
                 {
                  "gid":92,
@@ -528,6 +504,36 @@
                  "width":16,
                  "x":2576,
                  "y":208
+                }, 
+                {
+                 "gid":38,
+                 "height":96,
+                 "id":165,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"flyDistance",
+                         "type":"float",
+                         "value":6
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":48,
+                 "x":1168,
+                 "y":160
+                }, 
+                {
+                 "gid":38,
+                 "height":96,
+                 "id":166,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":48,
+                 "x":1808,
+                 "y":160
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -570,7 +576,7 @@
          "y":0
         }],
  "nextlayerid":21,
- "nextobjectid":165,
+ "nextobjectid":167,
  "orientation":"orthogonal",
  "properties":[
         {

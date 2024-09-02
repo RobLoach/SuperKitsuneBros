@@ -1,13 +1,14 @@
 {
   "name": "superkitsunebros",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "description": "An attempt at recreating [1-1](https://en.wikipedia.org/wiki/World_1-1) of [Super Mario Bros](https://en.wikipedia.org/wiki/Super_Mario_Bros) in [Kitsune Tails](https://kitsunegames.com/kitsunetails/).",
   "main": "index.js",
   "private": true,
   "type": "module",
   "scripts": {
     "test": "node tools/setup.js",
-    "clean": "rm -rf node_modules .git deps package-lock.json"
+    "clean": "rm -rf node_modules .git deps package-lock.json",
+    "prepare": "rm -rf SuperKitsuneBros.tiled-project SuperKitsuneBros.tiled-session tools node_modules deps package.json .gitignore .git"
   },
   "dependencies": {
     "glob": "^11.0.0",
