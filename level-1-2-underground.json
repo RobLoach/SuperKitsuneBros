@@ -553,17 +553,7 @@
                         {
                          "name":"zoneTo",
                          "type":"string",
-                         "value":"level-1-2-game2"
-                        }, 
-                        {
-                         "name":"zoneX",
-                         "type":"float",
-                         "value":3.5
-                        }, 
-                        {
-                         "name":"zoneY",
-                         "type":"int",
-                         "value":10
+                         "value":"level-2-1-begin"
                         }],
                  "rotation":0,
                  "type":"",
