@@ -18,12 +18,12 @@ jobs:
       - run: node tools/lint.js
       - run: npm run package
       - run: |
-          mkdir ../SuperKitsuneBros
-          cp -r . ../SuperKitsuneBros
-          cd ..
-          zip -r SuperKitsuneBros.zip SuperKitsuneBros
+          mkdir -p "$RUNNER_TEMP/package/SuperKitsuneBros"
+          cp -r . "$RUNNER_TEMP/package/SuperKitsuneBros"
+          cd "$RUNNER_TEMP/package"
+          zip -r "$RUNNER_TEMP/SuperKitsuneBros.zip" SuperKitsuneBros
       - env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "$GITHUB_REF_NAME" ../SuperKitsuneBros.zip --repo "$GITHUB_REPOSITORY" --generate-notes \
-            || gh release upload "$GITHUB_REF_NAME" ../SuperKitsuneBros.zip --repo "$GITHUB_REPOSITORY" --clobber
+          gh release create "$GITHUB_REF_NAME" "$RUNNER_TEMP/SuperKitsuneBros.zip" --repo "$GITHUB_REPOSITORY" --generate-notes \
+            || gh release upload "$GITHUB_REF_NAME" "$RUNNER_TEMP/SuperKitsuneBros.zip" --repo "$GITHUB_REPOSITORY" --clobber
