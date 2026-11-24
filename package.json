@@ -7,8 +7,8 @@
   "type": "module",
   "scripts": {
     "test": "node tools/setup.js",
-    "clean": "rm -rf node_modules .git deps package-lock.json",
-    "prepare": "rm -rf SuperKitsuneBros.tiled-project SuperKitsuneBros.tiled-session tools node_modules deps package.json .gitignore .git"
+    "clean": "rm -rf node_modules deps package-lock.json",
+    "package": "rm -rf SuperKitsuneBros.tiled-project SuperKitsuneBros.tiled-session tools node_modules deps package.json package-lock.json .gitignore .git"
   },
   "dependencies": {
     "glob": "^13.0.6",

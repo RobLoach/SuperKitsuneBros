@@ -24,7 +24,7 @@ Subscribe to [Super Kitsune Bros on the Steam Workshop](https://steamcommunity.c
     $XDG_DATA_HOME/KitsuneTails/levels
     ~/Library/Application Support/KitsuneTails/levels
     ~/.local/share/KitsuneTails/levels
-    ~/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/KitsuneTails/levels
+    ~/.var/app/com.valvesoftware.Steam/data/KitsuneTails/levels
     ```
 
     The result should appear like `KitsuneTails/levels/SuperKitsuneBros/level.json`
@@ -38,13 +38,12 @@ Subscribe to [Super Kitsune Bros on the Steam Workshop](https://steamcommunity.c
 1. Have [Node.js](https://nodejs.org/en) installed
 1. Clone project to your levels dir (from above)
     ``` sh
-    git clone https://github.com/RobLoach/SuperKitsuneBros.git ~/.local/share/KitsuneTails/levels
+    git clone https://github.com/RobLoach/SuperKitsuneBros.git ~/.local/share/KitsuneTails/levels/SuperKitsuneBros
     ```
 1. For Steam installed Kitsune, run...
     ```
     npm it
     ```
-    > Note that there have been reported issues with the Flatpak-install of Steam
 1. For non-Steam install (itch, etc), run...
     ```
     npm i
@@ -52,7 +51,8 @@ Subscribe to [Super Kitsune Bros on the Steam Workshop](https://steamcommunity.c
     ```
 1. Open `SuperKitsuneBros.tiled-project` with [Tiled](https://www.mapeditor.org/)
 1. See the newly created `deps` directory for example levels from Kitsune Tails as well as the modding documentation
-1. Before publishing a new version, first run `npm run clean` to clean up the files
+1. To remove the downloaded dependencies, run `npm run clean`
+1. To publish a new version, run `npm run package` in a separate clone of the project. It deletes all the development files, including `.git`, leaving only the mod
 
 ## File Descriptions
 
