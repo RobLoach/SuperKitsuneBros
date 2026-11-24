@@ -11,7 +11,7 @@
     "prepare": "rm -rf SuperKitsuneBros.tiled-project SuperKitsuneBros.tiled-session tools node_modules deps package.json .gitignore .git"
   },
   "dependencies": {
-    "glob": "^11.0.0",
+    "glob": "^13.0.6",
     "steam-game-path": "^4.0.2"
   },
   "repository": {
