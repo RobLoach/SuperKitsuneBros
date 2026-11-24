@@ -126,11 +126,21 @@
      "y": 112
     },
     {
-     "gid": 75,
-     "height": 32,
+     "gid": 38,
+     "height": 96,
      "id": 2,
      "name": "",
      "properties": [
+      {
+       "name": "flyDistance",
+       "type": "float",
+       "value": 7
+      },
+      {
+       "name": "flyVertical",
+       "type": "bool",
+       "value": true
+      },
       {
        "name": "respawn",
        "type": "bool",
@@ -142,14 +152,24 @@
      "visible": true,
      "width": 48,
      "x": 272,
-     "y": 132
+     "y": 224
     },
     {
-     "gid": 75,
-     "height": 32,
+     "gid": 38,
+     "height": 96,
      "id": 3,
      "name": "",
      "properties": [
+      {
+       "name": "flyDistance",
+       "type": "float",
+       "value": 7
+      },
+      {
+       "name": "flyVertical",
+       "type": "bool",
+       "value": true
+      },
       {
        "name": "respawn",
        "type": "bool",
@@ -161,14 +181,24 @@
      "visible": true,
      "width": 48,
      "x": 480,
-     "y": 132
+     "y": 224
     },
     {
-     "gid": 75,
-     "height": 32,
+     "gid": 38,
+     "height": 96,
      "id": 4,
      "name": "",
      "properties": [
+      {
+       "name": "flyDistance",
+       "type": "float",
+       "value": 7
+      },
+      {
+       "name": "flyVertical",
+       "type": "bool",
+       "value": true
+      },
       {
        "name": "respawn",
        "type": "bool",
@@ -180,14 +210,24 @@
      "visible": true,
      "width": 48,
      "x": 1744,
-     "y": 132
+     "y": 224
     },
     {
-     "gid": 75,
-     "height": 32,
+     "gid": 38,
+     "height": 96,
      "id": 5,
      "name": "",
      "properties": [
+      {
+       "name": "flyDistance",
+       "type": "float",
+       "value": 7
+      },
+      {
+       "name": "flyVertical",
+       "type": "bool",
+       "value": true
+      },
       {
        "name": "respawn",
        "type": "bool",
@@ -199,7 +239,7 @@
      "visible": true,
      "width": 48,
      "x": 1808,
-     "y": 132
+     "y": 224
     },
     {
      "gid": 91,
