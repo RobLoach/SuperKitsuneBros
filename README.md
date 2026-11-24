@@ -1,12 +1,12 @@
 # Kitsune Tails: Super Kitsune Bros
 
-An attempt at a faithful recreation of World 1 of [Super Mario Bros](https://en.wikipedia.org/wiki/Super_Mario_Bros) in [Kitsune Tails](https://kitsunegames.com/kitsunetails/).
+An attempt at a faithful recreation of Worlds 1 to 4 of [Super Mario Bros](https://en.wikipedia.org/wiki/Super_Mario_Bros) in [Kitsune Tails](https://kitsunegames.com/kitsunetails/).
 
 ![Screenshot](tools/screenshot.jpg)
 
 ## Features
 
-This currently only includes the first world. If you'd like to help see its completion, feel free to get involved.
+This currently includes the first two worlds. If you'd like to help see its completion, feel free to get involved.
 
 - [x] World 1
 - [x] World 2
@@ -14,6 +14,8 @@ This currently only includes the first world. If you'd like to help see its comp
 - [ ] World 4
 
 ## Installation
+
+Subscribe to [Super Kitsune Bros on the Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3320203878), or install it manually...
 
 1. [Download](https://github.com/RobLoach/SuperKitsuneBros/releases) the latest release
 2. Extract it to your `KitsuneTails/levels` folder, usually available at one of the following...
@@ -46,10 +48,10 @@ This currently only includes the first world. If you'd like to help see its comp
 1. For non-Steam install (itch, etc), run...
     ```
     npm i
-    npm t /WHEREEVER/KITSUNE/IS/INSTALLED
+    npm t /WHEREVER/KITSUNE/IS/INSTALLED
     ```
 1. Open `SuperKitsuneBros.tiled-project` with [Tiled](https://www.mapeditor.org/)
-1. See the newly created `deps` directory for example levels from Kitsume as well as the modding documentation
+1. See the newly created `deps` directory for example levels from Kitsune Tails as well as the modding documentation
 1. Before publishing a new version, first run `npm run clean` to clean up the files
 
 ## File Descriptions
