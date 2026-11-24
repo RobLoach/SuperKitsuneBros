@@ -35,7 +35,7 @@ Subscribe to [Super Kitsune Bros on the Steam Workshop](https://steamcommunity.c
 
 ## Development
 
-1. Have [Node.js](https://nodejs.org/en) installed
+1. Have [Node.js](https://nodejs.org/en) 22.12 or newer installed
 1. Clone project to your levels dir (from above)
     ``` sh
     git clone https://github.com/RobLoach/SuperKitsuneBros.git ~/.local/share/KitsuneTails/levels/SuperKitsuneBros
