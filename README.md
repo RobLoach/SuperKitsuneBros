@@ -9,7 +9,7 @@ An attempt at a faithful recreation of World 1 of [Super Mario Bros](https://en.
 This currently only includes the first world. If you'd like to help see its completion, feel free to get involved.
 
 - [x] World 1
-- [ ] World 2 (2-1, 2-3 and 2-4; 2-2 is still missing)
+- [x] World 2
 - [ ] World 3
 - [ ] World 4
 
