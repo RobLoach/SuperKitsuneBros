@@ -1,28 +1,30 @@
 # Kitsune Tails: Super Kitsune Bros
 
-An attempt at a faithful recreation of World 1 of [Super Mario Bros](https://en.wikipedia.org/wiki/Super_Mario_Bros) in [Kitsune Tails](https://kitsunegames.com/kitsunetails/).
+An attempt at a faithful recreation of Worlds 1 to 4 of [Super Mario Bros](https://en.wikipedia.org/wiki/Super_Mario_Bros) in [Kitsune Tails](https://kitsunegames.com/kitsunetails/).
 
 ![Screenshot](tools/screenshot.jpg)
 
 ## Features
 
-This currently only includes the first world. If you'd like to help see its completion, feel free to get involved.
+This currently includes the first two worlds. If you'd like to help see its completion, feel free to get involved.
 
 - [x] World 1
-- [ ] World 2
+- [x] World 2
 - [ ] World 3
 - [ ] World 4
 
 ## Installation
 
-1. [Download](https://github.com/RobLoach/SuperKitsuneBros/releases) the latest release
+Subscribe to [Super Kitsune Bros on the Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3320203878), or install it manually...
+
+1. Download `SuperKitsuneBros.zip` from the [latest release](https://github.com/RobLoach/SuperKitsuneBros/releases/latest)
 2. Extract it to your `KitsuneTails/levels` folder, usually available at one of the following...
     ```
     AppData\Roaming\KitsuneTails\levels
     $XDG_DATA_HOME/KitsuneTails/levels
     ~/Library/Application Support/KitsuneTails/levels
     ~/.local/share/KitsuneTails/levels
-    ~/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/KitsuneTails/levels
+    ~/.var/app/com.valvesoftware.Steam/data/KitsuneTails/levels
     ```
 
     The result should appear like `KitsuneTails/levels/SuperKitsuneBros/level.json`
@@ -33,24 +35,33 @@ This currently only includes the first world. If you'd like to help see its comp
 
 ## Development
 
-1. Have [Node.js](https://nodejs.org/en) installed
+1. Have [Node.js](https://nodejs.org/en) 22.12 or newer installed
 1. Clone project to your levels dir (from above)
     ``` sh
-    git clone https://github.com/RobLoach/SuperKitsuneBros.git ~/.local/share/KitsuneTails/levels
+    git clone https://github.com/RobLoach/SuperKitsuneBros.git ~/.local/share/KitsuneTails/levels/SuperKitsuneBros
+    ```
+    On Windows...
+    ``` cmd
+    git clone https://github.com/RobLoach/SuperKitsuneBros.git %APPDATA%\KitsuneTails\levels\SuperKitsuneBros
     ```
 1. For Steam installed Kitsune, run...
     ```
     npm it
     ```
-    > Note that there have been reported issues with the Flatpak-install of Steam
 1. For non-Steam install (itch, etc), run...
     ```
     npm i
-    npm t /WHEREEVER/KITSUNE/IS/INSTALLED
+    npm t /WHEREVER/KITSUNE/IS/INSTALLED
     ```
 1. Open `SuperKitsuneBros.tiled-project` with [Tiled](https://www.mapeditor.org/)
-1. See the newly created `deps` directory for example levels from Kitsume as well as the modding documentation
-1. Before publishing a new version, first run `npm run clean` to clean up the files
+1. See the newly created `deps` directory for example levels from Kitsune Tails as well as the modding documentation
+1. Run `npm run lint` to check the maps for broken links and bad data
+1. To remove the downloaded dependencies, run `npm run clean`
+1. To publish a new version, push a `v*` tag. GitHub Actions builds `SuperKitsuneBros.zip` with `npm run package` and attaches it to the release. `npm run package` deletes all the development files, including `.git`, so only run it locally in a separate clone
+1. To update the [Steam Workshop item](https://steamcommunity.com/sharedfiles/filedetails/?id=3320203878)...
+    1. Extract the release's `SuperKitsuneBros.zip` into your levels folder, in place of your clone. Only mods there can be uploaded
+    1. Put a 16:9 preview image named `SuperKitsuneBros.png` next to the `SuperKitsuneBros` folder
+    1. In Kitsune Tails, select the mod in the Mods menu and press the menu3 button to upload it
 
 ## File Descriptions
 

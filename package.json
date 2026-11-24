@@ -1,18 +1,22 @@
 {
   "name": "superkitsunebros",
   "version": "1.4.0",
-  "description": "An attempt at recreating [1-1](https://en.wikipedia.org/wiki/World_1-1) of [Super Mario Bros](https://en.wikipedia.org/wiki/Super_Mario_Bros) in [Kitsune Tails](https://kitsunegames.com/kitsunetails/).",
+  "description": "An attempt at recreating Worlds 1 to 4 of [Super Mario Bros](https://en.wikipedia.org/wiki/Super_Mario_Bros) in [Kitsune Tails](https://kitsunegames.com/kitsunetails/).",
   "main": "index.js",
   "private": true,
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "type": "module",
   "scripts": {
     "test": "node tools/setup.js",
-    "clean": "rm -rf node_modules .git deps package-lock.json",
-    "prepare": "rm -rf SuperKitsuneBros.tiled-project SuperKitsuneBros.tiled-session tools node_modules deps package.json .gitignore .git"
+    "lint": "node tools/lint.js",
+    "clean": "rm -rf node_modules deps package-lock.json",
+    "package": "rm -rf .github SuperKitsuneBros.tiled-project SuperKitsuneBros.tiled-session tools node_modules deps package.json package-lock.json .gitignore .git"
   },
   "dependencies": {
-    "glob": "^11.0.0",
-    "steam-game-path": "github:RobLoach/steam-game-path#flatpak"
+    "glob": "^13.0.6",
+    "steam-game-path": "^4.0.2"
   },
   "repository": {
     "type": "git",

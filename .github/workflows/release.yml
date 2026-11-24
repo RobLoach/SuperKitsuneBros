@@ -1,0 +1,29 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node tools/lint.js
+      - run: npm run package
+      - run: |
+          mkdir ../SuperKitsuneBros
+          cp -r . ../SuperKitsuneBros
+          cd ..
+          zip -r SuperKitsuneBros.zip SuperKitsuneBros
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" ../SuperKitsuneBros.zip --repo "$GITHUB_REPOSITORY" --generate-notes \
+            || gh release upload "$GITHUB_REF_NAME" ../SuperKitsuneBros.zip --repo "$GITHUB_REPOSITORY" --clobber
