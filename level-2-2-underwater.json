@@ -567,7 +567,7 @@
   {
    "name": "music",
    "type": "string",
-   "value": "stage_underwater"
+   "value": "music-underwater"
   },
   {
    "name": "waterLevel",
