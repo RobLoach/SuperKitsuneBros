@@ -10,8 +10,9 @@
   "type": "module",
   "scripts": {
     "test": "node tools/setup.js",
+    "lint": "node tools/lint.js",
     "clean": "rm -rf node_modules deps package-lock.json",
-    "package": "rm -rf SuperKitsuneBros.tiled-project SuperKitsuneBros.tiled-session tools node_modules deps package.json package-lock.json .gitignore .git"
+    "package": "rm -rf .github SuperKitsuneBros.tiled-project SuperKitsuneBros.tiled-session tools node_modules deps package.json package-lock.json .gitignore .git"
   },
   "dependencies": {
     "glob": "^13.0.6",

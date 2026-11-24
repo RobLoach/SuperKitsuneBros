@@ -17,7 +17,7 @@ This currently includes the first two worlds. If you'd like to help see its comp
 
 Subscribe to [Super Kitsune Bros on the Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3320203878), or install it manually...
 
-1. [Download](https://github.com/RobLoach/SuperKitsuneBros/releases) the latest release
+1. Download `SuperKitsuneBros.zip` from the [latest release](https://github.com/RobLoach/SuperKitsuneBros/releases/latest)
 2. Extract it to your `KitsuneTails/levels` folder, usually available at one of the following...
     ```
     AppData\Roaming\KitsuneTails\levels
@@ -40,6 +40,10 @@ Subscribe to [Super Kitsune Bros on the Steam Workshop](https://steamcommunity.c
     ``` sh
     git clone https://github.com/RobLoach/SuperKitsuneBros.git ~/.local/share/KitsuneTails/levels/SuperKitsuneBros
     ```
+    On Windows...
+    ``` cmd
+    git clone https://github.com/RobLoach/SuperKitsuneBros.git %APPDATA%\KitsuneTails\levels\SuperKitsuneBros
+    ```
 1. For Steam installed Kitsune, run...
     ```
     npm it
@@ -51,8 +55,13 @@ Subscribe to [Super Kitsune Bros on the Steam Workshop](https://steamcommunity.c
     ```
 1. Open `SuperKitsuneBros.tiled-project` with [Tiled](https://www.mapeditor.org/)
 1. See the newly created `deps` directory for example levels from Kitsune Tails as well as the modding documentation
+1. Run `npm run lint` to check the maps for broken links and bad data
 1. To remove the downloaded dependencies, run `npm run clean`
-1. To publish a new version, run `npm run package` in a separate clone of the project. It deletes all the development files, including `.git`, leaving only the mod
+1. To publish a new version, push a `v*` tag. GitHub Actions builds `SuperKitsuneBros.zip` with `npm run package` and attaches it to the release. `npm run package` deletes all the development files, including `.git`, so only run it locally in a separate clone
+1. To update the [Steam Workshop item](https://steamcommunity.com/sharedfiles/filedetails/?id=3320203878)...
+    1. Extract the release's `SuperKitsuneBros.zip` into your levels folder, in place of your clone. Only mods there can be uploaded
+    1. Put a 16:9 preview image named `SuperKitsuneBros.png` next to the `SuperKitsuneBros` folder
+    1. In Kitsune Tails, select the mod in the Mods menu and press the menu3 button to upload it
 
 ## File Descriptions
 
