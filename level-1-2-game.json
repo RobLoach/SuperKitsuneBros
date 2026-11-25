@@ -196,7 +196,7 @@
         {
          "name":"music",
          "type":"string",
-         "value":"music-ground"
+         "value":"music-pipe"
         }, 
         {
          "name":"postScene",
