@@ -6,12 +6,12 @@ An attempt at a faithful recreation of Worlds 1 to 4 of [Super Mario Bros](https
 
 ## Features
 
-This currently includes the first three worlds. If you'd like to help see its completion, feel free to get involved.
+This currently includes all four worlds. If you'd like to help improve it, feel free to get involved.
 
 - [x] World 1
 - [x] World 2
 - [x] World 3
-- [ ] World 4
+- [x] World 4
 
 ## Installation
 
