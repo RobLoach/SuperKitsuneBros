@@ -78,6 +78,7 @@ Subscribe to [Super Kitsune Bros on the Steam Workshop](https://steamcommunity.c
 ## Resources
 
 - https://nesmaps.com/maps/SuperMarioBrothers/SuperMarioBrothers.html
+- https://www.mariowiki.com/Super_Mario_Bros.#Worlds_and_levels
 - https://downloads.khinsider.com/game-soundtracks/album/super-mario-bros
 - https://fontstruct.com/fontstructions/show/1332355/arcade-classic-2-19
 
