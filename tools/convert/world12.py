@@ -71,6 +71,26 @@ def clouds(lv, band, f):
     print(f, len(cells), 'cloud tiles')
 
 
+def fish(lv, f):
+    """blocks drawn where the image has a flying Cheep-cheep in the sky (2-3 had four)"""
+    m = json.load(open(f'{ROOT}/{f}'))
+    W = m['width']
+    layer = lambda n: next(l for l in m['layers'] if l['name'] == n)['data']
+    bg, blocks = layer('Background No Parallax'), layer('Blocks')
+    a = np.array(Image.open(f'{NES}/{lv}.png').convert('RGB'))[:240, :W * 16]
+    sky = a[0, 0]
+    gone = []
+    for y in range(15):
+        for x in range(W):
+            c = a[y * 16:y * 16 + 16, x * 16:x * 16 + 16]
+            if blocks[y * W + x] and (c == (216, 40, 0)).all(2).any() and (c == sky).all(2).mean() > 0.3:
+                gone += [(x, y)] + [(x, r) for r in (15, 16) if y == 14]
+    set_cells(f'{ROOT}/{f}', 'Background No Parallax', {y * W + x: 0 for x, y in gone})
+    set_cells(f'{ROOT}/{f}', 'Blocks', {y * W + x: 0 for x, y in gone})
+    print(f, 'removed blocks at', gone)
+
+
 if __name__ == '__main__':
     main()
     clouds('2-3', 0, 'level-2-3-game.json')
+    fish('2-3', 'level-2-3-game.json')
