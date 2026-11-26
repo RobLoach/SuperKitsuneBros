@@ -1,7 +1,7 @@
 {
   "name": "superkitsunebros",
   "version": "1.4.0",
-  "description": "An attempt at recreating Worlds 1 to 6 of [Super Mario Bros](https://en.wikipedia.org/wiki/Super_Mario_Bros) in [Kitsune Tails](https://kitsunegames.com/kitsunetails/).",
+  "description": "An attempt at recreating Worlds 1 to 7 of [Super Mario Bros](https://en.wikipedia.org/wiki/Super_Mario_Bros) in [Kitsune Tails](https://kitsunegames.com/kitsunetails/).",
   "main": "index.js",
   "private": true,
   "engines": {
