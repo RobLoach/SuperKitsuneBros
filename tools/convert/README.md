@@ -22,3 +22,4 @@ Run `npm t` first so `deps/Content` has the game's tilesets, then `npm run lint`
 - `fixflags.py` and `world12.py` give the hand-made World 1 and 2 maps (and the copies of them) the NES flag and the trees, fences and bushes, editing only those tiles with `textedit.py`.
 - `compact.py` drops copied tiles no map uses, merges near-identical ones and packs the rest; run it now and then, it isn't part of `run.py`.
 - `render.py map.json out.png [night]` and `zoom.py` draw maps and NES images for checking the results.
+- `ascii.py map.json 150-175 ...` prints the solid tiles, doors and pipes as text, to trace routes through mazes.
