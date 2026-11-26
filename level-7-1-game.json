@@ -274,27 +274,41 @@
      "y": 160
     },
     {
-     "gid": 79,
+     "gid": 123,
      "height": 32,
      "id": 12,
      "name": "",
+     "properties": [
+      {
+       "name": "group",
+       "type": "string",
+       "value": "hammer-7-1-1"
+      }
+     ],
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 48,
-     "x": 1342,
+     "width": 32,
+     "x": 1350,
      "y": 144
     },
     {
-     "gid": 79,
+     "gid": 123,
      "height": 32,
      "id": 13,
      "name": "",
+     "properties": [
+      {
+       "name": "group",
+       "type": "string",
+       "value": "hammer-7-1-1"
+      }
+     ],
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 48,
-     "x": 1372,
+     "width": 32,
+     "x": 1380,
      "y": 80
     },
     {
@@ -358,27 +372,41 @@
      "y": 176
     },
     {
-     "gid": 79,
+     "gid": 123,
      "height": 32,
      "id": 19,
      "name": "",
+     "properties": [
+      {
+       "name": "group",
+       "type": "string",
+       "value": "hammer-7-1-2"
+      }
+     ],
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 48,
-     "x": 2144,
+     "width": 32,
+     "x": 2152,
      "y": 208
     },
     {
-     "gid": 79,
+     "gid": 123,
      "height": 32,
      "id": 20,
      "name": "",
+     "properties": [
+      {
+       "name": "group",
+       "type": "string",
+       "value": "hammer-7-1-2"
+      }
+     ],
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 48,
-     "x": 2176,
+     "width": 32,
+     "x": 2184,
      "y": 144
     },
     {
