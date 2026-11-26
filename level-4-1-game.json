@@ -107,22 +107,15 @@
    "name": "Objects",
    "objects": [
     {
-     "gid": 139,
-     "height": 32,
+     "gid": 60,
+     "height": 40,
      "id": 1,
      "name": "",
-     "properties": [
-      {
-       "name": "spawn-type",
-       "type": "string",
-       "value": "coin"
-      }
-     ],
      "rotation": 0,
      "type": "",
      "visible": true,
      "width": 16,
-     "x": 400,
+     "x": 1472,
      "y": 96
     },
     {
@@ -141,7 +134,7 @@
      "type": "",
      "visible": true,
      "width": 16,
-     "x": 1024,
+     "x": 400,
      "y": 96
     },
     {
@@ -161,7 +154,7 @@
      "visible": true,
      "width": 16,
      "x": 1024,
-     "y": 160
+     "y": 96
     },
     {
      "gid": 139,
@@ -179,8 +172,8 @@
      "type": "",
      "visible": true,
      "width": 16,
-     "x": 1056,
-     "y": 96
+     "x": 1024,
+     "y": 160
     },
     {
      "gid": 139,
@@ -199,7 +192,7 @@
      "visible": true,
      "width": 16,
      "x": 1056,
-     "y": 160
+     "y": 96
     },
     {
      "gid": 139,
@@ -217,7 +210,7 @@
      "type": "",
      "visible": true,
      "width": 16,
-     "x": 1440,
+     "x": 1056,
      "y": 160
     },
     {
@@ -236,7 +229,7 @@
      "type": "",
      "visible": true,
      "width": 16,
-     "x": 1456,
+     "x": 1440,
      "y": 160
     },
     {
@@ -255,7 +248,7 @@
      "type": "",
      "visible": true,
      "width": 16,
-     "x": 1472,
+     "x": 1456,
      "y": 160
     },
     {
@@ -274,7 +267,7 @@
      "type": "",
      "visible": true,
      "width": 16,
-     "x": 1488,
+     "x": 1472,
      "y": 160
     },
     {
@@ -293,7 +286,7 @@
      "type": "",
      "visible": true,
      "width": 16,
-     "x": 2336,
+     "x": 1488,
      "y": 160
     },
     {
@@ -312,7 +305,7 @@
      "type": "",
      "visible": true,
      "width": 16,
-     "x": 2352,
+     "x": 2336,
      "y": 160
     },
     {
@@ -331,8 +324,8 @@
      "type": "",
      "visible": true,
      "width": 16,
-     "x": 2368,
-     "y": 96
+     "x": 2352,
+     "y": 160
     },
     {
      "gid": 139,
@@ -350,7 +343,7 @@
      "type": "",
      "visible": true,
      "width": 16,
-     "x": 2384,
+     "x": 2368,
      "y": 96
     },
     {
@@ -369,7 +362,7 @@
      "type": "",
      "visible": true,
      "width": 16,
-     "x": 2400,
+     "x": 2384,
      "y": 96
     },
     {
@@ -388,7 +381,7 @@
      "type": "",
      "visible": true,
      "width": 16,
-     "x": 2416,
+     "x": 2400,
      "y": 96
     },
     {
@@ -408,7 +401,7 @@
      "visible": true,
      "width": 16,
      "x": 2416,
-     "y": 160
+     "y": 96
     },
     {
      "gid": 139,
@@ -426,7 +419,7 @@
      "type": "",
      "visible": true,
      "width": 16,
-     "x": 2432,
+     "x": 2416,
      "y": 160
     },
     {
@@ -445,13 +438,32 @@
      "type": "",
      "visible": true,
      "width": 16,
+     "x": 2432,
+     "y": 160
+    },
+    {
+     "gid": 139,
+     "height": 32,
+     "id": 19,
+     "name": "",
+     "properties": [
+      {
+       "name": "spawn-type",
+       "type": "string",
+       "value": "coin"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
      "x": 2448,
      "y": 160
     },
     {
      "gid": 90,
      "height": 48,
-     "id": 19,
+     "id": 20,
      "name": "",
      "properties": [
       {
@@ -470,7 +482,7 @@
     {
      "gid": 132,
      "height": 32,
-     "id": 20,
+     "id": 21,
      "name": "",
      "rotation": 0,
      "type": "",
@@ -482,7 +494,7 @@
     {
      "gid": 156,
      "height": 48,
-     "id": 21,
+     "id": 22,
      "name": "",
      "rotation": 0,
      "type": "",
@@ -494,7 +506,7 @@
     {
      "gid": 48,
      "height": 32,
-     "id": 22,
+     "id": 23,
      "name": "",
      "properties": [
       {
@@ -513,7 +525,7 @@
     {
      "gid": 48,
      "height": 32,
-     "id": 23,
+     "id": 24,
      "name": "",
      "properties": [
       {
@@ -532,7 +544,7 @@
     {
      "gid": 156,
      "height": 48,
-     "id": 24,
+     "id": 25,
      "name": "",
      "rotation": 0,
      "type": "",
@@ -544,7 +556,7 @@
     {
      "gid": 48,
      "height": 32,
-     "id": 25,
+     "id": 26,
      "name": "",
      "properties": [
       {
@@ -563,7 +575,7 @@
     {
      "gid": 48,
      "height": 32,
-     "id": 26,
+     "id": 27,
      "name": "",
      "properties": [
       {
@@ -582,7 +594,7 @@
     {
      "gid": 132,
      "height": 32,
-     "id": 27,
+     "id": 28,
      "name": "",
      "rotation": 0,
      "type": "",
@@ -594,7 +606,7 @@
     {
      "gid": 132,
      "height": 32,
-     "id": 28,
+     "id": 29,
      "name": "",
      "rotation": 0,
      "type": "",
@@ -606,7 +618,7 @@
     {
      "gid": 132,
      "height": 32,
-     "id": 29,
+     "id": 30,
      "name": "",
      "rotation": 0,
      "type": "",
@@ -618,7 +630,7 @@
     {
      "gid": 48,
      "height": 32,
-     "id": 30,
+     "id": 31,
      "name": "",
      "properties": [
       {
@@ -637,7 +649,7 @@
     {
      "gid": 156,
      "height": 48,
-     "id": 31,
+     "id": 32,
      "name": "",
      "rotation": 0,
      "type": "",
@@ -649,7 +661,7 @@
     {
      "gid": 48,
      "height": 32,
-     "id": 32,
+     "id": 33,
      "name": "",
      "properties": [
       {
@@ -668,7 +680,7 @@
     {
      "gid": 48,
      "height": 32,
-     "id": 33,
+     "id": 34,
      "name": "",
      "properties": [
       {
@@ -687,7 +699,7 @@
     {
      "gid": 60,
      "height": 40,
-     "id": 34,
+     "id": 35,
      "name": "",
      "rotation": 0,
      "type": "",
@@ -699,7 +711,7 @@
     {
      "gid": 131,
      "height": 16,
-     "id": 35,
+     "id": 36,
      "name": "",
      "properties": [
       {
@@ -723,7 +735,7 @@
     {
      "gid": 153,
      "height": 16,
-     "id": 36,
+     "id": 37,
      "name": "",
      "rotation": 0,
      "type": "",
@@ -735,7 +747,7 @@
     {
      "gid": 30,
      "height": 32,
-     "id": 37,
+     "id": 38,
      "name": "",
      "properties": [
       {
@@ -805,7 +817,7 @@
   }
  ],
  "nextlayerid": 19,
- "nextobjectid": 38,
+ "nextobjectid": 39,
  "orientation": "orthogonal",
  "properties": [
   {
