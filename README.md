@@ -1,17 +1,22 @@
 # Kitsune Tails: Super Kitsune Bros
 
-An attempt at a faithful recreation of Worlds 1 to 4 of [Super Mario Bros](https://en.wikipedia.org/wiki/Super_Mario_Bros) in [Kitsune Tails](https://kitsunegames.com/kitsunetails/).
+An attempt at a faithful recreation of [Super Mario Bros](https://en.wikipedia.org/wiki/Super_Mario_Bros) in [Kitsune Tails](https://kitsunegames.com/kitsunetails/).
 
 ![Screenshot](tools/screenshot.jpg)
 
 ## Features
 
-This currently includes the first two worlds. If you'd like to help see its completion, feel free to get involved.
+This includes all eight worlds. If you'd like to help improve it, feel free to get involved.
 
 - [x] World 1
 - [x] World 2
-- [ ] World 3
-- [ ] World 4
+- [x] World 3
+- [x] World 4
+- [x] World 5
+- [x] World 6
+- [x] World 7
+- [x] World 8
+- [x] World select after beating 8-4, with a pipe into each world
 
 ## Installation
 
@@ -57,10 +62,9 @@ Subscribe to [Super Kitsune Bros on the Steam Workshop](https://steamcommunity.c
 1. See the newly created `deps` directory for example levels from Kitsune Tails as well as the modding documentation
 1. Run `npm run lint` to check the maps for broken links and bad data
 1. To remove the downloaded dependencies, run `npm run clean`
-1. To publish a new version, push a `v*` tag. GitHub Actions builds `SuperKitsuneBros.zip` with `npm run package` and attaches it to the release. `npm run package` deletes all the development files, including `.git`, so only run it locally in a separate clone
+1. To publish a new version, push a `v*` tag. GitHub Actions builds `SuperKitsuneBros.zip` with `npm run package` and attaches it to the release. `npm run package` copies `tools/screenshot.jpg` to `../SuperKitsuneBros.jpg` as the 16:9 Workshop preview, then deletes all the development files, including `.git`, so only run it locally in a separate clone
 1. To update the [Steam Workshop item](https://steamcommunity.com/sharedfiles/filedetails/?id=3320203878)...
-    1. Extract the release's `SuperKitsuneBros.zip` into your levels folder, in place of your clone. Only mods there can be uploaded
-    1. Put a 16:9 preview image named `SuperKitsuneBros.png` next to the `SuperKitsuneBros` folder
+    1. Extract the release's `SuperKitsuneBros.zip` into your levels folder, in place of your clone. Only mods there can be uploaded. The zip includes the `SuperKitsuneBros.jpg` preview image, which lands next to the `SuperKitsuneBros` folder
     1. In Kitsune Tails, select the mod in the Mods menu and press the menu3 button to upload it
 
 ## File Descriptions
@@ -78,7 +82,9 @@ Subscribe to [Super Kitsune Bros on the Steam Workshop](https://steamcommunity.c
 ## Resources
 
 - https://nesmaps.com/maps/SuperMarioBrothers/SuperMarioBrothers.html
+- https://www.mariowiki.com/Super_Mario_Bros.#Worlds_and_levels
 - https://downloads.khinsider.com/game-soundtracks/album/super-mario-bros
+- https://nu.vgmtreasurechest.com/soundtracks/super-mario-bros/vfsuvvoj/18.%20Saved%20the%20Princess%20%28NES%29%20%5BVS.%20Super%20Mario%20Bros.%5D.mp3
 - https://fontstruct.com/fontstructions/show/1332355/arcade-classic-2-19
 
 ## License

@@ -151,7 +151,7 @@
      "type": "",
      "visible": true,
      "width": 48,
-     "x": 272,
+     "x": 256,
      "y": 224
     },
     {
@@ -180,7 +180,7 @@
      "type": "",
      "visible": true,
      "width": 48,
-     "x": 480,
+     "x": 464,
      "y": 224
     },
     {
@@ -209,7 +209,7 @@
      "type": "",
      "visible": true,
      "width": 48,
-     "x": 1744,
+     "x": 1728,
      "y": 224
     },
     {
@@ -238,7 +238,7 @@
      "type": "",
      "visible": true,
      "width": 48,
-     "x": 1808,
+     "x": 1792,
      "y": 224
     },
     {
@@ -1455,7 +1455,7 @@
      "type": "",
      "visible": true,
      "width": 48,
-     "x": 1552,
+     "x": 1536,
      "y": 128
     },
     {
@@ -1474,7 +1474,7 @@
      "type": "",
      "visible": true,
      "width": 48,
-     "x": 1760,
+     "x": 1744,
      "y": 160
     },
     {
@@ -1493,7 +1493,7 @@
      "type": "",
      "visible": true,
      "width": 48,
-     "x": 2000,
+     "x": 1984,
      "y": 128
     },
     {
@@ -1569,7 +1569,7 @@
      "type": "",
      "visible": true,
      "width": 48,
-     "x": 2192,
+     "x": 2176,
      "y": 112
     },
     {
@@ -1585,13 +1585,13 @@
      "y": 160
     },
     {
-     "gid": 96,
-     "height": 112,
+     "gid": 30,
+     "height": 32,
      "id": 76,
      "name": "",
      "properties": [
       {
-       "name": "endLevel",
+       "name": "alwaysActive",
        "type": "bool",
        "value": true
       },
@@ -1599,14 +1599,77 @@
        "name": "visible",
        "type": "bool",
        "value": false
+      },
+      {
+       "name": "zoneTo",
+       "type": "string",
+       "value": "level-3-1-begin"
       }
      ],
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 112,
-     "x": 2240,
-     "y": 144
+     "width": 16,
+     "x": 2304,
+     "y": 208
+    },
+    {
+     "gid": 30,
+     "height": 32,
+     "id": 77,
+     "name": "",
+     "properties": [
+      {
+       "name": "alwaysActive",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "visible",
+       "type": "bool",
+       "value": false
+      },
+      {
+       "name": "zoneTo",
+       "type": "string",
+       "value": "level-3-1-begin"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 2336,
+     "y": 208
+    },
+    {
+     "gid": 30,
+     "height": 32,
+     "id": 78,
+     "name": "",
+     "properties": [
+      {
+       "name": "alwaysActive",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "visible",
+       "type": "bool",
+       "value": false
+      },
+      {
+       "name": "zoneTo",
+       "type": "string",
+       "value": "level-3-1-begin"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 2368,
+     "y": 208
     }
    ],
    "opacity": 1,
@@ -1652,7 +1715,7 @@
   }
  ],
  "nextlayerid": 22,
- "nextobjectid": 77,
+ "nextobjectid": 79,
  "orientation": "orthogonal",
  "properties": [
   {
