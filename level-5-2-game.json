@@ -278,15 +278,15 @@
      "y": 336
     },
     {
-     "gid": 123,
+     "gid": 79,
      "height": 32,
      "id": 9,
      "name": "",
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 32,
-     "x": 728,
+     "width": 48,
+     "x": 720,
      "y": 336
     },
     {
@@ -340,15 +340,15 @@
      "y": 320
     },
     {
-     "gid": 123,
+     "gid": 79,
      "height": 32,
      "id": 13,
      "name": "",
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 32,
-     "x": 1288,
+     "width": 48,
+     "x": 1280,
      "y": 320
     },
     {
@@ -376,41 +376,27 @@
      "y": 352
     },
     {
-     "gid": 123,
+     "gid": 79,
      "height": 32,
      "id": 16,
      "name": "",
-     "properties": [
-      {
-       "name": "group",
-       "type": "string",
-       "value": "hammer-5-2-1"
-      }
-     ],
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 32,
-     "x": 1912,
+     "width": 48,
+     "x": 1904,
      "y": 320
     },
     {
-     "gid": 123,
+     "gid": 79,
      "height": 32,
      "id": 17,
      "name": "",
-     "properties": [
-      {
-       "name": "group",
-       "type": "string",
-       "value": "hammer-5-2-1"
-      }
-     ],
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 32,
-     "x": 1976,
+     "width": 48,
+     "x": 1968,
      "y": 256
     },
     {

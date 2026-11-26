@@ -564,41 +564,27 @@
      "y": 320
     },
     {
-     "gid": 123,
+     "gid": 79,
      "height": 32,
      "id": 27,
      "name": "",
-     "properties": [
-      {
-       "name": "group",
-       "type": "string",
-       "value": "hammer-3-1-1"
-      }
-     ],
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 32,
-     "x": 1800,
+     "width": 48,
+     "x": 1792,
      "y": 320
     },
     {
-     "gid": 123,
+     "gid": 79,
      "height": 32,
      "id": 28,
      "name": "",
-     "properties": [
-      {
-       "name": "group",
-       "type": "string",
-       "value": "hammer-3-1-1"
-      }
-     ],
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 32,
-     "x": 1848,
+     "width": 48,
+     "x": 1840,
      "y": 384
     },
     {

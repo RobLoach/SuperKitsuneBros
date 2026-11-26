@@ -1,14 +1,14 @@
 from paths import NES
-from gen import overworld, extend_down, flag, underground
+from gen import ENEMY, overworld, extend_down, flag, underground
 W = 240
 L = overworld('4-1', 0, W, legend=('4-1', 'B41'), tileset=None, qref=('4-1', 0, 25, 5), fresh=True)
 flag(L, 224, day=True)
 extend_down(L)
-lakitu = [o for o in L.objects if o['gid'] == 156]
+lakitu = [o for o in L.objects if o['gid'] == ENEMY['lakitu'][0]]
 height = lakitu[0]['y']
-L.objects[:] = [o for o in L.objects if o['gid'] != 156]
-for x in range(26, 210, 26):  # a kite ninja for Lakitu every 26 tiles, up to the last staircase
-    L.add(156, x * 16, height, 48, 48)
+L.objects[:] = [o for o in L.objects if o['gid'] != ENEMY['lakitu'][0]]
+for x in range(26, 210, 26):  # a kasha for Lakitu every 26 tiles, up to the last staircase
+    L.add(ENEMY['lakitu'][0], x * 16 + 8, height, 32, 32)  # a kasha, in the middle of where the 48-wide kite ninja was
 for x in (52, 78, 156, 182):  # more Spinies dropping from the sky, under the kite ninjas that don't have one in the NES picture
     L.add(48, x * 16 + 16, height + 32, 16, 32, respawn=True)
 L.add(131, 132 * 16, (9 + 1) * 16, 32, 16, disableInventory=True, zoneTo='level-4-1-underground')

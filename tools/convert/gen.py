@@ -177,8 +177,8 @@ def underground(path, template, rows, props, spawn, exit_):
 
 
 ENEMY = {'goomba': (36, 48, 32, {'walkOffLedges': True}),  # Goombas walk off ledges like the NES ones
-         'koopa': (24, 48, 32, {}), 'paratroopa': (38, 48, 96, {}), 'hammer': (123, 32, 32, {}),
-         'lakitu': (156, 48, 48, {}), 'spiny': (48, 16, 32, {'respawn': True}), 'egg': (48, 16, 32, {'respawn': True}),
+         'koopa': (24, 48, 32, {}), 'paratroopa': (38, 48, 96, {}), 'hammer': (79, 48, 32, {}),
+         'lakitu': (123, 32, 32, {}), 'spiny': (48, 16, 32, {'respawn': True}), 'egg': (48, 16, 32, {'respawn': True}),
          'buzzy': (73, 48, 40, {}), 'blooper': (103, 48, 32, {}), 'cheep': (77, 48, 32, {})}
 ITEM = {'mushroom': 113, 'star': 100}
 
