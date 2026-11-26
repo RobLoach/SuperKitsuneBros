@@ -221,6 +221,18 @@
      "y": 208
     },
     {
+     "gid": 123,
+     "height": 32,
+     "id": 7,
+     "name": "",
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 32,
+     "x": 361,
+     "y": 64
+    },
+    {
      "gid": 48,
      "height": 32,
      "id": 8,
@@ -378,105 +390,9 @@
      "y": 144
     },
     {
-     "gid": 123,
-     "height": 32,
-     "id": 19,
-     "name": "",
-     "rotation": 0,
-     "type": "",
-     "visible": true,
-     "width": 32,
-     "x": 328,
-     "y": 64
-    },
-    {
-     "gid": 123,
-     "height": 32,
-     "id": 20,
-     "name": "",
-     "rotation": 0,
-     "type": "",
-     "visible": true,
-     "width": 32,
-     "x": 648,
-     "y": 64
-    },
-    {
-     "gid": 123,
-     "height": 32,
-     "id": 21,
-     "name": "",
-     "rotation": 0,
-     "type": "",
-     "visible": true,
-     "width": 32,
-     "x": 968,
-     "y": 64
-    },
-    {
-     "gid": 123,
-     "height": 32,
-     "id": 22,
-     "name": "",
-     "rotation": 0,
-     "type": "",
-     "visible": true,
-     "width": 32,
-     "x": 1288,
-     "y": 64
-    },
-    {
-     "gid": 123,
-     "height": 32,
-     "id": 23,
-     "name": "",
-     "rotation": 0,
-     "type": "",
-     "visible": true,
-     "width": 32,
-     "x": 1608,
-     "y": 64
-    },
-    {
-     "gid": 123,
-     "height": 32,
-     "id": 24,
-     "name": "",
-     "rotation": 0,
-     "type": "",
-     "visible": true,
-     "width": 32,
-     "x": 1928,
-     "y": 64
-    },
-    {
-     "gid": 123,
-     "height": 32,
-     "id": 25,
-     "name": "",
-     "rotation": 0,
-     "type": "",
-     "visible": true,
-     "width": 32,
-     "x": 2248,
-     "y": 64
-    },
-    {
-     "gid": 123,
-     "height": 32,
-     "id": 26,
-     "name": "",
-     "rotation": 0,
-     "type": "",
-     "visible": true,
-     "width": 32,
-     "x": 2568,
-     "y": 64
-    },
-    {
      "gid": 30,
      "height": 32,
-     "id": 27,
+     "id": 19,
      "name": "",
      "properties": [
       {
@@ -546,7 +462,7 @@
   }
  ],
  "nextlayerid": 19,
- "nextobjectid": 28,
+ "nextobjectid": 20,
  "orientation": "orthogonal",
  "properties": [
   {
