@@ -7,10 +7,13 @@ def tight(im,x0,y0,x1,y1):
     ys=np.where(m.any(1))[0]; xs=np.where(m.any(0))[0]
     return r[ys[0]:ys[-1]+1, xs[0]:xs[-1]+1]
 def templates(lv,boxes):
-    im=np.array(Image.open(f'{NES}/{lv}.png').convert('RGB'))
+    """sprites cut from a map's legend; a box can name another map's image first, for sprites missing from the legend"""
+    ims={}
+    image=lambda l: ims.setdefault(l, np.array(Image.open(f'{NES}/{l}.png').convert('RGB')))
     T={}
     for name,b in boxes.items():
-        t=tight(im,*b); T[name]=t; T[name+'_flip']=t[:,::-1]
+        src,b=(b[0],b[1:]) if isinstance(b[0],str) else (lv,b)
+        t=tight(image(src),*b); T[name]=t; T[name+'_flip']=t[:,::-1]
     return T
 def find(img,T,minfrac=0.97):
     H,W,_=img.shape; out=[]
@@ -49,9 +52,11 @@ B73={'mushroom':(4388,79,4408,99),'cheep':(4388,106,4408,126),'koopa':(4368,124,
 B81={'coin':(508,277,528,295),'oneup':(508,297,528,317),'star':(508,318,528,338),'buzzy':(508,341,528,357),'goomba':(508,360,528,379),'koopa':(508,379,528,406),'paratroopa':(508,408,528,435),'piranha':(508,436,528,461)}
 B82={'coin':(473,316,493,334),'mushroom':(473,342,493,362),'bullet':(473,372,493,387),'buzzy':(473,393,493,409),'lakitu':(473,410,493,436),
      'goomba':(623,315,643,334),'paratroopa':(623,336,643,363),'piranha':(623,366,643,393),'spiny':(623,392,643,411),'egg':(623,414,643,434)}
-B83={'mushroom':(4388,79,4408,99),'bullet':(4388,109,4408,124),'paratroopa':(4388,132,4408,159),'piranha':(4388,163,4408,190),'hammer':(4388,193,4408,220)}
+B83={'koopa':('8-1',508,379,528,406),'mushroom':(4388,79,4408,99),'bullet':(4388,109,4408,124),'paratroopa':(4388,132,4408,159),'piranha':(4388,163,4408,190),'hammer':(4388,193,4408,220)}
 B84={'blooper':(510,343,530,371),'buzzy':(510,378,530,397),'cheep':(511,407,530,427),'hammer':(510,434,530,461),
      'paratroopa':(690,284,710,311),'goomba':(690,317,710,337),'piranha':(690,344,710,371),'podoboo':(691,376,709,396)}
+B11={'coin':(511,293,525,311),'mushroom':(508,319,528,339),'star':(509,346,527,366),'oneup':(508,368,528,388),'goomba':(508,389,528,408),'koopa':(508,406,528,433)}
+B21={'coin':(511,513,525,531),'mushroom':(508,539,528,559),'star':(509,566,527,586),'oneup':(508,588,528,608),'goomba':(508,609,528,628),'koopa':(508,626,528,653),'paratroopa':(508,655,528,682),'piranha':(508,683,528,710)}
 if __name__=='__main__':
     lv,band,W=sys.argv[1],int(sys.argv[2]),int(sys.argv[3])
     T=templates('3-1',B31)

@@ -3,6 +3,7 @@ import numpy as np
 from PIL import Image
 from gen import overworld, extend_down, flag_image, ropes
 import sprites
+import newtiles
 
 W = 192
 L = overworld('6-3', 0, W, template='level-1-3-game.json', legend=('6-3', 'B63'), tileset='tileset-night.png', qref=('6-1', 0, 17, 9), fresh=True)
@@ -19,10 +20,11 @@ for x in range(W):  # lift ropes look like the flagpole
 for x in (38, 116):  # springboards, lifts instead
     for y in (11, 12):
         L.set(x, y, E)
-for x in range(170, W):  # the castle matched 2-4's walls: it is scenery here, like 1-3
+# both castles matched 2-4's inside walls: copy the grey castles from the image instead, as scenery you walk past
+for x in list(range(0, 6)) + list(range(170, W)):
     for y in range(13):
-        v = L.get(x, y)
-        L.set(x, y, (v[0], 0, v[2], v[3]))
+        c = img[y * 16:y * 16 + 16, x * 16:x * 16 + 16]
+        L.set(x, y, (0, 0, 0, 0) if not c.any() else (newtiles.gid(c, (0, 0, 0)), 0, 0, 0))
 flag_image(L, '6-3', 0, 166, (0, 0, 0))  # the NES flagpole
 ropes(L, img, (0, 0, 0))  # pulley ropes and wheels that the lifts covered
 extend_down(L)

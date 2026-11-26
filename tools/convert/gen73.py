@@ -21,3 +21,6 @@ for n, x, y, w, h, s in sprites.find(img, sprites.templates('7-3', sprites.B73))
 m['nextobjectid'] = nid
 open(f'{ROOT}/level-7-3-game.json', 'w').write(dumps(m))
 print(nid - json.load(open(f'{ROOT}/level-2-3-game.json'))['nextobjectid'], 'Koopas')
+
+from world12 import clouds
+clouds('7-3', 0, 'level-7-3-game.json')  # 7-3's own clouds, not 2-3's

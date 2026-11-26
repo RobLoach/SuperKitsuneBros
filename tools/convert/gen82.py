@@ -19,8 +19,8 @@ b = L.add(91, 44.5 * 16, 13 * 16, 16, 16)
 for o, t in ((L.objects[-2], b), (L.objects[-1], a)):
     o['properties'] = [{'name': 'path', 'type': 'object', 'value': t}]
 L.add(136, 44 * 16, 13 * 16, 32, 16, path=a)
-L.add(131, 156 * 16, 9 * 16, 32, 16, disableInventory=True, zoneTo='level-8-2-underground')
-L.add(153, 163 * 16, 11 * 16, 32, 16)
+L.add(131, 156 * 16, (9 + 1) * 16, 32, 16, disableInventory=True, zoneTo='level-8-2-underground')
+L.add(153, 163 * 16, (11 + 1) * 16, 32, 16)
 L.add(30, 222 * 16, 13 * 16, 16, 32, alwaysActive=True, visible=False, zoneTo='level-8-3-begin')
 L.save('level-8-2-game.json')
 

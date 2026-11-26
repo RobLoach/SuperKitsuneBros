@@ -12,8 +12,8 @@ L.set(148, 9, (0, 0, 0, 0))  # hidden 1-up, the earth power-up like 1-1
 L.add(60, 148 * 16, 10 * 16, 16, 40)
 flag_image(L, '5-1', 0, 198, (92, 148, 252))  # the NES flagpole
 extend_down(L)
-L.add(131, 156 * 16, 7 * 16, 32, 16, disableInventory=True, zoneTo='level-5-1-underground')
-L.add(153, 163 * 16, 11 * 16, 32, 16)
+L.add(131, 156 * 16, (7 + 1) * 16, 32, 16, disableInventory=True, zoneTo='level-5-1-underground')
+L.add(153, 163 * 16, (11 + 1) * 16, 32, 16)
 L.add(30, 205 * 16, 13 * 16, 16, 32, alwaysActive=True, visible=False, zoneTo='level-5-2-begin')
 L.save('level-5-1-game.json')
 

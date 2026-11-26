@@ -2,7 +2,7 @@ from paths import NES
 import json
 import numpy as np
 from PIL import Image
-from gen import dumps, ROOT
+from gen import dumps, redraw_water, ROOT
 import sprites
 
 # 7-2 has the same layout as 2-2, with more Bloopers and Cheep-cheeps
@@ -24,5 +24,6 @@ for n, x, y, w, h, s in sprites.find(img, sprites.templates('7-2', sprites.B72))
                     'x': x + w // 2 - 24, 'y': round((y + h) / 16) * 16})
     nid += 1
 m['nextobjectid'] = nid
+redraw_water(m, img, [o for o in sprites.find(img, sprites.templates('7-2', sprites.B72))])  # the NES coral and seaweed
 open(f'{ROOT}/level-7-2-underwater.json', 'w').write(dumps(m))
 print(sum(1 for o in objects if o['gid'] in (103, 77)), 'fish')

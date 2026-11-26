@@ -5,8 +5,8 @@ W = 400
 L = overworld('8-1', 0, W, legend=('8-1', 'B81'), tileset=None, qref=('4-1', 0, 25, 5), fresh=True)
 flag_image(L, '8-1', 0, 375, (92, 148, 252))  # the NES flagpole
 extend_down(L)
-L.add(131, 104 * 16, 9 * 16, 32, 16, disableInventory=True, zoneTo='level-8-1-underground')
-L.add(153, 115 * 16, 11 * 16, 32, 16)
+L.add(131, 104 * 16, (9 + 1) * 16, 32, 16, disableInventory=True, zoneTo='level-8-1-underground')
+L.add(153, 115 * 16, (11 + 1) * 16, 32, 16)
 L.add(30, 382 * 16, 13 * 16, 16, 32, alwaysActive=True, visible=False, zoneTo='level-8-2-begin')
 L.save('level-8-1-game.json')
 

@@ -3,7 +3,7 @@ import json
 import numpy as np
 from PIL import Image
 from scipy import ndimage
-from gen import Level, from_image, extend_down, fresh_tiles, copy_cells, night, ROOT, ENEMY, TILE, LAYERS
+from gen import redraw_water, Level, from_image, extend_down, fresh_tiles, copy_cells, night, ROOT, ENEMY, TILE, LAYERS
 import sprites
 import newtiles
 
@@ -47,13 +47,13 @@ L.add(96, 300 * 16, 9 * 16, 112, 112, endLevel=True, visible=False)  # the end o
 
 # pipes: the right ones carry you on, the others go back to pipe 1
 SELF = 'level-8-4-game'
-L.add(153, 19 * 16, 11 * 16, 32, 16)  # pipe 1
-L.add(153, 259 * 16, 11 * 16, 32, 16)  # pipe 2
+L.add(153, 19 * 16, (11 + 1) * 16, 32, 16)  # pipe 1
+L.add(153, 259 * 16, (11 + 1) * 16, 32, 16)  # pipe 2
 for x, top in ((51, 11), (132, 11), (212, 7), (266, 11)):
-    L.add(131, x * 16, top * 16, 32, 16, zoneTo=SELF, zoneX=19.5, zoneY=9)
-L.add(131, 81 * 16, 8 * 16, 32, 16, zoneTo=SELF, zoneX=115.5, zoneY=9)
-L.add(131, 152 * 16, 6 * 16, 32, 16, zoneTo=SELF, zoneX=195.5, zoneY=9)
-L.add(131, 228 * 16, 8 * 16, 32, 16, zoneTo='level-8-4-underwater')
+    L.add(131, x * 16, (top + 1) * 16, 32, 16, zoneTo=SELF, zoneX=19.5, zoneY=9)
+L.add(131, 81 * 16, (8 + 1) * 16, 32, 16, zoneTo=SELF, zoneX=115.5, zoneY=9)
+L.add(131, 152 * 16, (6 + 1) * 16, 32, 16, zoneTo=SELF, zoneX=195.5, zoneY=9)
+L.add(131, 228 * 16, (8 + 1) * 16, 32, 16, zoneTo='level-8-4-underwater')
 # walking on past the right pipe loops back, like the NES
 for x, zx, zy in ((96, 32.5, 11), (160, 115.5, 9), (255, 195.5, 9)):
     for y in (5, 7, 9, 11, 13):
@@ -94,6 +94,7 @@ for x in range(WW):  # nesmaps labels above the water are not part of the level
 for y in range(15):  # the last column is a nesmaps arrow
     U.set(WW - 1, y, U.get(WW - 2, y))
 extend_down(U)
+redraw_water(U.m, wimg, wfound)  # the NES coral and seaweed
 U.add(90, 3 * 16, 6 * 16, 48, 48, actor='Mario')
 RING = [(1, 3), (2, 2), (2, 0), (1, -1), (-1, -1), (-2, 0), (-2, 2), (-1, 3)]
 for px, py in bars:

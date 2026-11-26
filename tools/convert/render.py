@@ -1,9 +1,8 @@
 # render a Kitsune Tails tiled map to PNG: render.py map.json out.png [scale]
 import json,sys,os
-from paths import ROOT
 from PIL import Image
 GM=0x0FFFFFFF
-root=ROOT
+root=os.path.dirname(os.path.abspath(sys.argv[1]))  # the tilesets next to the map
 m=json.load(open(sys.argv[1]))
 ts=[]
 for t in sorted(m['tilesets'],key=lambda t:t['firstgid']):

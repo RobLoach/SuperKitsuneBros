@@ -26,6 +26,7 @@ def load(src):
             for y in range(15):
                 k=y*MW+x
                 v=tuple(L[n][k]&GM if n in L else 0 for n in ('Background No Parallax','Blocks','Coins','Foreground'))
+                if v[0]>=4813+21*32: v=(0,)+v[1:]  # flags and scenery copied from the images are added later, by name
                 c=cell(im,x,y)
                 db[c][v]+=1; ndb[norm(c)][v]+=1
     return db,ndb

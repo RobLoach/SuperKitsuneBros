@@ -2,7 +2,7 @@ from paths import NES
 import json
 import numpy as np
 from PIL import Image
-from gen import GREY_PIPES, cannons, Level, overworld, extend_down, flag, from_image, fresh_tiles, ROOT, ENEMY, TILE, flag_image
+from gen import redraw_water, GREY_PIPES, cannons, Level, overworld, extend_down, flag, from_image, fresh_tiles, ROOT, ENEMY, TILE, flag_image, vine
 import sprites
 
 W = 224
@@ -35,9 +35,8 @@ def lift(x, top, bottom, start=None):
 
 
 lift(25, 2.5, 13)
-lift(85, 2, 5)  # the vine, then a higher lift to the right up to coin heaven, like 3-1
-L.add(131, 55 * 16, 10 * 16, 32, 16, disableInventory=True, zoneTo='level-5-2-underwater')
-L.add(153, 115 * 16, 11 * 16, 32, 16)
+L.add(131, 55 * 16, (10 + 1) * 16, 32, 16, disableInventory=True, zoneTo='level-5-2-underwater')
+L.add(153, 115 * 16, (11 + 1) * 16, 32, 16)
 L.add(30, 206 * 16, 13 * 16, 16, 32, alwaysActive=True, visible=False, zoneTo='level-5-3-begin')
 
 # coin heaven sits above the level, NES rows -11 to -1
@@ -54,15 +53,13 @@ for x in range(W):
             L.set(x, y - 15 + UP, (TILE(6, 22), 5901, 0, 0))
         elif 60 <= (c == (252, 152, 56)).all(2).sum() <= 90:
             L.set(x, y - 15 + UP, (0, 0, 66, 0))
-for x in (87, 88):  # shaft for the second lift
-    L.set(x, row(-2), E)
-lift(87, row(-2), row(1))
+vine(L, 85, 5, UP, heaven, L.img, (92, 148, 252), 'level-5-2-game')  # like 3-1
 a = L.add(91, 97.5 * 16, row(-4) * 16, 16, 16)  # the cloud lift
 b = L.add(91, 112.5 * 16, row(-4) * 16, 16, 16)
 link(a, b)
 link(b, a)
 L.add(136, 97 * 16, row(-4) * 16, 32, 16, path=a)
-for x in range(W):  # the nesmaps arrow between coin heaven and the level
+for x in set(range(W)) - {85}:  # the nesmaps arrow between coin heaven and the level, not the vine
     v = L.get(x, row(0))
     if v[0] >= TILE(0, 23):
         L.set(x, row(0), E)
@@ -98,6 +95,7 @@ for xs, y in ((range(22, 26), 6), (range(28, 32), 10)):  # lifts
         o['properties'] = [{'name': 'path', 'type': 'object', 'value': t}]
     U.add(92, xs[0] * 16, (y + 1) * 16, 64, 16, path=a)
 extend_down(U)
+redraw_water(U.m, wimg, found)  # the NES coral and seaweed
 U.add(90, 2 * 16, 6 * 16, 48, 48, actor='Mario')
 for n, x, y, w, h, s in found:
     if n in ENEMY:

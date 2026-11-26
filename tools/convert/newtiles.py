@@ -20,7 +20,8 @@ def gid(cell, sky=None, firstgid=4813):
     key = hashlib.sha1(c.tobytes()).hexdigest()
     reg = _load()
     if key not in reg:
-        i = len(reg)
+        taken = {tuple(v) for v in reg.values()}
+        i = next(i for i in range(9 * 32) if (i % 32, FIRST_ROW + i // 32) not in taken)
         col, row = i % 32, FIRST_ROW + i // 32
         assert row < 32, 'tileset is full'
         for name in ('tileset.png', 'tileset-night.png', 'tileset-night-white.png'):
@@ -54,7 +55,8 @@ def _put(c, firstgid):
     key = hashlib.sha1(c.tobytes()).hexdigest()
     reg = _load()
     if key not in reg:
-        i = len(reg)
+        taken = {tuple(v) for v in reg.values()}
+        i = next(i for i in range(9 * 32) if (i % 32, FIRST_ROW + i // 32) not in taken)
         col, row = i % 32, FIRST_ROW + i // 32
         assert row < 32, 'tileset is full'
         for name in ('tileset.png', 'tileset-night.png', 'tileset-night-white.png'):

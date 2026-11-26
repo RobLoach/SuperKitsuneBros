@@ -35,18 +35,19 @@ for o in src:
 for x in range(208, 224):  # into World 8: doors all along the floor of the end room
     L.add(30, x * 16, 13 * 16, 16, 32, alwaysActive=True, visible=False, zoneTo='level-8-1-begin')
 
-# the maze: each wrong path ends at a door back to the start of its puzzle, walled off where it would rejoin the right path
+# the maze: each wrong path ends at a door standing at its far end, walled off where it would rejoin the right path,
+# and the door takes you back to the start of the puzzle
 BRICK = L.get(0, 2)
-for x, ys in ((51, (3, 4, 5)), (67, (3, 4, 5)), (67, (11, 12)), (119, (11, 12)), (134, (3, 4, 5)), (159, (11, 12))):
+for x, ys in ((50, (3, 4, 5)), (65, (3, 4, 5)), (66, (11, 12)), (119, (11, 12)), (134, (3, 4, 5)), (159, (11, 12))):
     for y in ys:
         L.set(x, y, BRICK)
 P1, P2 = (33.5, 11), (96.5, 8)
-DOORS = [(50, 4, P1), (50, 6, P1),  # puzzle 1: take the bottom...
-         (66, 4, P1), (66, 6, P1), (66, 13, P1),  # ...then the middle...
-         (92, 11, P1), (92, 13, P1),  # ...then the top
-         (109, 8, P2), (109, 10, P2), (118, 12, P2), (118, 13, P2),  # puzzle 2: take the top with the firebar...
-         (133, 4, P2), (133, 6, P2),  # ...then stay in the middle...
-         (158, 13, P2)]  # ...then the top again
+DOORS = [(49, 6, P1),  # puzzle 1: the bottom path first, not the top...
+         (64, 6, P1), (65, 13, P1),  # ...then the middle, not the top or bottom...
+         (92, 13, P1),  # ...then the top, not the bottom
+         (109, 10, P2), (118, 13, P2),  # puzzle 2: the top with the firebar first, not the middle or bottom...
+         (133, 6, P2),  # ...then stay in the middle, not up...
+         (158, 13, P2)]  # ...then the top again, not the bottom
 for x, y, (zx, zy) in DOORS:
     L.add(30, x * 16, y * 16, 16, 32, alwaysActive=True, zoneTo='level-7-4-game', zoneX=zx, zoneY=zy)
 L.save('level-7-4-game.json')

@@ -51,8 +51,8 @@ for n, x, y, w, h, s in found:
     elif n == 'piranha':
         L.add(132, (x // 16) * 16, bottom, 32, 32)
 
-L.add(131, 38 * 16, 9 * 16, 32, 16, disableInventory=True, zoneTo='level-3-1-underground')
-L.add(153, 67 * 16, 11 * 16, 32, 16)
+L.add(131, 38 * 16, (9 + 1) * 16, 32, 16, disableInventory=True, zoneTo='level-3-1-underground')
+L.add(153, 67 * 16, (11 + 1) * 16, 32, 16)
 top = L.add(91, 126.5 * 16, 2.5 * 16, 16, 16)
 bottom = L.add(91, 126.5 * 16, 13 * 16, 16, 16, path=top)
 L.objects[-2]['properties'] = [{'name': 'path', 'type': 'object', 'value': bottom}]

@@ -461,3 +461,38 @@ def ropes(L, img, sky, x0=0):
             if any(lx < x * 16 + 16 and x * 16 < lx + lw and ly < y * 16 + 16 and y * 16 < ly + 8 for lx, ly, lw in lifts):
                 continue
             L.set(x + x0, y, (newtiles.gid(c, sky), 0, 0, 0))
+
+
+def vine(L, col, block, up, heaven, main, sky, zone):
+    """the vine from its block up through coin heaven (map grown by `up` rows): press up on it to climb into the clouds"""
+    import newtiles
+    for r in range(-6, block):
+        c = heaven[(r + 15) * 16:(r + 16) * 16, col * 16:(col + 1) * 16] if r < 0 else main[r * 16:(r + 1) * 16, col * 16:(col + 1) * 16]
+        if not (c == sky).all():
+            L.set(col, r + up, (newtiles.gid(c, sky), 0, 0, 0))
+    L.add(30, col * 16, (block + up) * 16, 16, 32, visible=False, zoneTo=zone, zoneX=col + 1.5, zoneY=up - 3)
+
+
+def redraw_water(m, img, found, water=(32, 56, 236)):
+    """underwater maps built from 2-2 use Kitsune's coral and seaweed: redraw every block and plant from the NES image"""
+    import newtiles
+    W = m['width']
+    L = {l['name']: l['data'] for l in m['layers'] if l['type'] == 'tilelayer'}
+    bg, blocks, coins = L['Background No Parallax'], L['Blocks'], L['Coins']
+    boxes = [(x - 2, y - 2, w + 4, h + 4) for n, x, y, w, h, s in found]
+    for y in range(2, 15):
+        for x in range(min(W, img.shape[1] // 16)):
+            i = y * W + x
+            c = img[y * 16:y * 16 + 16, x * 16:x * 16 + 16]
+            if y == 2 and not blocks[i]:
+                continue  # the water surface is its own layer
+            if coins[i] or (c == water).all():
+                if not blocks[i] and not coins[i]:
+                    bg[i] = 0
+                continue
+            if not blocks[i] and any(bx < x * 16 + 16 and x * 16 < bx + bw and by < y * 16 + 16 and y * 16 < by + bh for bx, by, bw, bh in boxes):
+                continue  # a fish in front: keep what is there
+            bg[i] = newtiles.gid(c, water)
+    for y in (15, 16):  # the 2 rows below the NES screen repeat the bottom row
+        for x in range(W):
+            bg[y * W + x] = bg[14 * W + x]

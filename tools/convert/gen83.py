@@ -9,6 +9,9 @@ img = np.array(Image.open(f'{NES}/8-3.png').convert('RGB'))[:240, :W * 16]
 head = np.array(Image.open(f'{NES}/5-1.png').convert('RGB'))[11 * 16:12 * 16, 111 * 16:112 * 16]
 print('cannons', cannons(L, img, head))
 flag_image(L, '8-3', 0, 213, (92, 148, 252))  # the NES flagpole
+for o in L.objects:  # the five Koopas walking in front of the last walls, not Hammer Bros
+    if o['gid'] == 79 and 140 * 16 <= o['x'] <= 190 * 16 and o['y'] == 13 * 16:
+        o['gid'] = 24
 extend_down(L)
 for d in (222, 224, 226):  # the big castle, like 1-3
     L.add(30, d * 16, 13 * 16, 16, 32, alwaysActive=True, visible=False, zoneTo='level-8-4-begin')

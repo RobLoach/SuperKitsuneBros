@@ -19,4 +19,6 @@ Run `npm t` first so `deps/Content` has the game's tilesets, then `npm run lint`
 - `newtiles.py` copies cells the earlier maps never used (snowy trees, mushrooms, grey pipes...) into the free rows of `tileset.png` and both night tilesets. `newtiles.json` remembers where each one went, so keep it with the tilesets.
 - `addtiles.py` adds the hand-picked tiles in tileset rows 20 to 22: water, the NES flags, trees, fences and the coin heaven cloud.
 - `gen.py` has the shared helpers, and `genWL.py` builds world W level L, with the level's own fixes: Kitsune stand-ins, links between maps, lifts, maze doors and so on.
+- `fixflags.py` and `world12.py` give the hand-made World 1 and 2 maps (and the copies of them) the NES flag and the trees, fences and bushes, editing only those tiles with `textedit.py`.
+- `compact.py` drops copied tiles no map uses, merges near-identical ones and packs the rest; run it now and then, it isn't part of `run.py`.
 - `render.py map.json out.png [night]` and `zoom.py` draw maps and NES images for checking the results.

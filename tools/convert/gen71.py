@@ -20,8 +20,8 @@ for o, t in ((L.objects[-2], b), (L.objects[-1], a)):
     o['properties'] = [{'name': 'path', 'type': 'object', 'value': t}]
 L.add(136, 151 * 16, 13 * 16, 32, 16, path=a)
 L.add(30, 185 * 16, 13 * 16, 16, 32, alwaysActive=True, visible=False, zoneTo='level-7-2-begin')
-L.add(131, 93 * 16, 10 * 16, 32, 16, disableInventory=True, zoneTo='level-7-1-underground')
-L.add(153, 115 * 16, 11 * 16, 32, 16)
+L.add(131, 93 * 16, (10 + 1) * 16, 32, 16, disableInventory=True, zoneTo='level-7-1-underground')
+L.add(153, 115 * 16, (11 + 1) * 16, 32, 16)
 L.save('level-7-1-game.json')
 
 # coin room, NES columns 100 to 116 at map columns 6 to 22

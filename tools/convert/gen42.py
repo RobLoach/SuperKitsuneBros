@@ -92,9 +92,9 @@ for col, ys, down in ((114, (3, 10), True), (123, (5, 12), False), (155, (5, 12)
         L.add(137, col * 16, y * 16, 48, 16, path=lo if down else hi)
 
 # pipes
-L.add(131, 84 * 16, 10 * 16, 32, 16, disableInventory=True, zoneTo='level-4-2-underground2')
+L.add(131, 84 * 16, (10 + 1) * 16, 32, 16, disableInventory=True, zoneTo='level-4-2-underground2')
 L.add(153, 189 * 16, 8 * 16, 32, 16, zoneTo='level-4-2-game2', zoneX=3.5, zoneY=10)
-L.add(131, 214 * 16, 10 * 16, 32, 16, zoneTo='level-5-1-begin')  # the warp zone to World 5
+L.add(131, 214 * 16, (10 + 1) * 16, 32, 16, zoneTo='level-5-1-begin')  # the warp zone to World 5
 L.save('level-4-2-underground.json')
 
 # coin room, NES columns 116 to 132 at map columns 6 to 22
@@ -140,7 +140,7 @@ for y in (13, 14):  # no pit under the vine
     L.set(64 - X0, y, L.get(65 - X0, y))
 extend_down(L)
 L.add(90, (66 - X0) * 16, 13 * 16, 48, 48, actor='Mario')
-L.add(131, (110 - X0) * 16, 10 * 16, 32, 16, zoneTo='level-8-1-begin')  # the 8 pipe
-L.add(131, (114 - X0) * 16, 10 * 16, 32, 16, zoneTo='level-7-1-begin')  # the 7 pipe
-L.add(131, (118 - X0) * 16, 10 * 16, 32, 16, zoneTo='level-6-1-begin')  # the 6 pipe
+L.add(131, (110 - X0) * 16, (10 + 1) * 16, 32, 16, zoneTo='level-8-1-begin')  # the 8 pipe
+L.add(131, (114 - X0) * 16, (10 + 1) * 16, 32, 16, zoneTo='level-7-1-begin')  # the 7 pipe
+L.add(131, (118 - X0) * 16, (10 + 1) * 16, 32, 16, zoneTo='level-6-1-begin')  # the 6 pipe
 L.save('level-4-2-warp.json')
