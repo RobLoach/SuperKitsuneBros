@@ -306,6 +306,13 @@
      "height": 32,
      "id": 11,
      "name": "",
+     "properties": [
+      {
+       "name": "walkOffLedges",
+       "type": "bool",
+       "value": true
+      }
+     ],
      "rotation": 0,
      "type": "",
      "visible": true,
@@ -318,6 +325,13 @@
      "height": 32,
      "id": 12,
      "name": "",
+     "properties": [
+      {
+       "name": "walkOffLedges",
+       "type": "bool",
+       "value": true
+      }
+     ],
      "rotation": 0,
      "type": "",
      "visible": true,
@@ -426,6 +440,13 @@
      "height": 32,
      "id": 21,
      "name": "",
+     "properties": [
+      {
+       "name": "walkOffLedges",
+       "type": "bool",
+       "value": true
+      }
+     ],
      "rotation": 0,
      "type": "",
      "visible": true,
@@ -438,6 +459,13 @@
      "height": 32,
      "id": 22,
      "name": "",
+     "properties": [
+      {
+       "name": "walkOffLedges",
+       "type": "bool",
+       "value": true
+      }
+     ],
      "rotation": 0,
      "type": "",
      "visible": true,

@@ -142,6 +142,13 @@
      "height": 32,
      "id": 3,
      "name": "",
+     "properties": [
+      {
+       "name": "walkOffLedges",
+       "type": "bool",
+       "value": true
+      }
+     ],
      "rotation": 0,
      "type": "",
      "visible": true,
@@ -154,6 +161,13 @@
      "height": 32,
      "id": 4,
      "name": "",
+     "properties": [
+      {
+       "name": "walkOffLedges",
+       "type": "bool",
+       "value": true
+      }
+     ],
      "rotation": 0,
      "type": "",
      "visible": true,
@@ -166,6 +180,13 @@
      "height": 32,
      "id": 5,
      "name": "",
+     "properties": [
+      {
+       "name": "walkOffLedges",
+       "type": "bool",
+       "value": true
+      }
+     ],
      "rotation": 0,
      "type": "",
      "visible": true,
@@ -250,6 +271,13 @@
      "height": 32,
      "id": 12,
      "name": "",
+     "properties": [
+      {
+       "name": "walkOffLedges",
+       "type": "bool",
+       "value": true
+      }
+     ],
      "rotation": 0,
      "type": "",
      "visible": true,
@@ -262,6 +290,13 @@
      "height": 32,
      "id": 13,
      "name": "",
+     "properties": [
+      {
+       "name": "walkOffLedges",
+       "type": "bool",
+       "value": true
+      }
+     ],
      "rotation": 0,
      "type": "",
      "visible": true,
@@ -274,6 +309,13 @@
      "height": 32,
      "id": 14,
      "name": "",
+     "properties": [
+      {
+       "name": "walkOffLedges",
+       "type": "bool",
+       "value": true
+      }
+     ],
      "rotation": 0,
      "type": "",
      "visible": true,
@@ -322,6 +364,13 @@
      "height": 32,
      "id": 18,
      "name": "",
+     "properties": [
+      {
+       "name": "walkOffLedges",
+       "type": "bool",
+       "value": true
+      }
+     ],
      "rotation": 0,
      "type": "",
      "visible": true,
@@ -334,6 +383,13 @@
      "height": 32,
      "id": 19,
      "name": "",
+     "properties": [
+      {
+       "name": "walkOffLedges",
+       "type": "bool",
+       "value": true
+      }
+     ],
      "rotation": 0,
      "type": "",
      "visible": true,
@@ -346,6 +402,13 @@
      "height": 32,
      "id": 20,
      "name": "",
+     "properties": [
+      {
+       "name": "walkOffLedges",
+       "type": "bool",
+       "value": true
+      }
+     ],
      "rotation": 0,
      "type": "",
      "visible": true,
@@ -490,6 +553,13 @@
      "height": 32,
      "id": 32,
      "name": "",
+     "properties": [
+      {
+       "name": "walkOffLedges",
+       "type": "bool",
+       "value": true
+      }
+     ],
      "rotation": 0,
      "type": "",
      "visible": true,
@@ -502,6 +572,13 @@
      "height": 32,
      "id": 33,
      "name": "",
+     "properties": [
+      {
+       "name": "walkOffLedges",
+       "type": "bool",
+       "value": true
+      }
+     ],
      "rotation": 0,
      "type": "",
      "visible": true,
@@ -514,6 +591,13 @@
      "height": 32,
      "id": 34,
      "name": "",
+     "properties": [
+      {
+       "name": "walkOffLedges",
+       "type": "bool",
+       "value": true
+      }
+     ],
      "rotation": 0,
      "type": "",
      "visible": true,
@@ -526,6 +610,13 @@
      "height": 32,
      "id": 35,
      "name": "",
+     "properties": [
+      {
+       "name": "walkOffLedges",
+       "type": "bool",
+       "value": true
+      }
+     ],
      "rotation": 0,
      "type": "",
      "visible": true,
@@ -538,6 +629,13 @@
      "height": 32,
      "id": 36,
      "name": "",
+     "properties": [
+      {
+       "name": "walkOffLedges",
+       "type": "bool",
+       "value": true
+      }
+     ],
      "rotation": 0,
      "type": "",
      "visible": true,
@@ -550,6 +648,13 @@
      "height": 32,
      "id": 37,
      "name": "",
+     "properties": [
+      {
+       "name": "walkOffLedges",
+       "type": "bool",
+       "value": true
+      }
+     ],
      "rotation": 0,
      "type": "",
      "visible": true,

@@ -472,6 +472,13 @@
      "height": 32,
      "id": 27,
      "name": "",
+     "properties": [
+      {
+       "name": "walkOffLedges",
+       "type": "bool",
+       "value": true
+      }
+     ],
      "rotation": 0,
      "type": "",
      "visible": true,
@@ -484,6 +491,13 @@
      "height": 32,
      "id": 28,
      "name": "",
+     "properties": [
+      {
+       "name": "walkOffLedges",
+       "type": "bool",
+       "value": true
+      }
+     ],
      "rotation": 0,
      "type": "",
      "visible": true,

@@ -975,6 +975,11 @@
        "value": true
       },
       {
+       "name": "wrongWarp",
+       "type": "bool",
+       "value": true
+      },
+      {
        "name": "zoneTo",
        "type": "string",
        "value": "level-7-4-game"
@@ -1005,6 +1010,11 @@
      "properties": [
       {
        "name": "alwaysActive",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "wrongWarp",
        "type": "bool",
        "value": true
       },
@@ -1043,6 +1053,11 @@
        "value": true
       },
       {
+       "name": "wrongWarp",
+       "type": "bool",
+       "value": true
+      },
+      {
        "name": "zoneTo",
        "type": "string",
        "value": "level-7-4-game"
@@ -1073,6 +1088,11 @@
      "properties": [
       {
        "name": "alwaysActive",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "wrongWarp",
        "type": "bool",
        "value": true
       },
@@ -1111,6 +1131,11 @@
        "value": true
       },
       {
+       "name": "wrongWarp",
+       "type": "bool",
+       "value": true
+      },
+      {
        "name": "zoneTo",
        "type": "string",
        "value": "level-7-4-game"
@@ -1141,6 +1166,11 @@
      "properties": [
       {
        "name": "alwaysActive",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "wrongWarp",
        "type": "bool",
        "value": true
       },
@@ -1179,6 +1209,11 @@
        "value": true
       },
       {
+       "name": "wrongWarp",
+       "type": "bool",
+       "value": true
+      },
+      {
        "name": "zoneTo",
        "type": "string",
        "value": "level-7-4-game"
@@ -1209,6 +1244,11 @@
      "properties": [
       {
        "name": "alwaysActive",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "wrongWarp",
        "type": "bool",
        "value": true
       },

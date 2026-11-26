@@ -64,5 +64,5 @@ DOORS = [(49, 6, P1),  # puzzle 1: the bottom path first, not the top...
          (133, 6, P2),  # ...then stay in the middle, not up...
          (152, 10, P2)]  # ...then the top again, not the middle
 for x, y, (zx, zy) in DOORS:
-    L.add(30, X(x) * 16, y * 16, 16, 32, alwaysActive=True, zoneTo='level-7-4-game', zoneX=zx, zoneY=zy)
+    L.add(30, X(x) * 16, y * 16, 16, 32, alwaysActive=True, wrongWarp=True, zoneTo='level-7-4-game', zoneX=zx, zoneY=zy)  # with a buzzer
 L.save('level-7-4-game.json')

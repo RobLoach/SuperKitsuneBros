@@ -47,7 +47,7 @@ for n, x, y, w, h, s in found:
     bottom = round((y + h) / 16) * 16
     if n in ENEMY:
         g, ow, oh, props = ENEMY[n]
-        L.add(g, x + 8 - ow // 2, bottom, ow, oh)  # centred on the NES sprite
+        L.add(g, x + 8 - ow // 2, bottom, ow, oh, **props)  # centred on the NES sprite
     elif n == 'piranha':
         L.add(132, (x // 16) * 16, bottom, 32, 32)
 

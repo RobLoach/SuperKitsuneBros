@@ -51,5 +51,5 @@ for y in (10, 11, 12):  # the bottom path of the first split is walled off
     L.set(74, y, BRICK)
 for x, y, zx, zy in ((73, 13, 14.5, 8),  # first split: the bottom path
                      (143, 5, 86.5, 11), (142, 10, 86.5, 11)):  # second split: the top and middle paths
-    L.add(30, x * 16, y * 16, 16, 32, alwaysActive=True, zoneTo='level-4-4-game', zoneX=zx, zoneY=zy)
+    L.add(30, x * 16, y * 16, 16, 32, alwaysActive=True, wrongWarp=True, zoneTo='level-4-4-game', zoneX=zx, zoneY=zy)  # with a buzzer
 L.save('level-4-4-game.json')
