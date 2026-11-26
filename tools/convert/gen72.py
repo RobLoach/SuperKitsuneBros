@@ -23,6 +23,11 @@ for n, x, y, w, h, s in sprites.find(img, sprites.templates('7-2', sprites.B72))
     objects.append({'gid': g, 'height': 32, 'id': nid, 'name': '', 'rotation': 0, 'type': '', 'visible': True, 'width': 48,
                     'x': x + w // 2 - 24, 'y': round((y + h) / 16) * 16})
     nid += 1
+exit_ = next(o for o in objects if o['gid'] == 30)  # 2-2's way out through the side pipe: two invisible doors in front of it instead
+objects[:] = [o for o in objects if o['gid'] not in (153, 30)]
+for x in (exit_['x'] - 16, exit_['x']):
+    objects.append({**exit_, 'id': nid, 'x': x})
+    nid += 1
 m['nextobjectid'] = nid
 redraw_water(m, img, [o for o in sprites.find(img, sprites.templates('7-2', sprites.B72))])  # the NES coral and seaweed
 open(f'{ROOT}/level-7-2-underwater.json', 'w').write(dumps(m))

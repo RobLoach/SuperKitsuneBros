@@ -104,6 +104,6 @@ for n, x, y, w, h, s in found:
     if n in ENEMY:
         g, ow, oh, props = ENEMY[n]
         U.add(g, x + w // 2 - ow // 2, round((y + h) / 16) * 16, ow, oh, **props)
-for g, extra in ((153, {}), (30, {'alwaysActive': True, 'hidePrompt': True, 'visible': False})):  # out through the side pipe, like 2-2: in the water just in front of it
-    U.add(g, 61 * 16, 9 * 16, 32 if g == 153 else 16, 16 if g == 153 else 32, zoneTo='level-5-2-game', zoneX=115.5, zoneY=9 + UP, **extra)
+for x in (60, 61):  # out through the side pipe: invisible doors in the water just in front of it
+    U.add(30, x * 16, 9 * 16, 16, 32, alwaysActive=True, hidePrompt=True, visible=False, zoneTo='level-5-2-game', zoneX=115.5, zoneY=9 + UP)
 U.save('level-5-2-underwater.json')

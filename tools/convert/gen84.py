@@ -125,9 +125,9 @@ for n, x, y, w, h, s in wfound:
         U.add(103, x + w // 2 - 24, round((y + h) / 16) * 16, 48, 32)
 side = [(i % WW, i // WW) for i, g in enumerate(U.layers['Foreground']) if g == 5206]
 print('bars', bars, 'side pipe', side)
-for g, extra in ((153, {}), (30, {'alwaysActive': True, 'hidePrompt': True, 'visible': False})):  # out through the side pipe to pipe 2, like 2-2
-    sx, sy = side[0]
-    U.add(g, (sx - 1) * 16, (sy + 2) * 16, 32 if g == 153 else 16, 16 if g == 153 else 32, zoneTo=SELF, zoneX=259.5, zoneY=9, **extra)
+sx, sy = side[0]
+for x in (sx - 2, sx - 1):  # out through the side pipe to pipe 2: invisible doors in the water just in front of it
+    U.add(30, x * 16, (sy + 2) * 16, 16, 32, alwaysActive=True, hidePrompt=True, visible=False, zoneTo=SELF, zoneX=259.5, zoneY=9)
 U.save('level-8-4-underwater.json')
 
 # "push button B to select a world": a room with a pipe into each world, and the end of the game past them
