@@ -780,6 +780,11 @@
        "name": "path",
        "type": "object",
        "value": 38
+      },
+      {
+       "name": "pathWait",
+       "type": "bool",
+       "value": true
       }
      ],
      "rotation": 0,

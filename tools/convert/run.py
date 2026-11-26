@@ -4,6 +4,6 @@ from paths import HERE
 
 os.chdir(HERE)
 sys.path.insert(0, HERE)
-for script in ['db.py', 'addtiles.py', 'fixflags.py', 'world12.py'] + sorted(glob.glob('gen[0-9][0-9].py')) + ['bowsers.py']:
+for script in ['db.py', 'addtiles.py', 'fixflags.py', 'world12.py'] + sorted(glob.glob('gen[0-9][0-9].py')) + ['bowsers.py'] + sorted(glob.glob('after_*.py')):
     print('--', script)
     runpy.run_path(script, run_name='__main__')
