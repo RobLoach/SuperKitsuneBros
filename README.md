@@ -62,10 +62,9 @@ Subscribe to [Super Kitsune Bros on the Steam Workshop](https://steamcommunity.c
 1. See the newly created `deps` directory for example levels from Kitsune Tails as well as the modding documentation
 1. Run `npm run lint` to check the maps for broken links and bad data
 1. To remove the downloaded dependencies, run `npm run clean`
-1. To publish a new version, push a `v*` tag. GitHub Actions builds `SuperKitsuneBros.zip` with `npm run package` and attaches it to the release. `npm run package` deletes all the development files, including `.git`, so only run it locally in a separate clone
+1. To publish a new version, push a `v*` tag. GitHub Actions builds `SuperKitsuneBros.zip` with `npm run package` and attaches it to the release. `npm run package` copies `tools/screenshot.jpg` to `../SuperKitsuneBros.jpg` as the 16:9 Workshop preview, then deletes all the development files, including `.git`, so only run it locally in a separate clone
 1. To update the [Steam Workshop item](https://steamcommunity.com/sharedfiles/filedetails/?id=3320203878)...
-    1. Extract the release's `SuperKitsuneBros.zip` into your levels folder, in place of your clone. Only mods there can be uploaded
-    1. Put a 16:9 preview image named `SuperKitsuneBros.png` next to the `SuperKitsuneBros` folder
+    1. Extract the release's `SuperKitsuneBros.zip` into your levels folder, in place of your clone. Only mods there can be uploaded. The zip includes the `SuperKitsuneBros.jpg` preview image, which lands next to the `SuperKitsuneBros` folder
     1. In Kitsune Tails, select the mod in the Mods menu and press the menu3 button to upload it
 
 ## File Descriptions

@@ -20,8 +20,9 @@ jobs:
       - run: |
           mkdir -p "$RUNNER_TEMP/package/SuperKitsuneBros"
           cp -r . "$RUNNER_TEMP/package/SuperKitsuneBros"
+          cp ../SuperKitsuneBros.jpg "$RUNNER_TEMP/package/"
           cd "$RUNNER_TEMP/package"
-          zip -r "$RUNNER_TEMP/SuperKitsuneBros.zip" SuperKitsuneBros
+          zip -r "$RUNNER_TEMP/SuperKitsuneBros.zip" SuperKitsuneBros SuperKitsuneBros.jpg
       - env:
           GH_TOKEN: ${{ github.token }}
         run: |
