@@ -4,6 +4,7 @@ import numpy as np
 from PIL import Image
 from gen import Level, from_image, extend_down, fresh_tiles, underground, ROOT, ENEMY, ITEM
 import sprites
+import newtiles
 
 # start and exit areas are the same as 1-2
 for src, dst, subs in (('level-1-2-game.json', 'level-4-2-game.json', [('level-1-2-underground', 'level-4-2-underground'), ('music-pipe', 'music-pipe')]),
@@ -36,8 +37,12 @@ for x in range(W):
         elif (img[y * 16:y * 16 + 16, x * 16:x * 16 + 16] == q).all():
             L.set(x, y, E)
             L.add(139, x * 16, (y + 1) * 16, 16, 32, **{'spawn-type': 'coin'})
-for x, y in ((64, 7), (63, 8), (65, 8), (66, 9)):  # coins by the vine
-    L.set(x, y, (0, 0, 66, 0))
+for x, y in ((64, 7), (63, 8), (65, 8), (66, 9)):  # hidden coin blocks: the steps up to the vine block
+    L.set(x, y, E)
+    L.add(139, x * 16, (y + 1) * 16, 16, 32, **{'spawn-type': 'coin'})
+for i, v in enumerate(L.layers['Blocks']):  # the teal bricks, which 1-2 leaves as plain cave tiles
+    if v == 1234 and not L.layers['Foreground'][i] and not L.layers['Background No Parallax'][i]:
+        L.layers['Foreground'][i] = 5711
 for n, x, y, w, h, s in found:
     bottom = round((y + h) / 16) * 16
     if n in ENEMY:
@@ -63,24 +68,20 @@ def link(a, b, **extra):
         {'name': k, 'type': 'float', 'value': v} for k, v in extra.items()]
 
 
-# the vine: a lift up to hidden doors in the ceiling gap, into the warp zone above
-top = L.add(91, 64.5 * 16, 1 * 16, 16, 16)
-bottom = L.add(91, 64.5 * 16, 5 * 16, 16, 16)
-link(top, bottom)
-link(bottom, top)
-L.add(136, 64 * 16, 5 * 16, 32, 16, path=top)
-for x in (63, 64, 65, 66):
-    L.add(30, x * 16, 2 * 16, 16, 32, alwaysActive=True, visible=False, zoneTo='level-4-2-warp', zoneX=10.5, zoneY=11)
+# the beanstalk: press up on it to climb into the warp zone above
+for y in range(5):
+    L.set(64, y, (newtiles.gid(img[y * 16:y * 16 + 16, 64 * 16:65 * 16], (0, 0, 0), 5325), 0, 0, 0))
+L.add(30, 64 * 16, 5 * 16, 16, 32, visible=False, zoneTo='level-4-2-warp', zoneX=10.5, zoneY=11)
 
 # a lift going up and down, then columns of lifts that loop up or down like 1-2
-a = L.add(91, 60.5 * 16, 5 * 16, 16, 16)
-b = L.add(91, 60.5 * 16, 12 * 16, 16, 16)
+a = L.add(91, 60 * 16, 5 * 16, 16, 16)
+b = L.add(91, 60 * 16, 12 * 16, 16, 16)
 link(a, b)
 link(b, a)
-L.add(92, 59 * 16 - 8, 8 * 16, 64, 16, path=a)
+L.add(137, 59 * 16, 8 * 16, 48, 16, path=a)  # 3 wide, like the NES lifts
 for col, ys, down in ((114, (3, 10), True), (123, (5, 12), False), (155, (5, 12), True)):
-    hi = L.add(91, (col + 1.5) * 16, -3 * 16, 16, 16)
-    lo = L.add(91, (col + 1.5) * 16, 21 * 16, 16, 16)
+    hi = L.add(91, (col + 1) * 16, -3 * 16, 16, 16)
+    lo = L.add(91, (col + 1) * 16, 21 * 16, 16, 16)
     if down:  # ride down to lo, jump back up to hi
         link(hi, lo, pathSpeed=1)
         link(lo, hi, pathSpeed=9999)
@@ -88,7 +89,7 @@ for col, ys, down in ((114, (3, 10), True), (123, (5, 12), False), (155, (5, 12)
         link(lo, hi, pathSpeed=1)
         link(hi, lo, pathSpeed=9999)
     for y in ys:
-        L.add(92, col * 16 - 8, y * 16, 64, 16, path=lo if down else hi)
+        L.add(137, col * 16, y * 16, 48, 16, path=lo if down else hi)
 
 # pipes
 L.add(131, 84 * 16, 10 * 16, 32, 16, disableInventory=True, zoneTo='level-4-2-underground2')

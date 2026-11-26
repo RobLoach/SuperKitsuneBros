@@ -1,4 +1,4 @@
-nesmaps/
+nesmaps
 *.pkl
 __pycache__/
 .venv/

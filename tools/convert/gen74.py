@@ -32,7 +32,7 @@ src = [o for l in json.load(open(f'{ROOT}/level-3-4-game.json'))['layers'] if l[
 for o in src:
     if o['gid'] == 196 and o['x'] >= 134 * 16:
         L.add(196, o['x'] + 64 * 16, o['y'], o['width'], o['height'], **{p['name']: p['value'] for p in o.get('properties', [])})
-for x in (208, 210, 212):  # into World 8, like 3-4
+for x in range(208, 224):  # into World 8: doors all along the floor of the end room
     L.add(30, x * 16, 13 * 16, 16, 32, alwaysActive=True, visible=False, zoneTo='level-8-1-begin')
 
 # the maze: each wrong path ends at a door back to the start of its puzzle, walled off where it would rejoin the right path

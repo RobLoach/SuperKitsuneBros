@@ -37,7 +37,7 @@ for x, y in ((130.9, 10), (160.5, 8)):
     L.add(42, x * 16 - 12, y * 16, 48, 32, respawn=True)
 
 src = [o for l in json.load(open(f'{ROOT}/level-3-4-game.json'))['layers'] if l['type'] == 'objectgroup' for o in l['objects']]
-for x in (176, 178, 180):  # into World 5
+for x in range(176, 192):  # into World 5: doors all along the floor of the end room
     L.add(30, x * 16, 13 * 16, 16, 32, alwaysActive=True, visible=False, zoneTo='level-5-1-begin')
 for o in src:
     if o['gid'] == 196 and o['x'] >= 134 * 16:

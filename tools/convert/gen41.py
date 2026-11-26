@@ -6,6 +6,11 @@ L.set(92, 5, (0, 0, 0, 0))  # hidden 1-up
 L.add(60, 92 * 16, 6 * 16, 16, 40)
 flag(L, 224, day=True)
 extend_down(L)
+lakitu = [o for o in L.objects if o['gid'] == 156]
+height = lakitu[0]['y']
+L.objects[:] = [o for o in L.objects if o['gid'] != 156]
+for x in range(26, 210, 26):  # a kite ninja for Lakitu every 26 tiles, up to the last staircase
+    L.add(156, x * 16, height, 48, 48)
 L.add(131, 132 * 16, 9 * 16, 32, 16, disableInventory=True, zoneTo='level-4-1-underground')
 L.add(153, 163 * 16, 11 * 16, 32, 16)
 L.add(30, 231 * 16, 13 * 16, 16, 32, alwaysActive=True, visible=False, zoneTo='level-4-2-begin')

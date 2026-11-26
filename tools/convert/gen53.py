@@ -1,7 +1,7 @@
 from paths import NES
 import numpy as np
 from PIL import Image
-from gen import overworld, extend_down
+from gen import overworld, extend_down, flag_image
 import sprites
 
 W = 176
@@ -11,6 +11,7 @@ for x, y, w in sprites.lifts(img):  # lifts are objects, not tiles
     for xx in range(x // 16, (x + w + 15) // 16):
         L.set(xx, y // 16, (0, 0, 0, 0))
         L.set(xx, y // 16 + 1, (0, 0, 0, 0)) if (y % 16) > 8 else None
+flag_image(L, '5-3', 0, 151, (92, 148, 252))  # the NES flagpole
 extend_down(L)
 
 # Bullet Bills fly in from the right: hornets that come back

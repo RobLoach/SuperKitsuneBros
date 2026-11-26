@@ -46,6 +46,6 @@ for x, y in ((20.1, 5), (16.1, 6), (30.1, 6), (109.1, 6), (113.1, 6), (131.1, 7)
     L.add(38, round(x * 16) + 8 - 24, 14 * 16, 48, 96, flyDistance=7, flyVertical=True, respawn=True)
 for x, y in ((96.2, 8), (110.4, 10), (124.4, 8)):  # Bowser's fire
     L.add(42, round(x * 16), y * 16, 48, 32, respawn=True)
-for x in (144, 146, 148):  # into World 6, like 1-4
+for x in range(144, 160):  # into World 6: doors all along the floor of the end room
     L.add(30, x * 16, 13 * 16, 16, 32, alwaysActive=True, visible=False, zoneTo='level-6-1-begin')
 L.save('level-5-4-game.json')

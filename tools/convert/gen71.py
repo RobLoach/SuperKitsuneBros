@@ -1,7 +1,7 @@
 from paths import NES
 import numpy as np
 from PIL import Image
-from gen import GREY_PIPES, cannons, overworld, extend_down, underground
+from gen import GREY_PIPES, cannons, overworld, extend_down, underground, flag_image
 
 W = 208
 L = overworld('7-1', 0, W, legend=('7-1', 'B71'), tileset=None, qref=('4-1', 0, 25, 5), fresh=True, recolor=GREY_PIPES)
@@ -12,6 +12,7 @@ L.set(93, 5, (0, 0, 0, 0))  # hidden 1-up, the earth power-up like 1-1
 L.add(60, 93 * 16, 6 * 16, 16, 40)
 for y in (11, 12):  # springboard, a lift instead like 2-1 and 3-1
     L.set(151, y, (0, 0, 0, 0))
+flag_image(L, '7-1', 0, 178, (92, 148, 252))  # the NES flagpole
 extend_down(L)
 a = L.add(91, 151.5 * 16, 2.5 * 16, 16, 16)
 b = L.add(91, 151.5 * 16, 13 * 16, 16, 16)

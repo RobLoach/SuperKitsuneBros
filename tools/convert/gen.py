@@ -292,6 +292,9 @@ def overworld(lv, band, W, template='level-2-1-game.json', legend=('3-1', 'B31')
             L.add(g, x + w // 2 - ow // 2, bottom, ow, oh, **props)  # centred on the NES sprite
         elif n == 'piranha':
             L.add(132, (x // 16) * 16, bottom, 32, 32)
+    if fresh:
+        fill_hidden(L, img, found)
+    L.found, L.img = found, img
     print(lv, 'unknown', unknown)
     print(lv, '? blocks', qcells, 'items', items)
     return L
@@ -329,7 +332,7 @@ def flag(L, x0, green=False, day=False, red=False):
     ts = np.array(Image.open(f'{ROOT}/tileset.png').convert('RGBA'))
     for x in (x0, x0 + 1):
         for y in range(12):
-            if L.get(x, y)[0] in (4814, 4815, 4846, 4847, 4879):
+            if L.get(x, y)[0] in (4814, 4815, 4846, 4847, 4879) or TILE(0, 21) <= L.get(x, y)[0] < TILE(0, 22):
                 L.set(x, y, (0, 0, 0, 0))
     for i, (dx, dy) in enumerate(FLAG_CELLS + [(1, y) for y in range(6, 12)]):
         col = (24 if red else 16 if day else 8 if green else 0) + min(i, 6)
@@ -382,3 +385,79 @@ def cannons(L, img, head):
                 if not any(ox == x and oy < y for ox, oy in out[:-1]):  # one nest on top of a stacked cannon
                     L.add(43, x * 16 - 16, (y + 1) * 16, 48, 32)
     return out
+
+
+def flag_image(L, lv, band, x0, sky, x_img=None):
+    """the NES flagpole copied cell for cell from the level's image: x0 is the column left of the pole"""
+    import newtiles
+    xi = x0 if x_img is None else x_img
+    img = np.array(Image.open(f'{NES}/{lv}.png').convert('RGB'))[band:band + 240]
+    for dx in (0, 1):
+        for y in range(12):
+            c = img[y * 16:y * 16 + 16, (xi + dx) * 16:(xi + dx) * 16 + 16]
+            v = L.get(x0 + dx, y)
+            g = 0 if (c == sky).all() else newtiles.gid(c, sky)
+            L.set(x0 + dx, y, (g, v[1], v[2], 0))
+
+
+def fill_hidden(L, img, found, x0=0, rows=range(13)):
+    """scenery hidden behind sprites (trees and fences behind Goombas...): learnt from the rest of the level,
+    a cell between two fences is a fence, a cell under a tree top is the trunk, and so on"""
+    import collections
+    ts = np.array(Image.open(f'{ROOT}/tileset.png').convert('RGBA'))
+    first = TILE(0, 22)  # decorations and copied tiles
+    bg = lambda x, y: L.get(x, y)[0] if 0 <= x < L.W and 0 <= y < 17 else 0
+    deco = lambda g: g >= first
+    boxes = [(x - 6, y - 4, w + 12, h + 8) for n, x, y, w, h, s in found]  # some sprite templates are only part of the sprite
+    covered = {}
+    for y in rows:
+        for x in range(img.shape[1] // 16):
+            free = np.ones((16, 16), bool)
+            for bx, by, bw, bh in boxes:
+                free[max(0, by - y * 16):max(0, by + bh - y * 16), max(0, bx - x * 16):max(0, bx + bw - x * 16)] = False
+            if not free.all() and L.get(x + x0, y) == (0, 0, 0, 0):
+                covered[x + x0, y] = free
+    below, between = collections.Counter(), collections.Counter()
+    for y in rows:
+        for x in range(L.W):
+            if (x, y) in covered or not deco(bg(x, y)):
+                continue
+            if deco(bg(x, y - 1)) and (x, y - 1) not in covered:
+                below[bg(x, y - 1), bg(x, y)] += 1
+            if (x - 1, y) not in covered and (x + 1, y) not in covered and deco(bg(x - 1, y)) and deco(bg(x + 1, y)):
+                between[bg(x - 1, y), bg(x + 1, y), bg(x, y)] += 1
+
+    def fits(g, x, y):  # the visible part of the cell agrees with the tile
+        i = g - 4813
+        t = ts[i // 32 * 16:i // 32 * 16 + 16, i % 32 * 16:i % 32 * 16 + 16]
+        c = img[y * 16:y * 16 + 16, (x - x0) * 16:(x - x0) * 16 + 16]
+        free = covered[x, y]
+        lit = t[..., 3] > 0
+        return (c[free & lit] == t[free & lit][:, :3]).all(1).mean() >= 0.8 if (free & lit).any() else True
+
+    for _ in range(3):
+        for (x, y) in sorted(covered, key=lambda c: c[1]):
+            if bg(x, y):
+                continue
+            options = [(n, g) for (l, r, g), n in between.items() if l == bg(x - 1, y) and r == bg(x + 1, y)]
+            options += [(n, g) for (a, g), n in below.items() if a == bg(x, y - 1) and deco(a)]
+            for n, g in sorted(options, reverse=True):
+                if n >= 2 and fits(g, x, y):
+                    v = L.get(x, y)
+                    L.set(x, y, (g,) + v[1:])
+                    break
+
+
+def ropes(L, img, sky, x0=0):
+    """pulley ropes and wheels, copied from the image where the map is empty (the lifts themselves are objects)"""
+    import newtiles
+    import sprites
+    lifts = sprites.lifts(img)
+    for y in range(15):
+        for x in range(img.shape[1] // 16):
+            c = img[y * 16:y * 16 + 16, x * 16:x * 16 + 16]
+            if L.get(x + x0, y) != (0, 0, 0, 0) or (c == (252, 188, 176)).all(2).sum() < 2:
+                continue
+            if any(lx < x * 16 + 16 and x * 16 < lx + lw and ly < y * 16 + 16 and y * 16 < ly + 8 for lx, ly, lw in lifts):
+                continue
+            L.set(x + x0, y, (newtiles.gid(c, sky), 0, 0, 0))

@@ -1,7 +1,8 @@
 from paths import NES
 import numpy as np
+import newtiles
 from PIL import Image
-from gen import ENEMY, Level, from_image, night, copy_cells, underground, water, flag, deco, TILE
+from gen import ENEMY, Level, from_image, night, copy_cells, underground, water, flag, deco, fill_hidden, TILE
 import sprites
 
 W = 224
@@ -31,10 +32,11 @@ for x, y in qcells:
 
 L.add(60, 82 * 16, 6 * 16, 16, 40)  # hidden 1-up
 L.set(126, 12, EMPTY)  # springboard, replaced with a lift below
-L.set(131, 5, (0, 208, 0, 0))  # vine block, the vine is a lift below and coin heaven is skipped
+L.set(131, 5, (0, 208, 0, 0))  # vine block
 L.set(152, 5, (0, 208, 0, 0))  # brick under a Koopa
 flag(L, 199)
 deco(L, '3-1', 240)
+fill_hidden(L, img, found)
 
 for x in range(W):
     for y in (15, 16):
@@ -55,11 +57,6 @@ top = L.add(91, 126.5 * 16, 2.5 * 16, 16, 16)
 bottom = L.add(91, 126.5 * 16, 13 * 16, 16, 16, path=top)
 L.objects[-2]['properties'] = [{'name': 'path', 'type': 'object', 'value': bottom}]
 L.add(136, 126 * 16, 13 * 16, 32, 16, path=top)
-# the vine: a lift from the vine block, then a higher one to the right up to coin heaven
-top = L.add(91, 131.5 * 16, 2 * 16, 16, 16)
-bottom = L.add(91, 131.5 * 16, 5 * 16, 16, 16, path=top)
-L.objects[-2]['properties'] = [{'name': 'path', 'type': 'object', 'value': bottom}]
-L.add(136, 131 * 16, 5 * 16, 32, 16, path=top)
 L.add(30, 206 * 16, 13 * 16, 16, 32, alwaysActive=True, visible=False, zoneTo='level-3-2-begin')
 
 # coin heaven sits above the level, NES rows -11 to -1
@@ -75,12 +72,11 @@ for x in range(W):
         elif 60 <= (c == (252, 152, 56)).all(2).sum() <= 90:
             L.set(x, y - 15 + UP, (0, 0, 66, 0))
 row = lambda r: r + UP  # NES row of the main level to map row
-for x in (133, 134):  # shaft for the second lift
-    L.set(x, row(-2), (0, 0, 0, 0))
-top = L.add(91, 133.5 * 16, row(-1) * 16, 16, 16)
-bottom = L.add(91, 133.5 * 16, row(1) * 16, 16, 16, path=top)
-L.objects[-2]['properties'] = [{'name': 'path', 'type': 'object', 'value': bottom}]
-L.add(136, 133 * 16, row(1) * 16, 32, 16, path=top)
+# the vine grows from its block up through coin heaven: press up on it to climb into the clouds
+for r in range(-6, 5):
+    c = heaven[(r + 15) * 16:(r + 16) * 16, 131 * 16:132 * 16] if r < 0 else img[r * 16:(r + 1) * 16, 131 * 16:132 * 16]
+    L.set(131, row(r), (newtiles.gid(c, (0, 0, 0)), 0, 0, 0))
+L.add(30, 131 * 16, row(5) * 16, 16, 32, visible=False, zoneTo='level-3-1-game', zoneX=132.5, zoneY=row(-3))
 # the cloud lift
 a = L.add(91, 143.5 * 16, row(-4) * 16, 16, 16)
 b = L.add(91, 158.5 * 16, row(-4) * 16, 16, 16, path=a)

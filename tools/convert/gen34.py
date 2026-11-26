@@ -60,6 +60,6 @@ for o in src:
             if p['name'] == 'path':
                 p['value'] = ids[p['value']]
         L.objects.append(o)
-for x in (144, 146, 148):  # into World 4, like 1-4 and 2-4
+for x in range(144, 160):  # into World 4: doors all along the floor of the end room
     L.add(30, x * 16, 13 * 16, 16, 32, alwaysActive=True, visible=False, zoneTo='level-4-1-begin')
 L.save('level-3-4-game.json')

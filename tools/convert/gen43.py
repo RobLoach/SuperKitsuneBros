@@ -1,7 +1,7 @@
 from paths import NES, ROOT
 import numpy as np
 from PIL import Image
-from gen import overworld, extend_down, flag
+from gen import overworld, extend_down, flag, ropes
 import sprites
 
 W = 160
@@ -37,20 +37,21 @@ for x in range(W):
     for y in range(15):
         if L.get(x, y)[0] == 4879:
             L.set(x, y, (0, 0, 0, 0))
+ropes(L, img, (92, 148, 252))  # pulley ropes and wheels that the lifts covered
 flag(L, 146, red=True)
 extend_down(L)
 
 
 def lift(x, y, path):
-    px, py = x - 8, (round(y / 16) + 1) * 16
+    px, py = x, (round(y / 16) + 1) * 16
     if path[0] == 'v':
-        a = L.add(91, px + 24, path[1] * 16, 16, 16)
-        b = L.add(91, px + 24, path[2] * 16, 16, 16, path=a)
+        a = L.add(91, px + 16, path[1] * 16, 16, 16)
+        b = L.add(91, px + 16, path[2] * 16, 16, 16, path=a)
     else:
-        a = L.add(91, px + 24 + path[1] * 16, py, 16, 16)
-        b = L.add(91, px + 24 + path[2] * 16, py, 16, 16, path=a)
+        a = L.add(91, px + 16 + path[1] * 16, py, 16, 16)
+        b = L.add(91, px + 16 + path[2] * 16, py, 16, 16, path=a)
     L.objects[-2]['properties'] = [{'name': 'path', 'type': 'object', 'value': b}]
-    L.add(92, px, py, 64, 16, path=a)
+    L.add(137, px, py, 48, 16, path=a)  # 3 wide, like the NES lifts
 
 
 # the pulley (balance) lifts are pairs moving in opposite directions, like 3-3

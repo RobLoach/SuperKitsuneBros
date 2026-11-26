@@ -2,7 +2,7 @@ from paths import NES
 import json
 import numpy as np
 from PIL import Image
-from gen import GREY_PIPES, cannons, Level, overworld, extend_down, flag, from_image, fresh_tiles, ROOT, ENEMY, TILE
+from gen import GREY_PIPES, cannons, Level, overworld, extend_down, flag, from_image, fresh_tiles, ROOT, ENEMY, TILE, flag_image
 import sprites
 
 W = 224
@@ -17,6 +17,7 @@ for x in (81, 84):  # a ? block under a Koopa and a hidden coin block
 L.set(85, 5, (0, 208, 0, 0))  # vine block
 for y in (11, 12):  # springboard, a lift instead like 2-1 and 3-1
     L.set(25, y, E)
+flag_image(L, '5-2', 240, 199, (92, 148, 252))  # the NES flagpole
 extend_down(L)
 
 

@@ -1,7 +1,7 @@
 from paths import NES
 import numpy as np
 from PIL import Image
-from gen import overworld, extend_down
+from gen import overworld, extend_down, flag_image, ropes
 import sprites
 
 W = 192
@@ -23,6 +23,8 @@ for x in range(170, W):  # the castle matched 2-4's walls: it is scenery here, l
     for y in range(13):
         v = L.get(x, y)
         L.set(x, y, (v[0], 0, v[2], v[3]))
+flag_image(L, '6-3', 0, 166, (0, 0, 0))  # the NES flagpole
+ropes(L, img, (0, 0, 0))  # pulley ropes and wheels that the lifts covered
 extend_down(L)
 
 for n, x, y, w, h, s in sprites.find(img, sprites.templates('6-3', sprites.B63)):  # Bullet Bills: hornets that come back
