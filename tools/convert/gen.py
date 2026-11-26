@@ -151,9 +151,9 @@ def copy_cells(L, src, xs, ys, dx=0):
 
 
 def underground(path, template, rows, props, spawn, exit_):
-    """rows: 17 strings of 30 chars. # brick, = floor, o coin, M mushroom brick, P pipe body, L pipe lip"""
+    """rows: 17 strings of 30 chars. # brick, = floor, o coin, M mushroom brick, C coin brick (the gold chest), P pipe body, L pipe lip"""
     L = Level(template, 30)
-    T = {'#': (0, 1234, 0, 5711), '=': (0, 1262, 0, 5712), 'o': (0, 0, 66, 0), 'M': (0, 113, 0, 0),
+    T = {'#': (0, 1234, 0, 5711), '=': (0, 1262, 0, 5712), 'o': (0, 0, 66, 0), 'M': (0, 113, 0, 0), 'C': (0, 148, 0, 0),
          'P': (0, 4877, 0, 5784), 'L': (0, 4877, 0, 5816), '.': (0, 0, 0, 0)}
     for y, r in enumerate(rows):
         assert len(r) == 30, (y, len(r))
@@ -471,7 +471,7 @@ def vine(L, col, block, up, heaven, main, sky, zone):
         c = heaven[(r + 15) * 16:(r + 16) * 16, col * 16:(col + 1) * 16] if r < 0 else main[r * 16:(r + 1) * 16, col * 16:(col + 1) * 16]
         if not (c == sky).all():
             L.set(col, r + up, (newtiles.gid(c, sky), 0, 0, 0))
-    L.add(30, col * 16, (block + up) * 16, 16, 32, visible=False, zoneTo=zone, zoneX=col + 1.5, zoneY=up - 3)
+    L.add(30, col * 16, (block + up) * 16, 16, 32, visible=False, zoneTo=zone, zoneX=col + 1.5, zoneY=up - 4)  # standing on the cloud floor
 
 
 def redraw_water(m, img, found, water=(32, 56, 236)):

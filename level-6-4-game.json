@@ -2198,6 +2198,937 @@
      "width": 16,
      "x": 2544,
      "y": 208
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 290,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 291
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circley"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 400,
+     "y": 96
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 291,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 292
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circlex"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 384,
+     "y": 80
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 292,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 293
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circlex"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 352,
+     "y": 80
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 293,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 294
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circley"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 336,
+     "y": 96
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 294,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 295
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circley"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 336,
+     "y": 128
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 295,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 296
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circlex"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 352,
+     "y": 144
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 296,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 297
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circlex"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 384,
+     "y": 144
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 297,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 290
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circley"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 400,
+     "y": 128
+    },
+    {
+     "gid": 188,
+     "height": 32,
+     "id": 298,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 290
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 48,
+     "x": 384,
+     "y": 96
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 299,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 300
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circley"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 624,
+     "y": 96
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 300,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 301
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circlex"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 608,
+     "y": 80
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 301,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 302
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circlex"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 576,
+     "y": 80
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 302,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 303
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circley"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 560,
+     "y": 96
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 303,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 304
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circley"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 560,
+     "y": 128
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 304,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 305
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circlex"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 576,
+     "y": 144
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 305,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 306
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circlex"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 608,
+     "y": 144
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 306,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 299
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circley"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 624,
+     "y": 128
+    },
+    {
+     "gid": 188,
+     "height": 32,
+     "id": 307,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 299
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 48,
+     "x": 608,
+     "y": 96
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 308,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 309
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circley"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 1312,
+     "y": 64
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 309,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 310
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circlex"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 1296,
+     "y": 48
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 310,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 311
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circlex"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 1264,
+     "y": 48
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 311,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 312
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circley"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 1248,
+     "y": 64
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 312,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 313
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circley"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 1248,
+     "y": 96
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 313,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 314
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circlex"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 1264,
+     "y": 112
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 314,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 315
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circlex"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 1296,
+     "y": 112
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 315,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 308
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circley"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 1312,
+     "y": 96
+    },
+    {
+     "gid": 188,
+     "height": 32,
+     "id": 316,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 308
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 48,
+     "x": 1296,
+     "y": 64
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 317,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 318
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circley"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 1504,
+     "y": 144
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 318,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 319
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circlex"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 1488,
+     "y": 128
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 319,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 320
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circlex"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 1456,
+     "y": 128
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 320,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 321
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circley"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 1440,
+     "y": 144
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 321,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 322
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circley"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 1440,
+     "y": 176
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 322,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 323
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circlex"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 1456,
+     "y": 192
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 323,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 324
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circlex"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 1488,
+     "y": 192
+    },
+    {
+     "gid": 91,
+     "height": 16,
+     "id": 324,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 317
+      },
+      {
+       "name": "pathType",
+       "type": "string",
+       "value": "circley"
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 1504,
+     "y": 176
+    },
+    {
+     "gid": 188,
+     "height": 32,
+     "id": 325,
+     "name": "",
+     "properties": [
+      {
+       "name": "path",
+       "type": "object",
+       "value": 317
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 48,
+     "x": 1488,
+     "y": 144
+    },
+    {
+     "gid": 38,
+     "height": 96,
+     "id": 326,
+     "name": "",
+     "properties": [
+      {
+       "name": "flyDistance",
+       "type": "int",
+       "value": 7
+      },
+      {
+       "name": "flyVertical",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "respawn",
+       "type": "bool",
+       "value": true
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 48,
+     "x": 418,
+     "y": 224
+    },
+    {
+     "gid": 38,
+     "height": 96,
+     "id": 327,
+     "name": "",
+     "properties": [
+      {
+       "name": "flyDistance",
+       "type": "int",
+       "value": 7
+      },
+      {
+       "name": "flyVertical",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "respawn",
+       "type": "bool",
+       "value": true
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 48,
+     "x": 507,
+     "y": 224
+    },
+    {
+     "gid": 38,
+     "height": 96,
+     "id": 328,
+     "name": "",
+     "properties": [
+      {
+       "name": "flyDistance",
+       "type": "int",
+       "value": 7
+      },
+      {
+       "name": "flyVertical",
+       "type": "bool",
+       "value": true
+      },
+      {
+       "name": "respawn",
+       "type": "bool",
+       "value": true
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 48,
+     "x": 2082,
+     "y": 224
     }
    ],
    "opacity": 1,
@@ -2243,7 +3174,7 @@
   }
  ],
  "nextlayerid": 22,
- "nextobjectid": 290,
+ "nextobjectid": 329,
  "orientation": "orthogonal",
  "properties": [
   {

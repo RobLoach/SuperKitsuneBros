@@ -62,4 +62,8 @@ for x, y, w in sprites.lifts(img):
 
 for d in (152, 154, 156):
     L.add(30, d * 16, 13 * 16, 16, 32, alwaysActive=True, visible=False, zoneTo='level-4-4-begin')
+for o in L.objects:  # the red Paratroopa flies up and down between the mushrooms
+    if o['gid'] == 38:  # it rises from 4 rows below its NES spot back up to it
+        o['y'] += 4 * 16
+        o['properties'] = [{'name': 'flyDistance', 'type': 'float', 'value': 4.0}, {'name': 'flyVertical', 'type': 'bool', 'value': True}]
 L.save('level-4-3-game.json')

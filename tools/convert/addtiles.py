@@ -6,6 +6,7 @@ FLAG = [(0, 2), (1, 2), (0, 3), (1, 3), (0, 4), (1, 4), (1, 5)]  # relative to t
 DECO = [(11, 11), (11, 12), (13, 10), (13, 11), (14, 12), (77, 8)]  # small tree, trunk, tall tree top, tall tree middle, fence, bridge rail
 n31 = np.array(Image.open(f'{NES}/3-1.png').convert('RGBA'))[240:480]
 n33 = np.array(Image.open(f'{NES}/3-3.png').convert('RGBA'))[0:240]
+n61 = np.array(Image.open(f'{NES}/6-1.png').convert('RGBA'))[0:240]
 n41 = np.array(Image.open(f'{NES}/4-1.png').convert('RGBA'))[0:240]
 n43 = np.array(Image.open(f'{NES}/4-3.png').convert('RGBA'))[0:240]
 
@@ -18,7 +19,7 @@ ts = np.array(Image.open(f'{ROOT}/tileset.png').convert('RGBA'))
 put = lambda col, row, c: ts.__setitem__((slice(row * 16, row * 16 + 16), slice(col * 16, col * 16 + 16)), c)
 for i, (dx, dy) in enumerate(FLAG):
     put(i, 21, cell(n31, 199 + dx, dy))
-    put(8 + i, 21, cell(n33, 150 + dx, dy))
+    put(8 + i, 21, cell(n61, 185 + dx, dy))  # the green flag, from 6-1 (a cloud overlaps 3-3's)
     for col0, im, x0 in ((16, n41, 224), (24, n43, 146)):
         c = im[dy * 16:dy * 16 + 16, (x0 + dx) * 16:(x0 + dx) * 16 + 16].copy()
         c[(c[..., :3] == (92, 148, 252)).all(2)] = 0  # day sky is transparent

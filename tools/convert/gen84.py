@@ -106,6 +106,8 @@ for y in range(15):  # the last column is a nesmaps arrow
     U.set(WW - 1, y, U.get(WW - 2, y))
 extend_down(U)
 redraw_water(U.m, wimg, wfound)  # the NES coral and seaweed
+for y in range(17):  # the redraw brings back the nesmaps border in the last column
+    U.set(WW - 1, y, U.get(WW - 2, y))
 U.add(90, 3 * 16, 6 * 16, 48, 48, actor='Mario')
 RING = [(1, 3), (2, 2), (2, 0), (1, -1), (-1, -1), (-2, 0), (-2, 2), (-1, 3)]
 for px, py in bars:

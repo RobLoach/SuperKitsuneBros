@@ -43,6 +43,11 @@ for x, y in ((64, 7), (63, 8), (65, 8), (66, 9)):  # hidden coin blocks: the ste
 for i, v in enumerate(L.layers['Blocks']):  # the teal bricks, which 1-2 leaves as plain cave tiles
     if v == 1234 and not L.layers['Foreground'][i] and not L.layers['Background No Parallax'][i]:
         L.layers['Foreground'][i] = 5711
+for i, v in enumerate(L.layers['Blocks']):  # the stone stairs, which 1-2's blocks leave invisible (an invisible function block)
+    if v == 4877 and not L.layers['Foreground'][i] and not L.layers['Background No Parallax'][i]:
+        L.layers['Background No Parallax'][i] = 5325 + 388
+for x, y in ((43, 4), (77, 9)):  # coin bricks, the gold chest like 4-1's
+    L.set(x, y, (0, 148, 0, 0))
 for n, x, y, w, h, s in found:
     bottom = round((y + h) / 16) * 16
     if n in ENEMY:
@@ -58,7 +63,8 @@ for x in range(187, 191):
     for y in (8, 9):
         L.set(x, y, E)
 extend_down(L)
-L.layers['Background No Parallax'][8 * W + 214] = 5325 + 19 * 32 + 5  # "5" over the warp pipe
+for x, y in [(x, 6) for x in range(210, 221)] + [(214, 8)]:  # "WELCOME TO WARP ZONE!" and the "5" over the warp pipe
+    L.layers['Background No Parallax'][y * W + x] = newtiles.gid(img[y * 16:y * 16 + 16, x * 16:x * 16 + 16], (0, 0, 0), 5325)
 
 
 def link(a, b, **extra):
@@ -106,7 +112,7 @@ underground('level-4-2-underground2.json', 'level-2-1-underground.json', [
     '#######.........#....PP#######',
     '#######....ooooo#....PP#######',
     '#######...#ooooo###..PP#######',
-    '#######...#######..o.PP#######',
+    '#######...#######...CPP#######',
     '#######..............PP#######',
     '#######..............LL#######',
     '#######..................#####',
@@ -138,6 +144,11 @@ for x in range(WW):
                 L.set(x, y, (v[0], 5901, 0, 0))
 for y in (13, 14):  # no pit under the vine
     L.set(64 - X0, y, L.get(65 - X0, y))
+for y in range(15):  # no falling off either edge: the NES gap at 56 to 59 is off screen there, and the wall goes on past 124
+    for x in range(4):
+        if y >= 13:
+            L.set(x, y, L.get(4, y))
+    L.set(WW - 1, y, L.get(WW - 2, y))
 extend_down(L)
 L.add(90, (66 - X0) * 16, 13 * 16, 48, 48, actor='Mario')
 L.add(131, (110 - X0) * 16, (10 + 1) * 16, 32, 16, zoneTo='level-8-1-begin')  # the 8 pipe

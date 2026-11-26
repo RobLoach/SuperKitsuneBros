@@ -18,6 +18,10 @@ old = np.array(Image.open(f'{NES}/2-4.png').convert('RGB'))[:240, :W * 16]
 for (x, y), v in grid.items():
     if (x, y) not in unknown and not (img[y * 16:y * 16 + 16, x * 16:x * 16 + 16] == old[y * 16:y * 16 + 16, x * 16:x * 16 + 16]).all():
         L.set(x, y, v)
+for x in range(W):  # 2-4's map has a few blocks the NES doesn't (a ledge under the firebar at 55 left only a 2-tall gap)
+    for y in range(2, 15):
+        if L.get(x, y)[1] and not img[y * 16:y * 16 + 16, x * 16:x * 16 + 16].any():
+            L.set(x, y, (0, 0, 0, 0))
 
 keep = [o for l in src['layers'] if l['type'] == 'objectgroup' for o in l['objects'] if o['gid'] in (90, 136, 196)]
 ids = {p['value'] for o in keep for p in o.get('properties', []) if p['name'] == 'path'}

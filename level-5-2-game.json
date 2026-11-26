@@ -565,28 +565,9 @@
      "y": 336
     },
     {
-     "gid": 139,
-     "height": 32,
-     "id": 30,
-     "name": "",
-     "properties": [
-      {
-       "name": "spawn-type",
-       "type": "string",
-       "value": "coin"
-      }
-     ],
-     "rotation": 0,
-     "type": "",
-     "visible": true,
-     "width": 16,
-     "x": 1344,
-     "y": 336
-    },
-    {
      "gid": 91,
      "height": 16,
-     "id": 31,
+     "id": 30,
      "name": "",
      "rotation": 0,
      "type": "",
@@ -598,14 +579,14 @@
       {
        "name": "path",
        "type": "object",
-       "value": 32
+       "value": 31
       }
      ]
     },
     {
      "gid": 91,
      "height": 16,
-     "id": 32,
+     "id": 31,
      "name": "",
      "rotation": 0,
      "type": "",
@@ -617,20 +598,20 @@
       {
        "name": "path",
        "type": "object",
-       "value": 31
+       "value": 30
       }
      ]
     },
     {
      "gid": 136,
      "height": 16,
-     "id": 33,
+     "id": 32,
      "name": "",
      "properties": [
       {
        "name": "path",
        "type": "object",
-       "value": 31
+       "value": 30
       }
      ],
      "rotation": 0,
@@ -643,7 +624,7 @@
     {
      "gid": 131,
      "height": 16,
-     "id": 34,
+     "id": 33,
      "name": "",
      "properties": [
       {
@@ -667,7 +648,7 @@
     {
      "gid": 153,
      "height": 16,
-     "id": 35,
+     "id": 34,
      "name": "",
      "rotation": 0,
      "type": "",
@@ -679,7 +660,7 @@
     {
      "gid": 30,
      "height": 32,
-     "id": 36,
+     "id": 35,
      "name": "",
      "properties": [
       {
@@ -706,6 +687,18 @@
      "y": 384
     },
     {
+     "gid": 132,
+     "height": 32,
+     "id": 36,
+     "name": "",
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 32,
+     "x": 2768,
+     "y": 352
+    },
+    {
      "gid": 30,
      "height": 32,
      "id": 37,
@@ -729,7 +722,7 @@
       {
        "name": "zoneY",
        "type": "int",
-       "value": 8
+       "value": 7
       }
      ],
      "rotation": 0,

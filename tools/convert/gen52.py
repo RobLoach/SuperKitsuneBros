@@ -11,7 +11,7 @@ img = np.array(Image.open(f'{NES}/5-2.png').convert('RGB'))[240:480, :W * 16]
 head = np.array(Image.open(f'{NES}/5-1.png').convert('RGB'))[11 * 16:12 * 16, 111 * 16:112 * 16]
 print('cannons', cannons(L, img, head))
 E = (0, 0, 0, 0)
-for x in (81, 84):  # a ? block under a Koopa and a hidden coin block
+for x in (81,):  # a ? block under a Koopa (the hidden coin block at 84 is found with the others)
     L.set(x, 9, E)
     L.add(139, x * 16, 10 * 16, 16, 32, **{'spawn-type': 'coin'})
 L.set(85, 5, (0, 208, 0, 0))  # vine block
@@ -38,6 +38,7 @@ lift(25, 2.5, 13)
 L.add(131, 55 * 16, (10 + 1) * 16, 32, 16, disableInventory=True, zoneTo='level-5-2-underwater')
 L.add(153, 115 * 16, (11 + 1) * 16, 32, 16)
 L.add(30, 206 * 16, 13 * 16, 16, 32, alwaysActive=True, visible=False, zoneTo='level-5-3-begin')
+L.add(132, 173 * 16, 11 * 16, 32, 32)  # the Piranha Plant on the last pipe, inside it in the NES picture
 
 # coin heaven sits above the level, NES rows -11 to -1
 UP = 11
@@ -96,6 +97,8 @@ for xs, y in ((range(22, 26), 6), (range(28, 32), 10)):  # lifts
     U.add(92, xs[0] * 16, (y + 1) * 16, 64, 16, path=a)
 extend_down(U)
 redraw_water(U.m, wimg, found)  # the NES coral and seaweed
+for y in range(17):  # the redraw brings back the nesmaps border in the last column
+    U.set(WW - 1, y, U.get(WW - 2, y))
 U.add(90, 2 * 16, 6 * 16, 48, 48, actor='Mario')
 for n, x, y, w, h, s in found:
     if n in ENEMY:

@@ -76,7 +76,7 @@ row = lambda r: r + UP  # NES row of the main level to map row
 for r in range(-6, 5):
     c = heaven[(r + 15) * 16:(r + 16) * 16, 131 * 16:132 * 16] if r < 0 else img[r * 16:(r + 1) * 16, 131 * 16:132 * 16]
     L.set(131, row(r), (newtiles.gid(c, (0, 0, 0)), 0, 0, 0))
-L.add(30, 131 * 16, row(5) * 16, 16, 32, visible=False, zoneTo='level-3-1-game', zoneX=132.5, zoneY=row(-3))
+L.add(30, 131 * 16, row(5) * 16, 16, 32, visible=False, zoneTo='level-3-1-game', zoneX=132.5, zoneY=row(-4))  # standing on the cloud floor
 # the cloud lift
 a = L.add(91, 143.5 * 16, row(-4) * 16, 16, 16)
 b = L.add(91, 158.5 * 16, row(-4) * 16, 16, 16, path=a)

@@ -2,8 +2,6 @@ from paths import NES
 from gen import overworld, extend_down, flag, underground
 W = 240
 L = overworld('4-1', 0, W, legend=('4-1', 'B41'), tileset=None, qref=('4-1', 0, 25, 5), fresh=True)
-L.set(92, 5, (0, 0, 0, 0))  # hidden 1-up
-L.add(60, 92 * 16, 6 * 16, 16, 40)
 flag(L, 224, day=True)
 extend_down(L)
 lakitu = [o for o in L.objects if o['gid'] == 156]
