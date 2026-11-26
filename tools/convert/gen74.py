@@ -52,7 +52,8 @@ WALLS = [(50, (3, 4, 5)), (65, (3, 4, 5)), (66, (11, 12)), (119, (11, 12)), (134
          *((x, (6, 7, 8, 9)) for x in range(88, 96)),  # puzzle 1's last bottom path ends at its door, and the top path runs on into puzzle 2
          *((x, (6, 7, 8, 9)) for x in (116, 117)), (118, (7, 8, 9)),  # puzzle 2's first bottom path can't be jumped out of past its door
          (122, (10,)), (123, (10,)),  # dropping from the top path lands in the middle one
-         (130, (6,)), (131, (6,))]  # the second top path can't drop back into the middle one past its door
+         (130, (6,)), (131, (6,)),  # the second top path can't drop back into the middle one past its door
+         *((x, (10,)) for x in range(105, 110))]  # a floor under puzzle 2's short middle path, so its door isn't hanging over the bottom one
 for x, ys in WALLS:
     for y in ys:
         L.set(X(x), y, BRICK)

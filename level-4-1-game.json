@@ -757,9 +757,85 @@
      "y": 64
     },
     {
+     "gid": 48,
+     "height": 32,
+     "id": 43,
+     "name": "",
+     "properties": [
+      {
+       "name": "respawn",
+       "type": "bool",
+       "value": true
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 848,
+     "y": 96
+    },
+    {
+     "gid": 48,
+     "height": 32,
+     "id": 44,
+     "name": "",
+     "properties": [
+      {
+       "name": "respawn",
+       "type": "bool",
+       "value": true
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 1264,
+     "y": 96
+    },
+    {
+     "gid": 48,
+     "height": 32,
+     "id": 45,
+     "name": "",
+     "properties": [
+      {
+       "name": "respawn",
+       "type": "bool",
+       "value": true
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 2512,
+     "y": 96
+    },
+    {
+     "gid": 48,
+     "height": 32,
+     "id": 46,
+     "name": "",
+     "properties": [
+      {
+       "name": "respawn",
+       "type": "bool",
+       "value": true
+      }
+     ],
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 16,
+     "x": 2928,
+     "y": 96
+    },
+    {
      "gid": 131,
      "height": 16,
-     "id": 43,
+     "id": 47,
      "name": "",
      "properties": [
       {
@@ -783,7 +859,7 @@
     {
      "gid": 153,
      "height": 16,
-     "id": 44,
+     "id": 48,
      "name": "",
      "rotation": 0,
      "type": "",
@@ -795,7 +871,7 @@
     {
      "gid": 30,
      "height": 32,
-     "id": 45,
+     "id": 49,
      "name": "",
      "properties": [
       {
@@ -865,7 +941,7 @@
   }
  ],
  "nextlayerid": 19,
- "nextobjectid": 46,
+ "nextobjectid": 50,
  "orientation": "orthogonal",
  "properties": [
   {

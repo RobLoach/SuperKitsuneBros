@@ -48,4 +48,5 @@ for x, y, w in sprites.lifts(img):
 
 for d in (156, 158, 160):
     L.add(30, d * 16, 13 * 16, 16, 32, alwaysActive=True, visible=False, zoneTo='level-3-4-begin')
+L.set(26, 6, (0, 0, 0, 0))  # a Goomba the sprite search missed, copied as scenery: 3-3 has its enemy there already
 L.save('level-3-3-game.json')

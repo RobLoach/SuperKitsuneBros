@@ -9,6 +9,8 @@ height = lakitu[0]['y']
 L.objects[:] = [o for o in L.objects if o['gid'] != 156]
 for x in range(26, 210, 26):  # a kite ninja for Lakitu every 26 tiles, up to the last staircase
     L.add(156, x * 16, height, 48, 48)
+for x in (52, 78, 156, 182):  # more Spinies dropping from the sky, under the kite ninjas that don't have one in the NES picture
+    L.add(48, x * 16 + 16, height + 32, 16, 32, respawn=True)
 L.add(131, 132 * 16, (9 + 1) * 16, 32, 16, disableInventory=True, zoneTo='level-4-1-underground')
 L.add(153, 163 * 16, (11 + 1) * 16, 32, 16)
 L.add(30, 231 * 16, 13 * 16, 16, 32, alwaysActive=True, visible=False, zoneTo='level-4-2-begin')

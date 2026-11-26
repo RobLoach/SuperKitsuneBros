@@ -65,8 +65,8 @@ for x, top in ((51, 11), (132, 11), (212, 7), (266, 11)):
 L.add(131, 81 * 16, (8 + 1) * 16, 32, 16, zoneTo=SELF, zoneX=115.5, zoneY=9)
 L.add(131, 152 * 16, (6 + 1) * 16, 32, 16, zoneTo=SELF, zoneX=195.5, zoneY=9)
 L.add(131, 228 * 16, (8 + 1) * 16, 32, 16, zoneTo='level-8-4-underwater')
-# walking on past the right pipe loops back, like the NES
-for x, zx, zy in ((96, 32.5, 11), (160, 115.5, 9), (255, 195.5, 9)):
+# walking on past the right pipe in the last room loops back, like the NES (the loops at 96 and 160 were removed in a18cd53)
+for x, zx, zy in ((255, 195.5, 9),):
     for y in (5, 7, 9, 11, 13):
         L.add(30, x * 16, y * 16, 16, 32, alwaysActive=True, visible=False, zoneTo=SELF, zoneX=zx, zoneY=zy)
 L.save('level-8-4-game.json')
@@ -102,6 +102,11 @@ for x in range(WW):  # nesmaps labels above the water are not part of the level
     for y in range(3):
         if U.get(x, y)[0] >= TILE(0, 23):
             U.set(x, y, E)
+for x in range(WW):  # 8-4's green blocks and the pink entry pipe aren't in the 2-2 database, so they came out as pictures only
+    for y in range(2, 15):
+        c = wimg[y * 16:y * 16 + 16, x * 16:x * 16 + 16]
+        if (c == (0, 168, 0)).all(2).sum() >= 60 or (c == (228, 0, 88)).all(2).sum() >= 20:
+            U.layers['Blocks'][y * WW + x] = 5901
 for y in range(15):  # the last column is a nesmaps arrow
     U.set(WW - 1, y, U.get(WW - 2, y))
 extend_down(U)
@@ -120,9 +125,9 @@ for n, x, y, w, h, s in wfound:
         U.add(103, x + w // 2 - 24, round((y + h) / 16) * 16, 48, 32)
 side = [(i % WW, i // WW) for i, g in enumerate(U.layers['Foreground']) if g == 5206]
 print('bars', bars, 'side pipe', side)
-for g, extra in ((153, {}), (30, {'alwaysActive': True, 'hidePrompt': True, 'visible': False})):  # out through the side pipe to pipe 2, like 2-2
-    sx, sy = side[0]
-    U.add(g, sx * 16, (sy + 2) * 16, 32 if g == 153 else 16, 16 if g == 153 else 32, zoneTo=SELF, zoneX=259.5, zoneY=9, **extra)
+sx, sy = side[0]
+for x in (sx - 2, sx - 1):  # out through the side pipe to pipe 2: invisible doors in the water just in front of it
+    U.add(30, x * 16, (sy + 2) * 16, 16, 32, alwaysActive=True, hidePrompt=True, visible=False, zoneTo=SELF, zoneX=259.5, zoneY=9)
 U.save('level-8-4-underwater.json')
 
 # "push button B to select a world": a room with a pipe into each world, and the end of the game past them

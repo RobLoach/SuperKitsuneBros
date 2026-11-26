@@ -161,6 +161,10 @@ def underground(path, template, rows, props, spawn, exit_):
             v = T[ch]
             if ch == '=' and (y == 0 or rows[y - 1][x] != '='):
                 v = (0, 1230, 0, 5712)
+            if ch == '#' and 7 <= x <= 22:  # bricks in the room break and go away: a plain cave brick, like 1-2's
+                v = (0, 1234, 0, 0)
+            elif ch == '#':  # the walls around it can't be broken: an invisible block under the brick picture
+                v = (0, 4877, 0, 5711)
             if ch in 'PL' and x > 0 and r[x - 1] == ch:
                 v = (v[0], v[1], v[2], v[3] + 1)
             L.set(x, y, v)

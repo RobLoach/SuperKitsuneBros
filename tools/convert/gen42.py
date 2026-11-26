@@ -40,9 +40,6 @@ for x in range(W):
 for x, y in ((64, 7), (63, 8), (65, 8), (66, 9)):  # hidden coin blocks: the steps up to the vine block
     L.set(x, y, E)
     L.add(139, x * 16, (y + 1) * 16, 16, 32, **{'spawn-type': 'coin'})
-for i, v in enumerate(L.layers['Blocks']):  # the teal bricks, which 1-2 leaves as plain cave tiles
-    if v == 1234 and not L.layers['Foreground'][i] and not L.layers['Background No Parallax'][i]:
-        L.layers['Foreground'][i] = 5711
 for i, v in enumerate(L.layers['Blocks']):  # the stone stairs, which 1-2's blocks leave invisible (an invisible function block)
     if v == 4877 and not L.layers['Foreground'][i] and not L.layers['Background No Parallax'][i]:
         L.layers['Background No Parallax'][i] = 5325 + 388
