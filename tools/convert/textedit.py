@@ -16,3 +16,17 @@ def set_cells(path, layer, cells):
             out += s[a + last:a + n.start()] + str(cells[i])
             last = n.end()
     open(path, 'w').write(out + s[a + last:])
+
+
+def set_object(path, oid, **fields):
+    """change number fields (gid, x, width...) of the object with id oid"""
+    s = open(path).read()
+    m = re.search(r'"id"\s*:\s*%d\s*,' % oid, s)
+    a = s.rindex('{', 0, m.start())
+    b = s.index('}', m.end())
+    if s.find('{', m.end(), b) != -1:  # the object has properties: its closing brace is after them
+        b = s.index('}', s.index(']', m.end()))
+    obj = s[a:b]
+    for k, v in fields.items():
+        obj = re.sub(r'("%s"\s*:\s*)[-\d.]+' % k, lambda g: g.group(1) + str(v), obj)
+    open(path, 'w').write(s[:a] + obj + s[b:])

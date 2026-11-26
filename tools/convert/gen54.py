@@ -1,4 +1,5 @@
 from paths import NES
+from bowsers import GIDS
 import json, math
 import numpy as np
 from PIL import Image
@@ -23,7 +24,7 @@ for x in range(W):  # 2-4's map has a few blocks the NES doesn't (a ledge under 
         if L.get(x, y)[1] and not img[y * 16:y * 16 + 16, x * 16:x * 16 + 16].any():
             L.set(x, y, (0, 0, 0, 0))
 
-keep = [o for l in src['layers'] if l['type'] == 'objectgroup' for o in l['objects'] if o['gid'] in (90, 136, 196)]
+keep = [o for l in src['layers'] if l['type'] == 'objectgroup' for o in l['objects'] if o['gid'] in {90, 136} | GIDS]
 ids = {p['value'] for o in keep for p in o.get('properties', []) if p['name'] == 'path'}
 nodes = [o for l in src['layers'] if l['type'] == 'objectgroup' for o in l['objects'] if o['id'] in ids]
 ids |= {p['value'] for o in nodes for p in o.get('properties', []) if p['name'] == 'path'}

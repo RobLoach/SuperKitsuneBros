@@ -1,4 +1,5 @@
 import json
+from bowsers import GIDS
 import numpy as np
 from gen import Level, from_image, extend_down, copy_cells, night, ROOT
 
@@ -39,8 +40,8 @@ for x, y in ((18, 8), (22, 9)):  # the flimsy lifts over the lava bob up and dow
     L.add(136, x * 16, y * 16, 32, 16, path=a)
 src34 = [o for l in json.load(open(f'{ROOT}/level-3-4-game.json'))['layers'] if l['type'] == 'objectgroup' for o in l['objects']]
 for o in src34:
-    if o['gid'] == 196 and o['x'] >= 134 * 16:
-        L.add(196, o['x'] + (X(198) - 134) * 16, o['y'], o['width'], o['height'], **{p['name']: p['value'] for p in o.get('properties', [])})
+    if o['gid'] in GIDS and o['x'] >= 134 * 16:
+        L.add(o['gid'], o['x'] + (X(198) - 134) * 16, o['y'], o['width'], o['height'], **{p['name']: p['value'] for p in o.get('properties', [])})
 for x in range(X(208), W):  # into World 8: doors all along the floor of the end room
     L.add(30, x * 16, 13 * 16, 16, 32, alwaysActive=True, visible=False, zoneTo='level-8-1-begin')
 

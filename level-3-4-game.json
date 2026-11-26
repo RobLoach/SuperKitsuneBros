@@ -2010,15 +2010,15 @@
      "y": 112
     },
     {
-     "gid": 196,
-     "height": 32,
+     "gid": 160,
+     "height": 48,
      "id": 98,
      "name": "",
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 80,
-     "x": 2192,
+     "width": 48,
+     "x": 2208,
      "y": 160
     },
     {

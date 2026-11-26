@@ -1524,15 +1524,15 @@
      "y": 208
     },
     {
-     "gid": 196,
-     "height": 32,
+     "gid": 101,
+     "height": 48,
      "id": 67,
      "name": "",
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 80,
-     "x": 2704,
+     "width": 48,
+     "x": 2720,
      "y": 160
     },
     {

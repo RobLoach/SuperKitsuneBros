@@ -1722,15 +1722,15 @@
                  "y":142.5
                 }, 
                 {
-                 "gid":196,
+                 "gid":46,
                  "height":32,
                  "id":271,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":80,
-                 "x":2192,
+                 "width":16,
+                 "x":2224,
                  "y":160
                 }],
          "opacity":1,

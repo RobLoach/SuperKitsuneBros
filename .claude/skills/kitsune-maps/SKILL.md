@@ -40,7 +40,7 @@ Each level is a Tiled JSON map (`level-W-L-*.json`), 16px tiles, usually 17 rows
 | 79 | archer | Hammer Bro |
 | 103, 77 | pufferfish, carp | Blooper, swimming Cheep-cheep |
 | 75 | brown carp (`missile` on by default: flies forward forever) | flying Cheep-cheep (2-3, 7-3) |
-| 196 | spearman (captain) | Bowser |
+| 196, 125, 46, 56, 160, 101, 194, 123 | spear captain, big pango, skeleton, tanuki ninja, brown monkey, tengu, spear soldier, kasha | Bowser: a different one in each castle, set by `tools/convert/bowsers.py` |
 
 `tools/convert/gen.py` has `ENEMY` with the sizes; centre an enemy on the NES sprite (`x + w/2 - width/2`), not by its left edge.
 
