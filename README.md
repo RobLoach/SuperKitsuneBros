@@ -16,6 +16,7 @@ This includes all eight worlds. If you'd like to help improve it, feel free to g
 - [x] World 6
 - [x] World 7
 - [x] World 8
+- [x] World select after beating 8-4, with a pipe into each world
 
 ## Installation
 

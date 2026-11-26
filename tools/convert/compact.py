@@ -7,7 +7,7 @@ from textedit import set_cells
 import newtiles
 
 FIRST = 23 * 32
-SAME = 6  # tiles differing in this many pixels or fewer are merged
+SAME = 6  # tiles of the same shape differing in this many pixels or fewer are merged (letters like O and 8 are not)
 
 
 def main():
@@ -30,7 +30,8 @@ def main():
     # the most used tile of each group of near-identical ones stays
     rep = {}
     for i in sorted(used, key=lambda i: -used[i]):
-        rep[i] = next((r for r in rep.values() if r == rep.get(r) and (tile(i) != tile(r)).any(2).sum() <= SAME), i)
+        rep[i] = next((r for r in rep.values() if r == rep.get(r) and ((tile(i)[..., 3] > 0) == (tile(r)[..., 3] > 0)).all()
+                       and (tile(i) != tile(r)).any(2).sum() <= SAME), i)
     keep = sorted(set(rep.values()))
     new = {i: FIRST + keep.index(rep[i]) for i in used}
     for n, a in sheets.items():
@@ -41,6 +42,7 @@ def main():
             a[j // 32 * 16:j // 32 * 16 + 16, j % 32 * 16:j % 32 * 16 + 16] = old[i // 32 * 16:i // 32 * 16 + 16, i % 32 * 16:i % 32 * 16 + 16]
         Image.fromarray(a).save(f'{ROOT}/{n}', optimize=True)
     reg = newtiles._load()
+    reg = {k: v for k, v in reg.items() if (v[1] * 32 + v[0]) not in rep or rep[v[1] * 32 + v[0]] == v[1] * 32 + v[0]}
     out = {}
     for key, (col, row) in reg.items():
         i = row * 32 + col

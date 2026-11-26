@@ -25,8 +25,13 @@ for x in range(286, 301):  # Bowser's hammers and fire are sprites, not tiles
     for y in range(3, 10):
         if L.get(x, y)[0] >= TILE(0, 23):
             L.set(x, y, E)
+for x in range(W):  # nesmaps marks the loop points under the floor
+    if L.get(x, 14)[0] >= TILE(0, 23):
+        L.set(x, 14, L.get(31, 14))
 extend_down(L)
-copy_cells(L, 'level-2-4-game.json', range(134, 142), range(2, 17), dx=160)  # the end of the Bowser bridge matches 2-4
+copy_cells(L, 'level-2-4-game.json', range(134, 142), range(2, 17), dx=160)
+L.set(150, 9, E)  # the hidden coin block you stand on to reach the floating pipe
+L.add(139, 150 * 16, 10 * 16, 16, 32, **{'spawn-type': 'coin'})  # the end of the Bowser bridge matches 2-4
 
 L.add(90, 0, 7 * 16, 48, 48, actor='Mario')
 for n, x, y, w, h, s in found:
@@ -43,7 +48,13 @@ for o in src:
     if o['gid'] == 196:  # Bowser
         L.add(196, o['x'] + 160 * 16, o['y'], o['width'], o['height'], **{p['name']: p['value'] for p in o.get('properties', [])})
 L.add(42, 289 * 16, 10 * 16, 48, 32, respawn=True)  # Bowser's fire
-L.add(96, 300 * 16, 9 * 16, 112, 112, endLevel=True, visible=False)  # the end of Super Mario Bros.
+for x in range(314, W):  # past the princess, on to the world select
+    L.add(30, x * 16, 13 * 16, 16, 32, alwaysActive=True, visible=False, zoneTo='level-world-select')
+# the lift over the first lava pit, up to the top of the walls either side and back down
+a = L.add(91, 70.5 * 16, 10 * 16, 16, 16)
+b = L.add(91, 70.5 * 16, 13 * 16, 16, 16, path=a)
+L.objects[-2]['properties'] = [{'name': 'path', 'type': 'object', 'value': b}]
+L.add(136, 70 * 16, 13 * 16, 32, 16, path=a)
 
 # pipes: the right ones carry you on, the others go back to pipe 1
 SELF = 'level-8-4-game'
@@ -111,3 +122,30 @@ for g, extra in ((153, {}), (30, {'alwaysActive': True, 'hidePrompt': True, 'vis
     sx, sy = side[0]
     U.add(g, sx * 16, (sy + 2) * 16, 32 if g == 153 else 16, 16 if g == 153 else 32, zoneTo=SELF, zoneX=259.5, zoneY=9, **extra)
 U.save('level-8-4-underwater.json')
+
+# "push button B to select a world": a room with a pipe into each world, and the end of the game past them
+W = 48
+L = Level('level-2-1-game.json', W)
+L.prop('customIndicator', '8-4')
+copy_cells(L, 'level-1-1-game.json', range(W), range(13))  # 1-1's hills, bushes and clouds...
+for x in range(W):
+    for y in range(13):
+        if L.get(x, y)[1:] != (0, 0, 0):  # ...but not its blocks and pipes
+            L.set(x, y, E)
+    for y in range(13, 17):
+        L.set(x, y, (0, 206 if y == 13 else 238, 0, 5044))
+text = lambda x, y, s: [L.set(x + i, y, (TILE(ord(c) - 65, 18) if c.isalpha() else TILE(int(c), 19), 0, 0, 0)) for i, c in enumerate(s) if c != ' ']
+text(10, 4, 'SELECT A WORLD')
+for i in range(8):
+    x = 7 + 4 * i
+    text(x, 8, str(i + 1))
+    L.set(x, 10, (0, 5901, 0, 5144))
+    L.set(x + 1, 10, (0, 5901, 0, 5145))
+    for y in (11, 12):
+        L.set(x, y, (0, 5901, 0, 5176))
+        L.set(x + 1, y, (0, 5901, 0, 5177))
+    L.add(131, x * 16, 11 * 16, 32, 16, zoneTo=f'level-{i + 1}-1-begin')
+text(41, 3, 'THE END')  # over the torii
+L.add(90, 2 * 16, 13 * 16, 48, 48, actor='Mario')
+L.add(96, 43 * 16, 13 * 16, 80, 112, endLevel=True, visible=False)  # the end of Super Mario Bros.
+L.save('level-world-select.json')

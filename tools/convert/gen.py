@@ -479,7 +479,8 @@ def redraw_water(m, img, found, water=(32, 56, 236)):
     W = m['width']
     L = {l['name']: l['data'] for l in m['layers'] if l['type'] == 'tilelayer'}
     bg, blocks, coins = L['Background No Parallax'], L['Blocks'], L['Coins']
-    boxes = [(x - 2, y - 2, w + 4, h + 4) for n, x, y, w, h, s in found]
+    boxes = [(x - 2, y - 2, w + 4, h + 4) for n, x, y, w, h, s in found if n != 'flame']
+    flames = [(x, y, w, h) for n, x, y, w, h, s in found if n == 'flame']
     for y in range(2, 15):
         for x in range(min(W, img.shape[1] // 16)):
             i = y * W + x
@@ -489,6 +490,9 @@ def redraw_water(m, img, found, water=(32, 56, 236)):
             if coins[i] or (c == water).all():
                 if not blocks[i] and not coins[i]:
                     bg[i] = 0
+                continue
+            if not blocks[i] and any(bx < x * 16 + 16 and x * 16 < bx + bw and by < y * 16 + 16 and y * 16 < by + bh for bx, by, bw, bh in flames):
+                bg[i] = 0  # firebar flames are objects, there is only water behind them
                 continue
             if not blocks[i] and any(bx < x * 16 + 16 and x * 16 < bx + bw and by < y * 16 + 16 and y * 16 < by + bh for bx, by, bw, bh in boxes):
                 continue  # a fish in front: keep what is there
