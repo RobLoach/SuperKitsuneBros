@@ -1,12 +1,12 @@
 # Kitsune Tails: Super Kitsune Bros
 
-An attempt at a faithful recreation of Worlds 1 to 7 of [Super Mario Bros](https://en.wikipedia.org/wiki/Super_Mario_Bros) in [Kitsune Tails](https://kitsunegames.com/kitsunetails/).
+An attempt at a faithful recreation of [Super Mario Bros](https://en.wikipedia.org/wiki/Super_Mario_Bros) in [Kitsune Tails](https://kitsunegames.com/kitsunetails/).
 
 ![Screenshot](tools/screenshot.jpg)
 
 ## Features
 
-This currently includes Worlds 1 to 7. If you'd like to help improve it, feel free to get involved.
+This includes all eight worlds. If you'd like to help improve it, feel free to get involved.
 
 - [x] World 1
 - [x] World 2
@@ -15,6 +15,7 @@ This currently includes Worlds 1 to 7. If you'd like to help improve it, feel fr
 - [x] World 5
 - [x] World 6
 - [x] World 7
+- [x] World 8
 
 ## Installation
 
