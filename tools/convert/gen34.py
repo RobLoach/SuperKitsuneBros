@@ -49,7 +49,7 @@ for x, y in ((101, 10), (115, 8), (122.5, 9), (129, 10)):
 src = [o for l in json.load(open(f'{ROOT}/level-2-4-game.json'))['layers'] if l['type'] == 'objectgroup' for o in l['objects']]
 ids = {}
 for o in src:
-    if o['x'] >= 134 * 16 and o['gid'] not in (42, 30):
+    if o['x'] >= 134 * 16 and o.get('gid') and o['gid'] not in (42, 30):  # not the bridge trigger, which has no gid
         ids[o['id']] = L.nextid
         L.nextid += 1
 for o in src:

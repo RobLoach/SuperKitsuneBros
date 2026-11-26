@@ -42,6 +42,7 @@ def obj(oid, gid, x, y, w, h, **props):
 class Level:
     def __init__(self, template, width):
         self.m = copy.deepcopy(json.load(open(f'{ROOT}/{template}')))
+        self.m['layers'] = [l for l in self.m['layers'] if l['name'] != 'Bridge']  # after_bridges.py adds it to the finished castle
         self.W = width
         self.m['width'] = width
         self.layers = {}
@@ -141,10 +142,20 @@ def night(L, image='tileset-night-white.png'):
             t['image'] = image
 
 
+def tiles(m):
+    """a map's tile layers by name, with the castles' separate Bowser bridge layer (after_bridges.py) folded back into
+    the background and blocks, so generators copying a castle get the bridge where they expect it"""
+    S = {l['name']: list(l['data']) for l in m['layers'] if l['type'] == 'tilelayer'}
+    for i, g in enumerate(S.pop('Bridge', [])):
+        if g:
+            S['Background No Parallax'][i], S['Blocks'][i] = g, 5901
+    return S
+
+
 def copy_cells(L, src, xs, ys, dx=0):
     m = json.load(open(f'{ROOT}/{src}'))
     W = m['width']
-    S = {l['name']: l['data'] for l in m['layers'] if l['type'] == 'tilelayer'}
+    S = tiles(m)
     for x in xs:
         for y in ys:
             L.set(x + dx, y, tuple(S[n][y * W + x] if n in S else 0 for n in LAYERS))

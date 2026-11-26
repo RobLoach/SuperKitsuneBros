@@ -20,7 +20,7 @@ def main():
     for world, (gid, w, h) in BOWSER.items():
         path = f'{ROOT}/level-{world}-4-game.json'
         m = json.load(open(path))
-        o = next(o for l in m['layers'] if l['type'] == 'objectgroup' for o in l['objects'] if o['gid'] in GIDS and o['y'] == 160)
+        o = next(o for l in m['layers'] if l['type'] == 'objectgroup' for o in l['objects'] if o.get('gid') in GIDS and o['y'] == 160)
         x = o['x'] + (o['width'] - w) / 2  # same middle, standing on the bridge
         set_object(path, o['id'], gid=gid, width=w, height=h, x=int(x) if x == int(x) else x)
         print(f'{world}-4', gid)

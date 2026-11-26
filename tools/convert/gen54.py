@@ -3,13 +3,13 @@ from bowsers import GIDS
 import json, math
 import numpy as np
 from PIL import Image
-from gen import Level, from_image, ROOT, LAYERS
+from gen import tiles, Level, from_image, ROOT, LAYERS
 
 # 5-4 is 2-4 with more firebars: start from the 2-4 map and add the differences
 W = 160
 src = json.load(open(f'{ROOT}/level-2-4-game.json'))
 L = Level('level-2-4-game.json', W)
-S = {l['name']: l['data'] for l in src['layers'] if l['type'] == 'tilelayer'}
+S = tiles(src)  # with the Bowser bridge folded back in
 for name, data in L.layers.items():
     data[:] = S[name]
 L.prop('customIndicator', '5-4')
@@ -24,7 +24,7 @@ for x in range(W):  # 2-4's map has a few blocks the NES doesn't (a ledge under 
         if L.get(x, y)[1] and not img[y * 16:y * 16 + 16, x * 16:x * 16 + 16].any():
             L.set(x, y, (0, 0, 0, 0))
 
-keep = [o for l in src['layers'] if l['type'] == 'objectgroup' for o in l['objects'] if o['gid'] in {90, 136} | GIDS]
+keep = [o for l in src['layers'] if l['type'] == 'objectgroup' for o in l['objects'] if o.get('gid') in {90, 136} | GIDS]
 ids = {p['value'] for o in keep for p in o.get('properties', []) if p['name'] == 'path'}
 nodes = [o for l in src['layers'] if l['type'] == 'objectgroup' for o in l['objects'] if o['id'] in ids]
 ids |= {p['value'] for o in nodes for p in o.get('properties', []) if p['name'] == 'path'}
