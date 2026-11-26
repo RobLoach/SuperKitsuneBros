@@ -85,6 +85,7 @@ Subscribe to [Super Kitsune Bros on the Steam Workshop](https://steamcommunity.c
 - https://nesmaps.com/maps/SuperMarioBrothers/SuperMarioBrothers.html
 - https://www.mariowiki.com/Super_Mario_Bros.#Worlds_and_levels
 - https://downloads.khinsider.com/game-soundtracks/album/super-mario-bros
+- https://nu.vgmtreasurechest.com/soundtracks/super-mario-bros/vfsuvvoj/18.%20Saved%20the%20Princess%20%28NES%29%20%5BVS.%20Super%20Mario%20Bros.%5D.mp3
 - https://fontstruct.com/fontstructions/show/1332355/arcade-classic-2-19
 
 ## License

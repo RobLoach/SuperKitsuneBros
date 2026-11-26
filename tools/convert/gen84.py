@@ -127,6 +127,7 @@ U.save('level-8-4-underwater.json')
 W = 48
 L = Level('level-2-1-game.json', W)
 L.prop('customIndicator', '8-4')
+L.prop('music', 'music-princess')  # Saved the Princess
 copy_cells(L, 'level-1-1-game.json', range(W), range(13))  # 1-1's hills, bushes and clouds...
 for x in range(W):
     for y in range(13):
@@ -146,6 +147,7 @@ for i in range(8):
         L.set(x + 1, y, (0, 5901, 0, 5177))
     L.add(131, x * 16, 11 * 16, 32, 16, zoneTo=f'level-{i + 1}-1-begin')
 text(41, 3, 'THE END')  # over the torii
+copy_cells(L, 'level-8-4-game.json', [313], (11, 12), dx=45 - 313)  # and the princess under it, inside the torii
 L.add(90, 2 * 16, 13 * 16, 48, 48, actor='Mario')
 L.add(96, 43 * 16, 13 * 16, 80, 112, endLevel=True, visible=False)  # the end of Super Mario Bros.
 L.save('level-world-select.json')
