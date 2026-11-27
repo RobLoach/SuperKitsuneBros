@@ -1,5 +1,6 @@
 """lifts that wait for the player (pathWait), like the NES: SMB's seven Flimsy Lifts (3-3, 6-3, 7-4) sink once stood on
-and stop a few tiles down, and the Coin Heaven cloud lifts only set off when landed on. Edits the finished maps in place, keeping
+and fall away below the level, the Coin Heaven cloud lifts only set off when landed on, and the lifts standing in for
+springboards only rise once stepped on. Edits the finished maps in place, keeping
 their formatting, and can be run again. Lifts are found by map, gid and position, not by object id."""
 import json, re
 from paths import ROOT
@@ -9,10 +10,11 @@ from textedit import set_object
 FALL = {'level-3-3-game': [(137, 60, 7)],  # the one in the middle, where the NES has it
         'level-6-3-game': [(136, 141, 8), (136, 145, 7), (136, 149, 9), (136, 153, 8)],  # the four before the flag
         'level-7-4-game': [(136, 18, 8), (136, 22, 9)]}  # over the lava, with a Podoboo between them
-DROP = 3  # tiles a Flimsy Lift sinks before it stops: the NES ones stop when you step off, these stop here
-WAIT = {'level-3-1-game': [(136, 143, 7)],  # the cloud lifts: still go back and forth once started
-        'level-5-2-game': [(136, 97, 7)],
-        'level-6-2-game': [(136, 93, 7)]}
+WAIT = [('level-3-1-game', 136, 143, 7), ('level-5-2-game', 136, 97, 7), ('level-6-2-game', 136, 93, 7),  # the cloud lifts: still go back and forth once started
+        # springboards: the lift rises when stepped on, then keeps going up and down
+        ('level-2-1-game', 136, 186, 13), ('level-3-1-game', 136, 126, 24), ('level-5-2-game', 136, 25, 24),
+        ('level-6-3-game', 136, 38, 13), ('level-6-3-game', 136, 116, 13), ('level-7-1-game', 136, 151, 13),
+        ('level-8-2-game', 136, 44, 13)]
 
 
 def span(s, oid):
@@ -82,19 +84,18 @@ def main():
         for gid, col, bottom in lifts:
             o, a, b = lift(json.load(open(path)), gid, col, bottom)
             x = o['x'] + o['width'] // 2 - 8
-            # sink a tile slowly, then faster, and stop DROP tiles down, so a lift you leave stays put
+            # sink a tile slowly, then fall out of the map and stay there, like the game's own falling platforms
             set_object(path, a, x=x, y=o['y'] + 16)
-            set_object(path, b, x=x, y=o['y'] + DROP * 16)
+            set_object(path, b, x=x, y=(json.load(open(path))['height'] + 3) * 16)
             set_properties(path, o['id'], {'pathWait': ('bool', True), 'pathSpeed': ('float', 0.5)})
             set_properties(path, a, {'path': ('object', b), 'pathSpeed': ('float', 1)})
             set_properties(path, b, {'path': None})
-            print(name, col, 'sinks')
-    for name, lifts in WAIT.items():
+            print(name, col, 'falls')
+    for name, gid, col, bottom in WAIT:
         path = f'{ROOT}/{name}.json'
-        for gid, col, bottom in lifts:
-            o, a, b = lift(json.load(open(path)), gid, col, bottom)
-            set_properties(path, o['id'], {'pathWait': ('bool', True)})
-            print(name, col, 'waits')
+        o, a, b = lift(json.load(open(path)), gid, col, bottom)
+        set_properties(path, o['id'], {'pathWait': ('bool', True)})
+        print(name, col, 'waits')
 
 
 if __name__ == '__main__':

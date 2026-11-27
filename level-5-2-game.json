@@ -612,6 +612,11 @@
        "name": "path",
        "type": "object",
        "value": 30
+      },
+      {
+       "name": "pathWait",
+       "type": "bool",
+       "value": true
       }
      ],
      "rotation": 0,

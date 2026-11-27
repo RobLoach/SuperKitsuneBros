@@ -909,6 +909,11 @@
        "name": "path",
        "type": "int",
        "value": 53
+      },
+      {
+       "name": "pathWait",
+       "type": "bool",
+       "value": true
       }
      ],
      "rotation": 0,
