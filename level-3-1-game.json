@@ -842,6 +842,11 @@
        "name": "path",
        "type": "object",
        "value": 45
+      },
+      {
+       "name": "pathSpeed",
+       "type": "float",
+       "value": 4
       }
      ]
     },
@@ -855,6 +860,11 @@
        "name": "path",
        "type": "object",
        "value": 44
+      },
+      {
+       "name": "pathSpeed",
+       "type": "float",
+       "value": 4
       }
      ],
      "rotation": 0,
@@ -874,6 +884,16 @@
        "name": "path",
        "type": "object",
        "value": 44
+      },
+      {
+       "name": "pathSpeed",
+       "type": "float",
+       "value": 4
+      },
+      {
+       "name": "pathWait",
+       "type": "bool",
+       "value": true
       }
      ],
      "rotation": 0,
@@ -994,6 +1014,11 @@
        "name": "path",
        "type": "object",
        "value": 49
+      },
+      {
+       "name": "pathWait",
+       "type": "bool",
+       "value": true
       }
      ],
      "rotation": 0,

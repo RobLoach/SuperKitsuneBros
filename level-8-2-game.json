@@ -653,6 +653,11 @@
        "name": "path",
        "type": "object",
        "value": 41
+      },
+      {
+       "name": "pathSpeed",
+       "type": "float",
+       "value": 4
       }
      ]
     },
@@ -672,6 +677,11 @@
        "name": "path",
        "type": "object",
        "value": 40
+      },
+      {
+       "name": "pathSpeed",
+       "type": "float",
+       "value": 4
       }
      ]
     },
@@ -685,6 +695,16 @@
        "name": "path",
        "type": "object",
        "value": 40
+      },
+      {
+       "name": "pathSpeed",
+       "type": "float",
+       "value": 4
+      },
+      {
+       "name": "pathWait",
+       "type": "bool",
+       "value": true
       }
      ],
      "rotation": 0,

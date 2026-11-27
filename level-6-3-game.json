@@ -887,13 +887,18 @@
      "type": "",
      "visible": true,
      "width": 16,
-     "x": 2296,
-     "y": 128,
+     "x": 2264,
+     "y": 144,
      "properties": [
       {
        "name": "path",
        "type": "object",
        "value": 42
+      },
+      {
+       "name": "pathSpeed",
+       "type": "float",
+       "value": 4
       }
      ]
     },
@@ -906,15 +911,8 @@
      "type": "",
      "visible": true,
      "width": 16,
-     "x": 2232,
-     "y": 128,
-     "properties": [
-      {
-       "name": "path",
-       "type": "object",
-       "value": 41
-      }
-     ]
+     "x": 2264,
+     "y": 320
     },
     {
      "gid": 136,
@@ -926,6 +924,16 @@
        "name": "path",
        "type": "object",
        "value": 41
+      },
+      {
+       "name": "pathSpeed",
+       "type": "float",
+       "value": 1
+      },
+      {
+       "name": "pathWait",
+       "type": "bool",
+       "value": true
       }
      ],
      "rotation": 0,
@@ -944,13 +952,18 @@
      "type": "",
      "visible": true,
      "width": 16,
-     "x": 2360,
-     "y": 112,
+     "x": 2328,
+     "y": 128,
      "properties": [
       {
        "name": "path",
        "type": "object",
        "value": 45
+      },
+      {
+       "name": "pathSpeed",
+       "type": "float",
+       "value": 4
       }
      ]
     },
@@ -963,15 +976,8 @@
      "type": "",
      "visible": true,
      "width": 16,
-     "x": 2296,
-     "y": 112,
-     "properties": [
-      {
-       "name": "path",
-       "type": "object",
-       "value": 44
-      }
-     ]
+     "x": 2328,
+     "y": 320
     },
     {
      "gid": 136,
@@ -983,6 +989,16 @@
        "name": "path",
        "type": "object",
        "value": 44
+      },
+      {
+       "name": "pathSpeed",
+       "type": "float",
+       "value": 1
+      },
+      {
+       "name": "pathWait",
+       "type": "bool",
+       "value": true
       }
      ],
      "rotation": 0,
@@ -1001,13 +1017,18 @@
      "type": "",
      "visible": true,
      "width": 16,
-     "x": 2424,
-     "y": 144,
+     "x": 2392,
+     "y": 160,
      "properties": [
       {
        "name": "path",
        "type": "object",
        "value": 48
+      },
+      {
+       "name": "pathSpeed",
+       "type": "float",
+       "value": 4
       }
      ]
     },
@@ -1020,15 +1041,8 @@
      "type": "",
      "visible": true,
      "width": 16,
-     "x": 2360,
-     "y": 144,
-     "properties": [
-      {
-       "name": "path",
-       "type": "object",
-       "value": 47
-      }
-     ]
+     "x": 2392,
+     "y": 320
     },
     {
      "gid": 136,
@@ -1040,6 +1054,16 @@
        "name": "path",
        "type": "object",
        "value": 47
+      },
+      {
+       "name": "pathSpeed",
+       "type": "float",
+       "value": 1
+      },
+      {
+       "name": "pathWait",
+       "type": "bool",
+       "value": true
       }
      ],
      "rotation": 0,
@@ -1058,13 +1082,18 @@
      "type": "",
      "visible": true,
      "width": 16,
-     "x": 2488,
-     "y": 128,
+     "x": 2456,
+     "y": 144,
      "properties": [
       {
        "name": "path",
        "type": "object",
        "value": 51
+      },
+      {
+       "name": "pathSpeed",
+       "type": "float",
+       "value": 4
       }
      ]
     },
@@ -1077,15 +1106,8 @@
      "type": "",
      "visible": true,
      "width": 16,
-     "x": 2424,
-     "y": 128,
-     "properties": [
-      {
-       "name": "path",
-       "type": "object",
-       "value": 50
-      }
-     ]
+     "x": 2456,
+     "y": 320
     },
     {
      "gid": 136,
@@ -1097,6 +1119,16 @@
        "name": "path",
        "type": "object",
        "value": 50
+      },
+      {
+       "name": "pathSpeed",
+       "type": "float",
+       "value": 1
+      },
+      {
+       "name": "pathWait",
+       "type": "bool",
+       "value": true
       }
      ],
      "rotation": 0,
@@ -1122,6 +1154,11 @@
        "name": "path",
        "type": "object",
        "value": 54
+      },
+      {
+       "name": "pathSpeed",
+       "type": "float",
+       "value": 4
       }
      ]
     },
@@ -1141,6 +1178,11 @@
        "name": "path",
        "type": "object",
        "value": 53
+      },
+      {
+       "name": "pathSpeed",
+       "type": "float",
+       "value": 4
       }
      ]
     },
@@ -1154,6 +1196,16 @@
        "name": "path",
        "type": "object",
        "value": 53
+      },
+      {
+       "name": "pathSpeed",
+       "type": "float",
+       "value": 4
+      },
+      {
+       "name": "pathWait",
+       "type": "bool",
+       "value": true
       }
      ],
      "rotation": 0,
@@ -1179,6 +1231,11 @@
        "name": "path",
        "type": "object",
        "value": 57
+      },
+      {
+       "name": "pathSpeed",
+       "type": "float",
+       "value": 4
       }
      ]
     },
@@ -1198,6 +1255,11 @@
        "name": "path",
        "type": "object",
        "value": 56
+      },
+      {
+       "name": "pathSpeed",
+       "type": "float",
+       "value": 4
       }
      ]
     },
@@ -1211,6 +1273,16 @@
        "name": "path",
        "type": "object",
        "value": 56
+      },
+      {
+       "name": "pathSpeed",
+       "type": "float",
+       "value": 4
+      },
+      {
+       "name": "pathWait",
+       "type": "bool",
+       "value": true
       }
      ],
      "rotation": 0,

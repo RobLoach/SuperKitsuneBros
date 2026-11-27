@@ -351,13 +351,18 @@
      "type": "",
      "visible": true,
      "width": 16,
-     "x": 1024,
-     "y": 112,
+     "x": 976,
+     "y": 128,
      "properties": [
       {
        "name": "path",
        "type": "object",
        "value": 16
+      },
+      {
+       "name": "pathSpeed",
+       "type": "float",
+       "value": 4
       }
      ]
     },
@@ -366,19 +371,12 @@
      "height": 16,
      "id": 16,
      "name": "",
-     "properties": [
-      {
-       "name": "path",
-       "type": "object",
-       "value": 15
-      }
-     ],
      "rotation": 0,
      "type": "",
      "visible": true,
      "width": 16,
-     "x": 928,
-     "y": 112
+     "x": 976,
+     "y": 320
     },
     {
      "gid": 137,
@@ -390,6 +388,16 @@
        "name": "path",
        "type": "object",
        "value": 15
+      },
+      {
+       "name": "pathSpeed",
+       "type": "float",
+       "value": 1
+      },
+      {
+       "name": "pathWait",
+       "type": "bool",
+       "value": true
       }
      ],
      "rotation": 0,
