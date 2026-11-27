@@ -4,26 +4,14 @@ An attempt at a faithful recreation of [Super Mario Bros](https://en.wikipedia.o
 
 ![Screenshot](tools/screenshot.jpg)
 
-## Features
-
-This includes all eight worlds. If you'd like to help improve it, feel free to get involved.
-
-- [x] World 1
-- [x] World 2
-- [x] World 3
-- [x] World 4
-- [x] World 5
-- [x] World 6
-- [x] World 7
-- [x] World 8
-- [x] World select after beating 8-4, with a pipe into each world
-- [x] Halfway checkpoints where SMB has them
-- [x] Bowser's bridge collapses when you reach the axe
-- [x] Falling lifts and springboard lifts that wait for you
-
 ## Installation
 
-Subscribe to [Super Kitsune Bros on the Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3320203878), or install it manually...
+1. Subscribe to [Super Kitsune Bros on the Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3320203878)
+2. Launch Kitsune Tails
+3. Visit Mods
+4. Select "SuperKitsuneTails"
+
+### Manual Installation
 
 1. Download `SuperKitsuneBros.zip` from the [latest release](https://github.com/RobLoach/SuperKitsuneBros/releases/latest)
 2. Extract it to your `KitsuneTails/levels` folder, usually available at one of the following...
