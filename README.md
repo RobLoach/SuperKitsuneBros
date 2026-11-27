@@ -9,7 +9,7 @@ An attempt at a faithful recreation of [Super Mario Bros](https://en.wikipedia.o
 1. Subscribe to [Super Kitsune Bros on the Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3320203878)
 2. Launch Kitsune Tails
 3. Visit Mods
-4. Select "SuperKitsuneTails"
+4. Select SuperKitsuneBros
 
 ### Manual Installation
 
