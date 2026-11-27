@@ -107,6 +107,18 @@
    "name": "Objects",
    "objects": [
     {
+     "gid": 105,
+     "height": 64,
+     "id": 20,
+     "name": "",
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 32,
+     "x": 1536,
+     "y": 208
+    },
+    {
      "gid": 139,
      "height": 32,
      "id": 1,
@@ -462,7 +474,7 @@
   }
  ],
  "nextlayerid": 19,
- "nextobjectid": 20,
+ "nextobjectid": 21,
  "orientation": "orthogonal",
  "properties": [
   {
