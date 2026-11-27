@@ -13,7 +13,13 @@ Generators live in `tools/convert/` (see its README). Set up `tools/convert` as 
 cd tools/convert && .venv/bin/python gen74.py   # world 7 level 4
 ```
 
-World 1 and 2 fixes are in `world12.py` and `fixflags.py`. A level copied from another (7-3 from 2-3) inherits its bugs: fix the source.
+Then re-apply the last steps, which edit the finished maps (Bowsers, bridges, checkpoints, waiting lifts, kashas) and change nothing where already done:
+
+```sh
+python bowsers.py; for s in after_*.py; do python $s; done
+```
+
+World 1 and 2 fixes are in `world12.py` and `fixflags.py`. A level copied from another (7-3 from 2-3) inherits its bugs: fix the source. Worlds 1 and 2 and `level-8-4-game.json` are edited by the owner in Tiled: they must keep their formatting, so change them only with `textedit.py` or the last steps, never by rewriting the JSON.
 
 ## 2. Look at it next to the original
 
