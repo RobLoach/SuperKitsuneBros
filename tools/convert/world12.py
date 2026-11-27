@@ -72,22 +72,25 @@ def clouds(lv, band, f):
 
 
 def fish(lv, f):
-    """blocks drawn where the image has a flying Cheep-cheep in the sky (2-3 had four)"""
+    """blocks and coins drawn where the image has a flying Cheep-cheep in the sky (2-3 had four blocks and two coins)"""
     m = json.load(open(f'{ROOT}/{f}'))
     W = m['width']
     layer = lambda n: next(l for l in m['layers'] if l['name'] == n)['data']
-    bg, blocks = layer('Background No Parallax'), layer('Blocks')
+    bg, blocks, coins = layer('Background No Parallax'), layer('Blocks'), layer('Coins')
     a = np.array(Image.open(f'{NES}/{lv}.png').convert('RGB'))[:240, :W * 16]
     sky = a[0, 0]
-    gone = []
+    gone, lost = [], []
     for y in range(15):
         for x in range(W):
             c = a[y * 16:y * 16 + 16, x * 16:x * 16 + 16]
             if blocks[y * W + x] and (c == (216, 40, 0)).all(2).any() and (c == sky).all(2).mean() > 0.3:
                 gone += [(x, y)] + [(x, r) for r in (15, 16) if y == 14]
+            if coins[y * W + x] and (c == (216, 40, 0)).all(2).sum() >= 20:  # NES coins have no red
+                lost.append((x, y))
     set_cells(f'{ROOT}/{f}', 'Background No Parallax', {y * W + x: 0 for x, y in gone})
     set_cells(f'{ROOT}/{f}', 'Blocks', {y * W + x: 0 for x, y in gone})
-    print(f, 'removed blocks at', gone)
+    set_cells(f'{ROOT}/{f}', 'Coins', {y * W + x: 0 for x, y in lost})
+    print(f, 'removed blocks at', gone, 'coins at', lost)
 
 
 if __name__ == '__main__':
