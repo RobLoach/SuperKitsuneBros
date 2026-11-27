@@ -10,11 +10,12 @@ from textedit import set_object
 FALL = {'level-3-3-game': [(137, 60, 7)],  # the one in the middle, where the NES has it
         'level-6-3-game': [(136, 141, 8), (136, 145, 7), (136, 149, 9), (136, 153, 8)],  # the four before the flag
         'level-7-4-game': [(136, 18, 8), (136, 22, 9)]}  # over the lava, with a Podoboo between them
-WAIT = [('level-3-1-game', 136, 143, 7), ('level-5-2-game', 136, 97, 7), ('level-6-2-game', 136, 93, 7),  # the cloud lifts: still go back and forth once started
-        # springboards: the lift rises when stepped on, then keeps going up and down
-        ('level-2-1-game', 136, 186, 13), ('level-3-1-game', 136, 126, 24), ('level-5-2-game', 136, 25, 24),
-        ('level-6-3-game', 136, 38, 13), ('level-6-3-game', 136, 116, 13), ('level-7-1-game', 136, 151, 13),
-        ('level-8-2-game', 136, 44, 13)]
+WAIT = [('level-3-1-game', 136, 143, 7), ('level-5-2-game', 136, 97, 7), ('level-6-2-game', 136, 93, 7)]  # the cloud lifts: still go back and forth once started
+# springboards: the lift shoots up when stepped on, then keeps going up and down
+SPRING = [('level-2-1-game', 136, 186, 13), ('level-3-1-game', 136, 126, 24), ('level-5-2-game', 136, 25, 24),
+          ('level-6-3-game', 136, 38, 13), ('level-6-3-game', 136, 116, 13), ('level-7-1-game', 136, 151, 13),
+          ('level-8-2-game', 136, 44, 13)]
+SINK_SPEED, FALL_SPEED, SPRING_SPEED = 1, 4, 4  # path speeds (1 is normal; the game's own lifts mostly use 2 to 4)
 
 
 def span(s, oid):
@@ -84,11 +85,11 @@ def main():
         for gid, col, bottom in lifts:
             o, a, b = lift(json.load(open(path)), gid, col, bottom)
             x = o['x'] + o['width'] // 2 - 8
-            # sink a tile slowly, then fall out of the map and stay there, like the game's own falling platforms
+            # sink a tile, then fall fast out of the map and stay there, like the game's own falling platforms
             set_object(path, a, x=x, y=o['y'] + 16)
             set_object(path, b, x=x, y=(json.load(open(path))['height'] + 3) * 16)
-            set_properties(path, o['id'], {'pathWait': ('bool', True), 'pathSpeed': ('float', 0.5)})
-            set_properties(path, a, {'path': ('object', b), 'pathSpeed': ('float', 1)})
+            set_properties(path, o['id'], {'pathWait': ('bool', True), 'pathSpeed': ('float', SINK_SPEED)})
+            set_properties(path, a, {'path': ('object', b), 'pathSpeed': ('float', FALL_SPEED)})
             set_properties(path, b, {'path': None})
             print(name, col, 'falls')
     for name, gid, col, bottom in WAIT:
@@ -96,6 +97,13 @@ def main():
         o, a, b = lift(json.load(open(path)), gid, col, bottom)
         set_properties(path, o['id'], {'pathWait': ('bool', True)})
         print(name, col, 'waits')
+    for name, gid, col, bottom in SPRING:
+        path = f'{ROOT}/{name}.json'
+        o, a, b = lift(json.load(open(path)), gid, col, bottom)
+        set_properties(path, o['id'], {'pathWait': ('bool', True), 'pathSpeed': ('float', SPRING_SPEED)})
+        for n in (a, b):  # both ways
+            set_properties(path, n, {'pathSpeed': ('float', SPRING_SPEED)})
+        print(name, col, 'springs')
 
 
 if __name__ == '__main__':

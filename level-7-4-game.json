@@ -393,7 +393,7 @@
       {
        "name": "pathSpeed",
        "type": "float",
-       "value": 1
+       "value": 4
       }
      ]
     },
@@ -423,7 +423,7 @@
       {
        "name": "pathSpeed",
        "type": "float",
-       "value": 0.5
+       "value": 1
       },
       {
        "name": "pathWait",
@@ -458,7 +458,7 @@
       {
        "name": "pathSpeed",
        "type": "float",
-       "value": 1
+       "value": 4
       }
      ]
     },
@@ -488,7 +488,7 @@
       {
        "name": "pathSpeed",
        "type": "float",
-       "value": 0.5
+       "value": 1
       },
       {
        "name": "pathWait",

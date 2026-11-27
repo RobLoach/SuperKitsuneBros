@@ -871,6 +871,11 @@
        "name": "path",
        "type": "object",
        "value": 54
+      },
+      {
+       "name": "pathSpeed",
+       "type": "float",
+       "value": 4
       }
      ],
      "rotation": 0,
@@ -890,6 +895,11 @@
        "name": "path",
        "type": "object",
        "value": 53
+      },
+      {
+       "name": "pathSpeed",
+       "type": "float",
+       "value": 4
       }
      ],
      "rotation": 0,
@@ -909,6 +919,11 @@
        "name": "path",
        "type": "int",
        "value": 53
+      },
+      {
+       "name": "pathSpeed",
+       "type": "float",
+       "value": 4
       },
       {
        "name": "pathWait",
