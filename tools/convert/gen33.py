@@ -40,9 +40,11 @@ def lift(x, y, path):
     L.add(137, px, py, 48, 16, path=a)  # 3 wide, like the NES lifts
 
 
-# vertical lifts come in pairs, the pulley (balance) lifts move in opposite directions
-MOVE = {30: ('v', 3, 14), 33: ('v', 14, 3), 60: ('h', 3, -3), 81: ('v', 10, 4), 88: ('v', 4, 10), 94: ('v', 14, 3),
-        96: ('v', 3, 14), 103: ('h', 3, -3), 132: ('h', 3, -3), 136: ('v', 9, 3), 140: ('v', 3, 9)}
+# the pulley (balance) lifts move in opposite directions; the others are SMB's horizontal lifts (enemy $28 in its
+# 3-3 data), which set off to the left and swing back about 3 tiles (the Flimsy Lift at 60 is made by after_liftwait.py)
+H = ('h', 0, -3)
+MOVE = {30: H, 33: H, 60: ('h', 3, -3), 81: ('v', 10, 4), 88: ('v', 4, 10), 94: H, 96: H, 103: H, 132: H,
+        136: ('v', 9, 3), 140: ('v', 3, 9)}
 for x, y, w in sprites.lifts(img):
     lift(x, y, MOVE[x // 16])
 
