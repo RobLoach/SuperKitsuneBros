@@ -1,6 +1,6 @@
 # Kitsune Tails: Super Kitsune Bros
 
-An attempt at a faithful recreation of [Super Mario Bros](https://en.wikipedia.org/wiki/Super_Mario_Bros) in [Kitsune Tails](https://kitsunegames.com/kitsunetails/).
+A faithful recreation of [Super Mario Bros](https://en.wikipedia.org/wiki/Super_Mario_Bros) in [Kitsune Tails](https://kitsunegames.com/kitsunetails/).
 
 ![Screenshot](tools/screenshot.jpg)
 
