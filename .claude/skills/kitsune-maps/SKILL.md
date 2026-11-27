@@ -14,8 +14,8 @@ Each level is a Tiled JSON map (`level-W-L-*.json`), 16px tiles, usually 17 rows
 - `Coins`: gid 66 is a coin.
 - `Foreground`: drawn over the player (pipes).
 - Underwater maps also have `Water Background`.
-- One object layer, with exactly one player object. Tiled object `y` is the object's **bottom** edge.
-- Layer roles come from properties and order: `blocks: true` makes a collision layer; tile layers after a block layer but before the object layer are fringe (drawn with blocks, not solid); tile layers after the object layer are foreground. Keep `Coins` directly under the object layer: a layer with coins is never foreground.
+- One object layer, with exactly one player object. Tiled object `y` is the object's **bottom** edge. Trigger rectangles have no `gid`, so read it with `o.get('gid')`.
+- Layer roles come from properties and order: `blocks: true` makes a collision layer; tile layers after a block layer but before the object layer are fringe (drawn with blocks, not solid); tile layers after the object layer are foreground. Keep `Coins` directly under the object layer: a layer with coins is never foreground. A second block layer (the castles' `Bridge`) goes right after `Blocks` with `blocks: true`, so it stays a block layer.
 - Maps must be at least 30x17 tiles.
 
 ## Objects (gid: Kitsune object, what this mod uses it for)
@@ -29,13 +29,14 @@ Each level is a Tiled JSON map (`level-W-L-*.json`), 16px tiles, usually 17 rows
 | 96 | tori, `endLevel` | ends the run; lint needs a route to one |
 | 91 | pathnode, `path` | points lifts and flyers follow; each points at the next |
 | 136 / 137 / 92 | moving-platform 2x1 / 3x1 / 4x1, `path` | lifts |
+| 105 | checkpoint, 32x64 on the floor | SMB halfway points (`tools/convert/after_checkpoints.py`); dying after touching it restarts there. Confirmed in the game |
 | 188 | flying-beetle-path | firebars: one circling a ring of 8 path nodes |
 | 139 | bang (custom), `spawn-type` | ? block (`spawn-type: coin`), hidden blocks |
 | 60 / 113 / 100 | bang earth / fire / invincibility | 1-up / mushroom and flower / star |
 | 36, 24, 73 | beetle (`walkOffLedges` on generated Goombas), pango, crab | Goomba, Koopa, Buzzy Beetle |
 | 38 | flying-beetle, `flyDistance`, `flyVertical` | Paratroopa, Podoboo |
 | 132 | rokurokubi | Piranha Plant, at `y = pipe top row * 16` |
-| 156, 48 | kiteninja, porcupine (`respawn`) | Lakitu, Spiny |
+| 123, 48 | kasha (left), porcupine (`respawn`) | Lakitu (one per level: 4-1, 6-1, 8-2; the game itself has kashas floating in the air), Spiny |
 | 43, 42 | hornet-nest, hornet | Bullet Bill cannon, Bullet Bill and Bowser's fire |
 | 79 | archer | Hammer Bro |
 | 103, 77 | pufferfish, carp | Blooper, swimming Cheep-cheep |
@@ -62,6 +63,8 @@ Each level is a Tiled JSON map (`level-W-L-*.json`), 16px tiles, usually 17 rows
   L.objects[-2]['properties'] = [{'name': 'path', 'type': 'object', 'value': b}]
   L.add(136, x * 16, bottom * 16, 32, 16, path=a)
   ```
+  `pathSpeed` (per platform or node, 1 is normal; the game's own maps mostly use 2 to 4) and `pathWait: true` (stands still until the player lands on it, then keeps going; it can't pause again when the player steps off). `tools/convert/after_liftwait.py` uses them: the Flimsy Lifts in 3-3, 6-3 and 7-4 sink a tile, then a last node with no `path` far below the map drops them out of the level (confirmed in the game); coin heaven cloud lifts and springboard lifts wait until stepped on.
+- **Collapsing Bowser bridge (Layer Script):** `tools/convert/after_bridges.py` moves the bridge tiles into a `Bridge` tile layer right after `Blocks`, with properties `blocks: true`, `moveAnchored: false` (so Bowser falls instead of riding the bridge) and a `movement` string `end\n\nfunc collapse\ndown 8 1 quad in\nend\n` (wait, then drop). A gid-less rectangle object over the axe platform, from the map top down to the floor, has `trigger: layerscript`, `targetLayer: Bridge`, `scriptFunc: collapse`, like the Crusher 1 trigger in the game's `g-4.json`. Confirmed in the game: the trigger fires and Bowser falls.
 - **Map properties:** `music` (`music-*.ogg` without the extension), `customIndicator` (the "W-L" shown), `background` (`bg-bluesky` for day maps).
 
 ## More from the editing guide (not tried in this mod yet)
@@ -69,12 +72,12 @@ Each level is a Tiled JSON map (`level-W-L-*.json`), 16px tiles, usually 17 rows
 Check these in the game before relying on them.
 
 - **Activation:** enemies and platforms only start when the player is near. Give several objects the same `group` value to start them together (synchronised lifts, pulley pairs). The World 1 map uses `group` already.
-- **Lifts:** `pathSpeed` (per node, 1 is normal), `pathWait: true` (waits until the player stands on it, like falling or pulley lifts), `pathType: circlex/circley` (curve to the next node), `unpauseRange`.
+- **Lifts:** `pathType: circlex/circley` (curve to the next node), `unpauseRange`.
 - **Enemies:** `speed` (multiplier), `walkOffLedges`, `flipOnTouch`, `respawn` with `respawnAfter` (seconds), `spawnSeconds` for spawners like hornet nests (Bullet Bill rate), `missile` for carp, `flyDistance` (vertical flyers go up by this many tiles; horizontal ones half each way), `shellState: inShell/bouncing` (starts rolled up or bouncing), `palette` (recolour, e.g. grey castle Goombas), `upsideDown`, `offsetX`/`offsetY` (tiles), `drawOrder`.
 - **Bang blocks:** `spawn-type` picks the contents and any `spawn-<property>` is passed to what comes out; `compatibleWith` with `incompatible-Kiri` gives another item when playing as Kiri.
-- **Map properties:** `deathZoneTo`/`deathZoneX`/`deathZoneY` (where you come back after dying: SMB's halfway points), `waterLevel` (the whole map is water), `edgeTiles` (left and right edges are walls), `hideLevelIndicator`, `noTempState`, `disableInventory`, `instantDeath`, `godMode`.
+- **Map properties:** `deathZoneTo`/`deathZoneX`/`deathZoneY` (a fixed spot to come back to after dying; static, so the halfway points use checkpoint objects instead), `waterLevel` (the whole map is water), `edgeTiles` (left and right edges are walls), `hideLevelIndicator`, `noTempState`, `disableInventory`, `instantDeath`, `godMode`.
 - **Tile properties** in a tileset's tiles: `lava`, `damaging`, `water`, `breakable` (bricks broken from below), `invisible`, `playerPassable`, `slippery`, `spikes`, slopes with `heightLeft`/`heightRight`, and `nextFrame` for animation. Tile animation timings are ignored: all tiles share one timer.
-- **Layer Script:** a tile layer with a `movement` string property moves by script (`down 3 1.5 circ in`, `pause 1`, `func name` sequences), started by button objects or rectangles with `trigger: layerscript` and `targetLayer`. Could collapse the Bowser bridge or drop falling lifts.
+- **Layer Script:** besides the bridge above, `movement` scripts take `down 3 1.5 circ in`, `pause 1` and `func name` sequences, and can be started by button objects too.
 
 ## Tileset (`tileset.png`, 32 tiles wide)
 
@@ -86,4 +89,4 @@ Check these in the game before relying on them.
 
 - Enemies or NES markers in front of a cell get classified as tiles: Cheep-cheeps became solid blocks in 2-3/7-3, nesmaps loop markers became floor tiles in 8-4. Compare renders with the NES image.
 - `compact.py` must only merge tiles with the same shape; merging by pixel count turned O into 8 and N into W.
-- Hand-made maps (Worlds 1 and 2) are edited cell by cell with `tools/convert/textedit.set_cells` to keep their formatting; the rest are regenerated, so fix the generator (`tools/convert/genWL.py`), not the JSON.
+- Hand-made maps (Worlds 1 and 2, and `level-8-4-game.json`, edited in Tiled) are edited with `tools/convert/textedit.py` to keep their formatting; the rest are regenerated, so fix the generator (`tools/convert/genWL.py`) or a last step (`bowsers.py`, `after_*.py`), not the JSON.

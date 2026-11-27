@@ -17,6 +17,9 @@ This includes all eight worlds. If you'd like to help improve it, feel free to g
 - [x] World 7
 - [x] World 8
 - [x] World select after beating 8-4, with a pipe into each world
+- [x] Halfway checkpoints where SMB has them
+- [x] Bowser's bridge collapses when you reach the axe
+- [x] Falling lifts and springboard lifts that wait for you
 
 ## Installation
 
