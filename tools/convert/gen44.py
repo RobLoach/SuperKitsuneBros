@@ -41,7 +41,7 @@ src = [o for l in json.load(open(f'{ROOT}/level-3-4-game.json'))['layers'] if l[
 for x in range(176, 192):  # into World 5: doors all along the floor of the end room
     L.add(30, x * 16, 13 * 16, 16, 32, alwaysActive=True, visible=False, zoneTo='level-5-1-begin')
 for o in src:
-    if o['gid'] in GIDS and o['x'] >= 134 * 16:
+    if o.get('gid') in GIDS and o['x'] >= 134 * 16:
         p = {q['name']: q['value'] for q in o.get('properties', [])}
         L.add(o['gid'], o['x'] + 32 * 16, o['y'], o['width'], o['height'], **p)
 

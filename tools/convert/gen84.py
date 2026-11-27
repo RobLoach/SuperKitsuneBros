@@ -46,7 +46,7 @@ for n, x, y, w, h, s in found:
         L.add(g, x + w // 2 - ow // 2, bottom, ow, oh, **props)
 src = [o for l in json.load(open(f'{ROOT}/level-2-4-game.json'))['layers'] if l['type'] == 'objectgroup' for o in l['objects']]
 for o in src:
-    if o['gid'] in GIDS:  # Bowser
+    if o.get('gid') in GIDS:  # Bowser
         L.add(o['gid'], o['x'] + 160 * 16, o['y'], o['width'], o['height'], **{p['name']: p['value'] for p in o.get('properties', [])})
 L.add(42, 289 * 16, 10 * 16, 48, 32, respawn=True)  # Bowser's fire
 for x in range(314, W):  # past the princess, on to the world select

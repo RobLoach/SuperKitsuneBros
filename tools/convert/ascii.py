@@ -21,11 +21,11 @@ def main(path, *windows):
     for l in m['layers']:
         for o in l.get('objects', []) if l['type'] == 'objectgroup' else []:
             x, y = int(o['x'] // 16), int(o['y'] // 16)
-            if o['gid'] == 30 and any(p['name'] == 'zoneTo' for p in o.get('properties', [])):
+            if o.get('gid') == 30 and any(p['name'] == 'zoneTo' for p in o.get('properties', [])):
                 for yy in (y - 2, y - 1):
                     if 0 <= yy < H:
                         marks[x, yy] = 'X' if solid[yy * W + x] else 'D'
-            elif o['gid'] in (131, 153):
+            elif o.get('gid') in (131, 153):
                 for xx in (x, x + 1):
                     marks[xx, y - 1] = 'v' if o['gid'] == 131 else '^'
     for w in windows or [f'0-{W}']:
