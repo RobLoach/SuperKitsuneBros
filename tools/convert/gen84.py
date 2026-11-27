@@ -41,6 +41,8 @@ for n, x, y, w, h, s in found:
         L.add(38, x + w // 2 - 24, 14 * 16, 48, 96, flyDistance=7, flyVertical=True, respawn=True)
     elif n == 'piranha':
         L.add(132, (x // 16) * 16, bottom, 32, 32)
+    elif n == 'cheep':  # Cheep-cheeps jumping up from below in the third room: flying brown carps, like 2-3 and 7-3
+        L.add(75, x + w // 2 - 24, bottom, 48, 32, flyDistance=3.0, respawn=True)
     elif n in ENEMY:
         g, ow, oh, props = ENEMY[n]
         L.add(g, x + w // 2 - ow // 2, bottom, ow, oh, **props)
@@ -68,7 +70,7 @@ L.add(131, 152 * 16, (6 + 1) * 16, 32, 16, zoneTo=SELF, zoneX=195.5, zoneY=9)
 L.add(131, 228 * 16, (8 + 1) * 16, 32, 16, zoneTo='level-8-4-underwater')
 # walking on past the right pipe in the last room loops back, like the NES (the loops at 96 and 160 were removed in a18cd53)
 for x, zx, zy in ((255, 195.5, 9),):
-    for y in (5, 7, 9, 11, 13):
+    for y in (5, 7, 9, 11):  # up to the top of the wall the doors stand in
         L.add(30, x * 16, y * 16, 16, 32, alwaysActive=True, visible=False, zoneTo=SELF, zoneX=zx, zoneY=zy)
 L.save('level-8-4-game.json')
 
@@ -156,6 +158,7 @@ for i in range(8):
     L.add(131, x * 16, 11 * 16, 32, 16, zoneTo=f'level-{i + 1}-1-begin')
 text(41, 3, 'THE END')  # over the torii
 copy_cells(L, 'level-8-4-game.json', [313], (11, 12), dx=45 - 313)  # and the princess under it, inside the torii
+L.set(25, 12, E)  # the end of a 1-1 bush left sticking out from behind the 5 pipe
 L.add(90, 2 * 16, 13 * 16, 48, 48, actor='Mario')
 L.add(96, 43 * 16, 13 * 16, 80, 112, endLevel=True, visible=False)  # the end of Super Mario Bros.
 L.save('level-world-select.json')

@@ -30,5 +30,12 @@ for x in (exit_['x'] - 16, exit_['x']):
     nid += 1
 m['nextobjectid'] = nid
 redraw_water(m, img, [o for o in sprites.find(img, sprites.templates('7-2', sprites.B72))])  # the NES coral and seaweed
+W = m['width']  # 2-2's own seaweed left next to a fish: the NES cell, drawn with the tile already used for the same picture
+bg = next(l for l in m['layers'] if l['name'] == 'Background No Parallax')['data']
+cell = lambda i: img[i // W * 16:i // W * 16 + 16, i % W * 16:i % W * 16 + 16].tobytes()
+known = {cell(i): g for i, g in enumerate(bg) if 4813 <= g < 5837 and i // W < 15}
+for i, g in enumerate(bg):
+    if g >= 5837 and i // W < 15 and cell(i) in known:
+        bg[i] = known[cell(i)]
 open(f'{ROOT}/level-7-2-underwater.json', 'w').write(dumps(m))
 print(sum(1 for o in objects if o['gid'] in (103, 77)), 'fish')

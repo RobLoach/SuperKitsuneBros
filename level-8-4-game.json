@@ -451,11 +451,22 @@
                  "y":128
                 }, 
                 {
-                 "gid":77,
+                 "gid":75,
                  "height":32,
                  "id":22,
                  "name":"",
                  "opacity":1,
+                 "properties":[
+                        {
+                         "name":"flyDistance",
+                         "type":"float",
+                         "value":3
+                        }, 
+                        {
+                         "name":"respawn",
+                         "type":"bool",
+                         "value":true
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -477,11 +488,22 @@
                  "y":112
                 }, 
                 {
-                 "gid":77,
+                 "gid":75,
                  "height":32,
                  "id":24,
                  "name":"",
                  "opacity":1,
+                 "properties":[
+                        {
+                         "name":"flyDistance",
+                         "type":"float",
+                         "value":3
+                        }, 
+                        {
+                         "name":"respawn",
+                         "type":"bool",
+                         "value":true
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1207,45 +1229,6 @@
                  "width":16,
                  "x":4080,
                  "y":176
-                }, 
-                {
-                 "gid":30,
-                 "height":32,
-                 "id":64,
-                 "name":"",
-                 "opacity":1,
-                 "properties":[
-                        {
-                         "name":"alwaysActive",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"visible",
-                         "type":"bool",
-                         "value":false
-                        }, 
-                        {
-                         "name":"zoneTo",
-                         "type":"string",
-                         "value":"level-8-4-game"
-                        }, 
-                        {
-                         "name":"zoneX",
-                         "type":"float",
-                         "value":195.5
-                        }, 
-                        {
-                         "name":"zoneY",
-                         "type":"int",
-                         "value":9
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":4080,
-                 "y":208
                 }, 
                 {
                  "height":144,
