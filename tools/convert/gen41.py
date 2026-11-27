@@ -1,15 +1,13 @@
 from paths import NES
-from gen import overworld, extend_down, flag, underground
+from gen import ENEMY, overworld, extend_down, flag, underground
 W = 240
 L = overworld('4-1', 0, W, legend=('4-1', 'B41'), tileset=None, qref=('4-1', 0, 25, 5), fresh=True)
 flag(L, 224, day=True)
 extend_down(L)
-lakitu = [o for o in L.objects if o['gid'] == 156]
-height = lakitu[0]['y']
-L.objects[:] = [o for o in L.objects if o['gid'] != 156]
-for x in range(26, 210, 26):  # a kite ninja for Lakitu every 26 tiles, up to the last staircase
-    L.add(156, x * 16, height, 48, 48)
-for x in (52, 78, 156, 182):  # more Spinies dropping from the sky, under the kite ninjas that don't have one in the NES picture
+lakitus = sorted((o for o in L.objects if o['gid'] == ENEMY['lakitu'][0]), key=lambda o: o['x'])
+L.objects[:] = [o for o in L.objects if o not in lakitus[1:]]  # one Lakitu that follows you, as in SMB (the NES map shows it 3 times)
+height = lakitus[0]['y']
+for x in (52, 78, 156, 182):  # more Spinies dropping from the sky
     L.add(48, x * 16 + 16, height + 32, 16, 32, respawn=True)
 L.add(131, 132 * 16, (9 + 1) * 16, 32, 16, disableInventory=True, zoneTo='level-4-1-underground')
 L.add(153, 163 * 16, (11 + 1) * 16, 32, 16)

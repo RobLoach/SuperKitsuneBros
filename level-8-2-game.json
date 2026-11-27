@@ -202,15 +202,15 @@
      "y": 208
     },
     {
-     "gid": 156,
-     "height": 48,
+     "gid": 123,
+     "height": 32,
      "id": 6,
      "name": "",
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 48,
-     "x": 241,
+     "width": 32,
+     "x": 249,
      "y": 64
     },
     {
