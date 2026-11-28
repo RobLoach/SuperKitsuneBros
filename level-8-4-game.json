@@ -451,28 +451,108 @@
                  "y":128
                 }, 
                 {
-                 "gid":75,
-                 "height":32,
-                 "id":22,
+                 "gid":127,
+                 "height":224,
+                 "id":66,
                  "name":"",
                  "opacity":1,
-                 "properties":[
-                        {
-                         "name":"flyDistance",
-                         "type":"float",
-                         "value":3
-                        }, 
-                        {
-                         "name":"respawn",
-                         "type":"bool",
-                         "value":true
-                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":48,
-                 "x":3333,
-                 "y":160
+                 "width":32,
+                 "x":1056,
+                 "y":272
+                }, 
+                {
+                 "gid":127,
+                 "height":224,
+                 "id":67,
+                 "name":"",
+                 "opacity":1,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":1104,
+                 "y":272
+                }, 
+                {
+                 "gid":127,
+                 "height":224,
+                 "id":68,
+                 "name":"",
+                 "opacity":1,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":1152,
+                 "y":272
+                }, 
+                {
+                 "gid":127,
+                 "height":224,
+                 "id":69,
+                 "name":"",
+                 "opacity":1,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":2304,
+                 "y":272
+                }, 
+                {
+                 "gid":127,
+                 "height":224,
+                 "id":70,
+                 "name":"",
+                 "opacity":1,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":3520,
+                 "y":272
+                }, 
+                {
+                 "gid":127,
+                 "height":224,
+                 "id":71,
+                 "name":"",
+                 "opacity":1,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":3552,
+                 "y":272
+                }, 
+                {
+                 "gid":127,
+                 "height":224,
+                 "id":72,
+                 "name":"",
+                 "opacity":1,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":4432,
+                 "y":272
+                }, 
+                {
+                 "gid":127,
+                 "height":224,
+                 "id":73,
+                 "name":"",
+                 "opacity":1,
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":4464,
+                 "y":272
                 }, 
                 {
                  "gid":132,
@@ -485,30 +565,6 @@
                  "visible":true,
                  "width":32,
                  "x":3392,
-                 "y":112
-                }, 
-                {
-                 "gid":75,
-                 "height":32,
-                 "id":24,
-                 "name":"",
-                 "opacity":1,
-                 "properties":[
-                        {
-                         "name":"flyDistance",
-                         "type":"float",
-                         "value":3
-                        }, 
-                        {
-                         "name":"respawn",
-                         "type":"bool",
-                         "value":true
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":48,
-                 "x":3468,
                  "y":112
                 }, 
                 {
@@ -1299,7 +1355,7 @@
          "y":0
         }],
  "nextlayerid":23,
- "nextobjectid":66,
+ "nextobjectid":74,
  "orientation":"orthogonal",
  "properties":[
         {

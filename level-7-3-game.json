@@ -150,340 +150,208 @@
      "y": 96
     },
     {
-     "gid": 75,
-     "height": 32,
-     "id": 3,
+     "gid": 127,
+     "height": 224,
+     "id": 28,
      "name": "",
-     "properties": [
-      {
-       "name": "flyDistance",
-       "type": "float",
-       "value": 3
-      },
-      {
-       "name": "respawn",
-       "type": "bool",
-       "value": true
-      }
-     ],
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 48,
-     "x": 384,
-     "y": 144
+     "width": 32,
+     "x": 1024,
+     "y": 256
     },
     {
-     "gid": 75,
-     "height": 32,
-     "id": 4,
+     "gid": 127,
+     "height": 224,
+     "id": 29,
      "name": "",
-     "properties": [
-      {
-       "name": "flyDistance",
-       "type": "float",
-       "value": 3
-      },
-      {
-       "name": "respawn",
-       "type": "bool",
-       "value": true
-      }
-     ],
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 48,
-     "x": 608,
-     "y": 160
-    },
-    {
-     "gid": 75,
-     "height": 32,
-     "id": 5,
-     "name": "",
-     "properties": [
-      {
-       "name": "flyDistance",
-       "type": "float",
-       "value": 3
-      },
-      {
-       "name": "respawn",
-       "type": "bool",
-       "value": true
-      }
-     ],
-     "rotation": 0,
-     "type": "",
-     "visible": true,
-     "width": 48,
-     "x": 832,
-     "y": 128
-    },
-    {
-     "gid": 75,
-     "height": 32,
-     "id": 6,
-     "name": "",
-     "properties": [
-      {
-       "name": "flyDistance",
-       "type": "float",
-       "value": 3
-      },
-      {
-       "name": "respawn",
-       "type": "bool",
-       "value": true
-      }
-     ],
-     "rotation": 0,
-     "type": "",
-     "visible": true,
-     "width": 48,
+     "width": 32,
      "x": 1056,
-     "y": 144
+     "y": 240
     },
     {
-     "gid": 75,
-     "height": 32,
-     "id": 7,
+     "gid": 127,
+     "height": 224,
+     "id": 30,
      "name": "",
-     "properties": [
-      {
-       "name": "flyDistance",
-       "type": "float",
-       "value": 3
-      },
-      {
-       "name": "respawn",
-       "type": "bool",
-       "value": true
-      }
-     ],
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 48,
+     "width": 32,
      "x": 1280,
-     "y": 160
+     "y": 256
     },
     {
-     "gid": 75,
-     "height": 32,
-     "id": 8,
+     "gid": 127,
+     "height": 224,
+     "id": 31,
      "name": "",
-     "properties": [
-      {
-       "name": "flyDistance",
-       "type": "float",
-       "value": 3
-      },
-      {
-       "name": "respawn",
-       "type": "bool",
-       "value": true
-      }
-     ],
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 48,
-     "x": 1504,
-     "y": 128
+     "width": 32,
+     "x": 1312,
+     "y": 240
     },
     {
-     "gid": 75,
-     "height": 32,
-     "id": 9,
+     "gid": 127,
+     "height": 224,
+     "id": 32,
      "name": "",
-     "properties": [
-      {
-       "name": "flyDistance",
-       "type": "float",
-       "value": 3
-      },
-      {
-       "name": "respawn",
-       "type": "bool",
-       "value": true
-      }
-     ],
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 48,
+     "width": 32,
+     "x": 1536,
+     "y": 256
+    },
+    {
+     "gid": 127,
+     "height": 224,
+     "id": 33,
+     "name": "",
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 32,
+     "x": 1696,
+     "y": 240
+    },
+    {
+     "gid": 127,
+     "height": 224,
+     "id": 34,
+     "name": "",
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 32,
      "x": 1728,
-     "y": 144
+     "y": 256
     },
     {
-     "gid": 75,
-     "height": 32,
-     "id": 10,
+     "gid": 127,
+     "height": 224,
+     "id": 35,
      "name": "",
-     "properties": [
-      {
-       "name": "flyDistance",
-       "type": "float",
-       "value": 3
-      },
-      {
-       "name": "respawn",
-       "type": "bool",
-       "value": true
-      }
-     ],
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 48,
-     "x": 1952,
-     "y": 160
+     "width": 32,
+     "x": 1760,
+     "y": 240
     },
     {
-     "gid": 75,
-     "height": 32,
-     "id": 11,
+     "gid": 127,
+     "height": 224,
+     "id": 36,
      "name": "",
-     "properties": [
-      {
-       "name": "flyDistance",
-       "type": "float",
-       "value": 3
-      },
-      {
-       "name": "respawn",
-       "type": "bool",
-       "value": true
-      }
-     ],
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 48,
-     "x": 2176,
-     "y": 128
+     "width": 32,
+     "x": 1920,
+     "y": 256
     },
     {
-     "gid": 75,
-     "height": 32,
-     "id": 12,
+     "gid": 127,
+     "height": 224,
+     "id": 37,
      "name": "",
-     "properties": [
-      {
-       "name": "flyDistance",
-       "type": "float",
-       "value": 3
-      },
-      {
-       "name": "respawn",
-       "type": "bool",
-       "value": true
-      }
-     ],
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 48,
-     "x": 2400,
-     "y": 144
+     "width": 32,
+     "x": 2000,
+     "y": 240
     },
     {
-     "gid": 75,
-     "height": 32,
-     "id": 13,
+     "gid": 127,
+     "height": 224,
+     "id": 38,
      "name": "",
-     "properties": [
-      {
-       "name": "flyDistance",
-       "type": "float",
-       "value": 3
-      },
-      {
-       "name": "respawn",
-       "type": "bool",
-       "value": true
-      }
-     ],
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 48,
-     "x": 2624,
-     "y": 160
+     "width": 32,
+     "x": 2304,
+     "y": 256
     },
     {
-     "gid": 75,
-     "height": 32,
-     "id": 14,
+     "gid": 127,
+     "height": 224,
+     "id": 39,
      "name": "",
-     "properties": [
-      {
-       "name": "flyDistance",
-       "type": "float",
-       "value": 3
-      },
-      {
-       "name": "respawn",
-       "type": "bool",
-       "value": true
-      }
-     ],
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 48,
-     "x": 2848,
-     "y": 128
+     "width": 32,
+     "x": 2496,
+     "y": 240
     },
     {
-     "gid": 75,
-     "height": 32,
-     "id": 15,
+     "gid": 127,
+     "height": 224,
+     "id": 40,
      "name": "",
-     "properties": [
-      {
-       "name": "flyDistance",
-       "type": "float",
-       "value": 3
-      },
-      {
-       "name": "respawn",
-       "type": "bool",
-       "value": true
-      }
-     ],
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 48,
-     "x": 3072,
-     "y": 144
+     "width": 32,
+     "x": 2704,
+     "y": 256
     },
     {
-     "gid": 75,
-     "height": 32,
-     "id": 16,
+     "gid": 127,
+     "height": 224,
+     "id": 41,
      "name": "",
-     "properties": [
-      {
-       "name": "flyDistance",
-       "type": "float",
-       "value": 3
-      },
-      {
-       "name": "respawn",
-       "type": "bool",
-       "value": true
-      }
-     ],
      "rotation": 0,
      "type": "",
      "visible": true,
-     "width": 48,
-     "x": 3296,
-     "y": 160
+     "width": 32,
+     "x": 2768,
+     "y": 240
+    },
+    {
+     "gid": 127,
+     "height": 224,
+     "id": 42,
+     "name": "",
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 32,
+     "x": 2832,
+     "y": 256
+    },
+    {
+     "gid": 127,
+     "height": 224,
+     "id": 43,
+     "name": "",
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 32,
+     "x": 2896,
+     "y": 240
+    },
+    {
+     "gid": 127,
+     "height": 224,
+     "id": 44,
+     "name": "",
+     "rotation": 0,
+     "type": "",
+     "visible": true,
+     "width": 32,
+     "x": 3280,
+     "y": 256
     },
     {
      "gid": 30,
@@ -700,7 +568,7 @@
   }
  ],
  "nextlayerid": 21,
- "nextobjectid": 28,
+ "nextobjectid": 45,
  "orientation": "orthogonal",
  "properties": [
   {
